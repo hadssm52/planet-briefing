@@ -164,6 +164,15 @@ def apply_result(story: dict, result: dict, regions: list[str], topics: list[str
 # ---------------------------------------------------------------- API calls
 
 
+class FatalAPIError(Exception):
+    """The API rejected the key or account. Retrying won't help."""
+
+
+def is_fatal(exc: Exception) -> bool:
+    """Bad/missing key (401), no access (403), or no credit left."""
+    return getattr(exc, "status_code", None) in (401, 403) or "credit balance" in str(exc).lower()
+
+
 def _call_json(client, model: str, system: str, prompt: str, schema: dict, usage: Usage, max_tokens: int) -> dict:
     response = client.messages.create(
         model=model,
@@ -192,6 +201,11 @@ def summarise_batch(client, model, system, batch, regions, topics, usage) -> lis
             max_tokens=max(2000, 260 * len(batch)),
         )
     except Exception as exc:
+        if is_fatal(exc):
+            raise FatalAPIError(
+                f"the Anthropic API refused the request ({exc}). Check that the ANTHROPIC_API_KEY "
+                "secret holds a valid key and that your Anthropic account has credit."
+            ) from exc
         if len(batch) <= 3:
             print(f"    ! dropped {len(batch)} stories: {exc}")
             return []

@@ -72,3 +72,23 @@ def test_system_prompt_includes_topic_guide():
     for t in CFG["topics"]:
         assert t["name"] in prompt
     assert "Environment: climate" in prompt
+
+
+def test_bad_api_key_stops_immediately():
+    class AuthError(Exception):
+        status_code = 401
+
+    class BadKeyClient(FakeClient):
+        def create(self, **kwargs):
+            self.calls += 1
+            raise AuthError("invalid x-api-key")
+
+    client = BadKeyClient()
+    stories = [story(n, title=f"Headline {n}") for n in range(1, 30)]
+    try:
+        summarise.summarise(stories, CFG, client=client)
+    except summarise.FatalAPIError as exc:
+        assert "ANTHROPIC_API_KEY" in str(exc)
+    else:
+        raise AssertionError("expected FatalAPIError")
+    assert client.calls == 1  # no pointless retries

@@ -63,7 +63,10 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
         print("  (dry run: using placeholder summaries, no API calls, $0)")
         results, top_ids, usage = summarise.fake_summarise(chosen, cfg)
     else:
-        results, top_ids, usage = summarise.summarise(chosen, cfg)
+        try:
+            results, top_ids, usage = summarise.summarise(chosen, cfg)
+        except summarise.FatalAPIError as exc:
+            raise PipelineError(str(exc)) from exc
         print(f"  actual usage: {usage.report()}")
     if len(results) < pcfg["min_stories"]:
         raise PipelineError(
