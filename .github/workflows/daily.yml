@@ -1,0 +1,76 @@
+# Planet Briefing — daily build and deploy.
+#
+# Runs every day at 06:00 UTC, and whenever you press "Run workflow" on the
+# Actions tab. If any step fails, nothing is deployed and yesterday's site
+# stays online.
+
+name: Daily briefing
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC daily (GitHub may start it a few minutes late)
+  workflow_dispatch:       # the "Run workflow" button
+
+permissions:
+  contents: write   # to commit the day's archive file
+  pages: write      # to deploy to GitHub Pages
+  id-token: write   # required by the Pages deploy action
+
+# Never run two builds at once.
+concurrency:
+  group: daily-briefing
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Fetch news, summarise and build the site
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python run_local.py
+
+      - name: Package the site for GitHub Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Commit today's archive file
+        run: |
+          git config user.name "planet-briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/archive
+          if git diff --cached --quiet; then
+            echo "No archive changes to commit."
+          else
+            git commit -m "Daily briefing $(date -u +%Y-%m-%d)"
+            git pull --rebase
+            git push
+          fi
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

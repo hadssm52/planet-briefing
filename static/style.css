@@ -1,0 +1,162 @@
+/* Planet Briefing — green and white. One small stylesheet, no JavaScript. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --tint: #f0f7f2;          /* very light green panels */
+  --text: #17231b;
+  --muted: #5b6b60;
+  --line: #d9e7dd;
+  --green: #16723a;         /* main green: links, headings */
+  --green-dark: #0f4d27;    /* masthead */
+  --green-soft: #e3f1e7;
+  --on-green: #ffffff;
+  --radius: 10px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1510;
+    --surface: #131e17;
+    --tint: #16241b;
+    --text: #e6efe8;
+    --muted: #93a699;
+    --line: #253529;
+    --green: #5fd38a;
+    --green-dark: #0b3a1d;
+    --green-soft: #1b3324;
+    --on-green: #ffffff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--green); }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 8px; background: var(--surface); padding: 8px; z-index: 10; }
+
+/* ---------- Header: solid green band with white text ---------- */
+.masthead { background: var(--green-dark); color: var(--on-green); }
+.masthead > .wrap:first-child {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 4px 16px; padding-top: 18px; padding-bottom: 10px;
+}
+.brand { font-size: 1.5rem; font-weight: 750; letter-spacing: -0.02em; color: var(--on-green); text-decoration: none; }
+.brand::before { content: "●"; color: #7ee2a2; margin-right: 8px; font-size: 0.9em; }
+.updated { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.78); }
+
+.nav {
+  display: flex; gap: 4px; overflow-x: auto; padding-bottom: 8px;
+  scrollbar-width: none; font-size: 0.92rem;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  flex: none; padding: 6px 11px; border-radius: 999px;
+  color: var(--on-green); text-decoration: none; white-space: nowrap;
+}
+.nav a:hover { background: rgba(255, 255, 255, 0.14); }
+.nav a[aria-current="page"] { background: #ffffff; color: #0f4d27; font-weight: 600; }
+.nav-topics { font-size: 0.84rem; padding-bottom: 12px; }
+.nav-topics a { color: rgba(255, 255, 255, 0.8); }
+
+/* ---------- Page intro ---------- */
+main { padding-top: 8px; padding-bottom: 32px; }
+.intro h1 { font-size: 1.9rem; line-height: 1.2; margin: 26px 0 4px; letter-spacing: -0.02em; }
+.intro p { margin: 0 0 8px; color: var(--muted); }
+.crumb { margin-top: 20px !important; font-size: 0.9rem; }
+
+/* Green label bars ("Top stories today", section headings) */
+h2.band {
+  display: inline-block; margin: 28px 0 12px; padding: 4px 12px; border-radius: 6px;
+  background: var(--green); color: var(--bg);
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* ---------- Continents and their topic subheadings ---------- */
+.region { margin-top: 36px; }
+.region-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px;
+  border-bottom: 3px solid var(--green); padding-bottom: 6px; margin-bottom: 4px;
+}
+.region-head h2 { margin: 0; font-size: 1.5rem; letter-spacing: -0.01em; color: var(--text); }
+.region-head a { font-size: 0.88rem; text-decoration: none; font-weight: 600; }
+
+.topic h3 {
+  margin: 18px 0 8px; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--green); display: flex; align-items: center; gap: 6px;
+}
+.topic h3::before { content: ""; width: 4px; height: 14px; border-radius: 2px; background: var(--green); }
+
+.headlines { list-style: none; margin: 0; padding: 0; background: var(--tint); border-radius: var(--radius); }
+.headlines li { padding: 9px 14px; border-bottom: 1px solid var(--line); line-height: 1.4; }
+.headlines li:last-child { border-bottom: 0; }
+.headlines a { color: var(--text); text-decoration: none; font-weight: 500; }
+.headlines a:hover { color: var(--green); text-decoration: underline; }
+.headlines .muted { font-size: 0.8rem; }
+.headlines .more a { color: var(--green); font-size: 0.88rem; font-weight: 600; }
+
+/* ---------- Story cards ---------- */
+.stories { display: grid; gap: 12px; }
+.story {
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--green);
+  border-radius: var(--radius); padding: 14px 16px;
+}
+.story:target { background: var(--green-soft); }
+.story h4 { margin: 2px 0 6px; font-size: 1.08rem; line-height: 1.35; }
+.tags { margin: 0; font-size: 0.75rem; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.tags a { color: var(--green); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.tags a:hover { text-decoration: underline; }
+.tags a + a::before { content: "·"; margin-right: 6px; color: var(--muted); }
+.rank {
+  display: inline-grid; place-items: center; min-width: 22px; height: 22px; border-radius: 50%;
+  background: var(--green); color: var(--bg); font-weight: 700; font-size: 0.75rem;
+}
+.bullets { margin: 0 0 8px; padding-left: 20px; }
+.bullets li { margin: 2px 0; }
+.bullets li::marker { color: var(--green); }
+.sources { margin: 0; font-size: 0.82rem; color: var(--muted); }
+.sources span { margin-right: 2px; }
+
+.count {
+  font-size: 0.72rem; font-weight: 600; color: var(--green); letter-spacing: 0;
+  background: var(--green-soft); border-radius: 999px; padding: 1px 8px;
+}
+
+/* ---------- Jump links ---------- */
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 0; font-size: 0.88rem; }
+.jump a {
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--tint); color: var(--green); text-decoration: none; font-weight: 500;
+}
+.jump a:hover { border-color: var(--green); }
+
+/* ---------- Archive ---------- */
+.archive-list { list-style: none; padding: 0; margin: 16px 0; }
+.archive-list li {
+  display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line);
+}
+
+.muted, .empty { color: var(--muted); }
+
+.footer { border-top: 3px solid var(--green); padding-top: 12px; padding-bottom: 32px; font-size: 0.82rem; color: var(--muted); }
+.footer p { margin: 4px 0; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .intro h1 { font-size: 1.5rem; }
+  .region-head h2 { font-size: 1.3rem; }
+  .story { padding: 12px 14px; }
+}

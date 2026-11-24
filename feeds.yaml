@@ -1,0 +1,117 @@
+# Planet Briefing — news sources.
+#
+# To add a source: copy one of the blocks below, change the name and url.
+# To remove a source: delete its block, or set `enabled: false`.
+#
+# Only official public RSS/Atom feeds belong here. The site uses just the
+# headline, short description and link each feed provides.
+#
+# Note on wire services: Reuters and AP no longer publish public RSS feeds,
+# and AFP has no public English feed, so they can't be listed directly.
+# France 24, Anadolu and others carry wire reporting in their own feeds.
+
+feeds:
+  # ---- Global / multi-region ----
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+  - name: "Al Jazeera"
+    url: "https://www.aljazeera.com/xml/rss/all.xml"
+  - name: "DW"
+    url: "https://rss.dw.com/xml/rss-en-world"
+  - name: "France 24"
+    url: "https://www.france24.com/en/rss"
+  - name: "The Guardian"
+    url: "https://www.theguardian.com/world/rss"
+  - name: "Anadolu Agency"
+    url: "https://www.aa.com.tr/en/rss/default?cat=guncel"
+
+  # ---- Europe ----
+  - name: "Euronews"
+    url: "https://www.euronews.com/rss"
+  - name: "France 24"
+    url: "https://www.france24.com/en/europe/rss"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+
+  # ---- North America ----
+  - name: "NPR"
+    url: "https://feeds.npr.org/1004/rss.xml"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml"
+
+  # ---- Latin America ----
+  - name: "MercoPress"
+    url: "https://en.mercopress.com/rss"
+  - name: "Buenos Aires Times"
+    url: "https://www.batimes.com.ar/feed"
+  - name: "The Rio Times"
+    url: "https://www.riotimesonline.com/feed/"
+  - name: "Mexico News Daily"
+    url: "https://mexiconewsdaily.com/feed/"
+  - name: "France 24"
+    url: "https://www.france24.com/en/americas/rss"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml"
+
+  # ---- Asia-Pacific ----
+  - name: "ABC Australia"
+    url: "https://www.abc.net.au/news/feed/51120/rss.xml"
+  - name: "The Hindu"
+    url: "https://www.thehindu.com/news/international/feeder/default.rss"
+  - name: "The Hindu"
+    url: "https://www.thehindu.com/news/national/feeder/default.rss"
+  - name: "The Japan Times"
+    url: "https://www.japantimes.co.jp/feed/"
+  - name: "Yonhap"
+    url: "https://en.yna.co.kr/RSS/news.xml"
+  - name: "CNA"
+    url: "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml"
+  - name: "South China Morning Post"
+    url: "https://www.scmp.com/rss/91/feed"
+  - name: "RNZ"
+    url: "https://www.rnz.co.nz/rss/world.xml"
+  - name: "France 24"
+    url: "https://www.france24.com/en/asia-pacific/rss"
+  # NHK World doesn't currently offer a working public English RSS feed.
+  # Switch this on if they publish one again.
+  - name: "NHK World"
+    url: "https://www3.nhk.or.jp/nhkworld/en/news/feeds/"
+    enabled: false
+
+  # ---- Middle East ----
+  - name: "The National"
+    url: "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml"
+  - name: "Middle East Eye"
+    url: "https://www.middleeasteye.net/rss.xml"
+  - name: "France 24"
+    url: "https://www.france24.com/en/middle-east/rss"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+
+  # ---- Africa ----
+  - name: "Africanews"
+    url: "https://www.africanews.com/feed/rss"
+  - name: "AllAfrica"
+    url: "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf"
+  - name: "Daily Maverick"
+    url: "https://www.dailymaverick.co.za/dmrss/"
+  - name: "Premium Times"
+    url: "https://www.premiumtimesng.com/feed"
+  - name: "France 24"
+    url: "https://www.france24.com/en/africa/rss"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/world/africa/rss.xml"
+
+  # ---- Topic feeds ----
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/business/rss.xml"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/technology/rss.xml"
+  - name: "BBC News"
+    url: "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+  - name: "The Guardian"
+    url: "https://www.theguardian.com/environment/rss"
+  - name: "The Guardian"
+    url: "https://www.theguardian.com/culture/rss"
+  - name: "BBC Sport"
+    url: "https://feeds.bbci.co.uk/sport/rss.xml"

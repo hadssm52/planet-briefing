@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "_macros.html" import story, region_block %}
+{% block content %}
+<section class="intro">
+  <h1>{{ digest.date | longdate }}</h1>
+  <p>{{ digest.stories | length }} stories from {{ digest.stats.feeds_ok }} news sources around the world.</p>
+</section>
+
+<section class="top" aria-labelledby="top-heading">
+  <h2 id="top-heading" class="band">Top stories today</h2>
+  <div class="stories">
+    {% for s in top %}
+    {{ story(s, root, region_slug, topic_slug, rank=loop.index) }}
+    {% endfor %}
+  </div>
+</section>
+
+<nav class="jump" aria-label="Jump to a region">
+  {% for region in world %}<a href="#{{ region_slug[region] }}">{{ region }}</a>{% endfor %}
+</nav>
+
+{% for region, topics_map in world.items() %}
+{{ region_block(region, topics_map, root, region_slug, topic_slug) }}
+{% endfor %}
+{% endblock %}

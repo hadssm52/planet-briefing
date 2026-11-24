@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Archive — {{ site.title }}{% endblock %}
+{% block content %}
+<section class="intro">
+  <h1>Archive</h1>
+  <p>Every daily briefing from the last {{ digests | length }} {% if digests | length == 1 %}day{% else %}days{% endif %}.</p>
+</section>
+<ul class="archive-list">
+  {% for d in digests %}
+  <li>
+    <a href="{{ root }}archive/{{ d.date }}/index.html">{{ d.date | longdate }}</a>
+    <span class="muted">{{ d.stories | length }} stories</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

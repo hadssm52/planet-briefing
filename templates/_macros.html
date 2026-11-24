@@ -1,0 +1,51 @@
+{% macro story(s, root, region_slug, topic_slug, show_region=true, show_topic=true, rank=none) %}
+<article class="story" id="s{{ s.id }}">
+  {% if rank or show_region or show_topic %}
+  <p class="tags">
+    {% if rank %}<span class="rank">{{ rank }}</span>{% endif %}
+    {% if show_region %}<a href="{{ root }}region/{{ region_slug[s.region] }}/index.html">{{ s.region }}</a>{% endif %}
+    {% if show_topic %}<a href="{{ root }}topic/{{ topic_slug[s.topic] }}/index.html">{{ s.topic }}</a>{% endif %}
+  </p>
+  {% endif %}
+  <h4>{{ s.headline }}</h4>
+  <ul class="bullets">
+    {% for b in s.bullets %}<li>{{ b }}</li>{% endfor %}
+  </ul>
+  <p class="sources">
+    <span>Source{% if s.sources|length > 1 %}s{% endif %}:</span>
+    {% for src in s.sources %}<a href="{{ src.link }}" rel="noopener" target="_blank">{{ src.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+  </p>
+</article>
+{% endmacro %}
+
+{# One continent with a subheading for each topic. `full` shows whole story
+   cards; otherwise a compact headline list linking to the region page. #}
+{% macro region_block(region, topics_map, root, region_slug, topic_slug, full=false, preview=4) %}
+{% set rslug = region_slug[region] %}
+<section class="region" id="{{ rslug }}" aria-labelledby="h-{{ rslug }}">
+  <div class="region-head">
+    <h2 id="h-{{ rslug }}">{{ region }}</h2>
+    {% if not full %}<a href="{{ root }}region/{{ rslug }}/index.html">All {{ region }} stories →</a>{% endif %}
+  </div>
+  {% for topic, items in topics_map.items() %}
+  {% set tslug = topic_slug[topic] %}
+  <section class="topic" id="{{ rslug }}-{{ tslug }}" aria-labelledby="h-{{ rslug }}-{{ tslug }}">
+    <h3 id="h-{{ rslug }}-{{ tslug }}">{{ topic }} <span class="count">{{ items | length }}</span></h3>
+    {% if full %}
+    <div class="stories">
+      {% for s in items %}{{ story(s, root, region_slug, topic_slug, show_region=false, show_topic=false) }}{% endfor %}
+    </div>
+    {% else %}
+    <ul class="headlines">
+      {% for s in items[:preview] %}
+      <li><a href="{{ root }}region/{{ rslug }}/index.html#s{{ s.id }}">{{ s.headline }}</a>{% if s.sources|length > 1 %} <span class="muted">· {{ s.sources|length }} sources</span>{% endif %}</li>
+      {% endfor %}
+      {% if items|length > preview %}
+      <li class="more"><a href="{{ root }}region/{{ rslug }}/index.html#{{ tslug }}">+ {{ items|length - preview }} more in {{ topic }}</a></li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </section>
+  {% endfor %}
+</section>
+{% endmacro %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_macros.html" import story %}
+{% block title %}{{ title }} — {{ site.title }}{% endblock %}
+{% block content %}
+{% set slugs = topic_slug if kind == "region" else region_slug %}
+<section class="intro">
+  <h1>{{ title }}</h1>
+  <p>{{ total }} {% if total == 1 %}story{% else %}stories{% endif %} · {{ digest.date | longdate }}</p>
+</section>
+
+{% if groups %}
+<nav class="jump" aria-label="On this page">
+  {% for name, items in groups.items() %}<a href="#{{ slugs[name] }}">{{ name }} ({{ items | length }})</a>{% endfor %}
+</nav>
+{% for name, items in groups.items() %}
+<section class="topic" id="{{ slugs[name] }}" aria-labelledby="h-{{ slugs[name] }}">
+  <h2 id="h-{{ slugs[name] }}" class="band">{{ name }}</h2>
+  <div class="stories">
+    {% for s in items %}
+    {{ story(s, root, region_slug, topic_slug, show_region=(kind != "region"), show_topic=(kind != "topic")) }}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">No stories in this section today. Check back tomorrow, or see the <a href="{{ root }}archive/index.html">archive</a>.</p>
+{% endif %}
+{% endblock %}

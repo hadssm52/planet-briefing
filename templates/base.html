@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="{{ site.tagline }}">
+  <title>{% block title %}{{ site.title }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ root }}style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%232563eb'/><ellipse cx='50' cy='50' rx='44' ry='16' fill='none' stroke='white' stroke-width='6'/></svg>">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="{{ root }}index.html">{{ site.title }}</a>
+      <p class="updated">Last updated: {{ updated }}</p>
+    </div>
+    <nav class="wrap nav" aria-label="Regions">
+      <a href="{{ root }}index.html"{% if page == "home" %} aria-current="page"{% endif %}>Today</a>
+      {% for r in regions %}
+      <a href="{{ root }}region/{{ r.slug }}/index.html"{% if page == "region:" ~ r.slug %} aria-current="page"{% endif %}>{{ r.name }}</a>
+      {% endfor %}
+      <a href="{{ root }}archive/index.html"{% if page == "archive" %} aria-current="page"{% endif %}>Archive</a>
+    </nav>
+    <nav class="wrap nav nav-topics" aria-label="Topics">
+      {% for t in topics %}
+      <a href="{{ root }}topic/{{ t.slug }}/index.html"{% if page == "topic:" ~ t.slug %} aria-current="page"{% endif %}>{{ t.name }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="wrap footer">
+    <p>Last updated: {{ updated }}</p>
+    <p>Summaries are written automatically by AI (Claude) from headlines and short descriptions in public news feeds. They can contain mistakes, so follow the source links for full reporting. No cookies, no tracking.</p>
+  </footer>
+</body>
+</html>

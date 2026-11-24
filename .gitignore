@@ -1,0 +1,16 @@
+# Your API key lives here when testing locally — never commit it.
+.env
+
+# Built website (GitHub Actions rebuilds it every day)
+_site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+
+# Local editor/preview settings
+.claude/

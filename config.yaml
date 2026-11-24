@@ -1,0 +1,50 @@
+# Planet Briefing — main settings.
+# Edit this file to change how the site behaves. Lines starting with # are comments.
+
+site:
+  title: "Planet Briefing"
+  tagline: "The world's news, briefly. Updated every morning."
+
+pipeline:
+  # Only keep feed items published within this many hours of the run.
+  max_age_hours: 30
+  # Maximum number of stories (after merging duplicates) sent to Claude each day.
+  max_stories: 150
+  # If fewer than this many stories are summarised, the run fails and
+  # yesterday's site stays online.
+  min_stories: 15
+  # How many days of archive to keep. Older days are deleted automatically.
+  archive_days: 90
+  # Two headlines count as the same story when this share of their key words
+  # overlap (0–1). Higher = stricter merging.
+  dedupe_threshold: 0.6
+
+claude:
+  model: "claude-haiku-5-5"
+  # Stories sent to Claude per request.
+  batch_size: 25
+  # Prices in US dollars per million tokens, used for the cost estimate.
+  # Check https://www.anthropic.com/pricing if they change.
+  input_price_per_mtok: 0.10
+  output_price_per_mtok: 0.50
+
+# The categories every story is sorted into. The "slug" is used in the page address.
+regions:
+  - { name: "Europe", slug: "europe" }
+  - { name: "North America", slug: "north-america" }
+  - { name: "Latin America", slug: "latin-america" }
+  - { name: "Asia-Pacific", slug: "asia-pacific" }
+  - { name: "Middle East", slug: "middle-east" }
+  - { name: "Africa", slug: "africa" }
+  - { name: "Global", slug: "global" }   # stories that span many regions
+
+# Topics are shown in this order under each region. The "about" line tells
+# Claude what belongs in each one.
+topics:
+  - { name: "Politics", slug: "politics", about: "government, elections, diplomacy, law and courts, protests" }
+  - { name: "Economics", slug: "economics", about: "economy, business, companies, markets, trade, jobs, prices" }
+  - { name: "Environment", slug: "environment", about: "climate, weather and natural disasters, energy transition, nature, pollution" }
+  - { name: "Science & Technology", slug: "science-technology", about: "science, health and medicine, space, tech companies, AI, cyber" }
+  - { name: "Conflict", slug: "conflict", about: "war, armed violence, terrorism, military affairs" }
+  - { name: "Culture", slug: "culture", about: "arts, entertainment, religion, society, human interest" }
+  - { name: "Sport", slug: "sport", about: "all sport" }

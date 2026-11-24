@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sample News</title>
+    <link>https://example.com</link>
+    <description>Test feed</description>
+    <item>
+      <title>Leaders agree climate deal at summit in Brazil</title>
+      <link>https://example.com/climate-deal</link>
+      <description>&lt;p&gt;Negotiators from &lt;b&gt;190 countries&lt;/b&gt; reached agreement late on Friday.&lt;/p&gt;</description>
+      <pubDate>Mon, 23 Nov 2026 22:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Central bank holds interest rates steady</title>
+      <link>https://example.com/rates</link>
+      <description>The bank kept its main rate at 4%.</description>
+      <pubDate>Mon, 23 Nov 2026 18:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Item with no link is skipped</title>
+      <description>Should not appear.</description>
+    </item>
+    <item>
+      <title>Very old story</title>
+      <link>https://example.com/old</link>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
