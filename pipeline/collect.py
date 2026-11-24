@@ -80,9 +80,38 @@ def parse_feed(content: bytes, feed: dict) -> list[dict]:
                 "region_hint": feed.get("region"),
                 "topic_hint": feed.get("topic"),
                 "published": entry_time(entry),
+                "image": entry_image(entry),
             }
         )
     return items
+
+
+IMG_SRC_RE = re.compile(r"""<img[^>]+src=["']([^"']+)["']""", re.IGNORECASE)
+
+
+def entry_image(entry) -> Optional[str]:
+    """The picture the feed itself attaches to this item, if any (largest
+    offered). Images are never fetched from the article page."""
+    candidates = []  # (width, url)
+    for key in ("media_content", "media_thumbnail"):
+        for m in entry.get(key) or []:
+            if m.get("url") and (m.get("medium") in (None, "image") or "image" in (m.get("type") or "")):
+                candidates.append((int(m.get("width") or 0), m["url"]))
+    for link in entry.get("links") or []:
+        if link.get("rel") == "enclosure" and "image" in (link.get("type") or ""):
+            candidates.append((0, link.get("href")))
+    if not candidates:
+        html_text = (entry.get("summary") or "") + "".join(c.get("value", "") for c in entry.get("content") or [])
+        m = IMG_SRC_RE.search(html_text)
+        if m:
+            candidates.append((0, html.unescape(m.group(1))))
+    candidates = [(w, u) for w, u in candidates if u and u.startswith(("http://", "https://"))]
+    if not candidates:
+        return None
+    url = max(candidates, key=lambda c: c[0])[1]
+    url = "https://" + url[len("http://"):] if url.startswith("http://") else url
+    # BBC thumbnails are tiny (240px); their image server offers a larger size.
+    return re.sub(r"(ichef\.bbci\.co\.uk/ace/standard/)\d+/", r"\g<1>480/", url)
 
 
 def fetch_all(feeds: list[dict], workers: int = 12) -> tuple[list[dict], list[str]]:
@@ -195,6 +224,7 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
                 "published": item["published"],
                 "region_hint": item.get("region_hint"),
                 "topic_hint": item.get("topic_hint"),
+                "image": item.get("image"),
                 "sources": [],
                 "_tokens": [],
                 "_feeds": set(),
@@ -202,7 +232,7 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
             stories.append(match)
         elif not match["description"] and item["description"]:
             match["description"] = item["description"]
-        for key in ("region_hint", "topic_hint"):
+        for key in ("region_hint", "topic_hint", "image"):
             match[key] = match.get(key) or item.get(key)
 
         by_link[item["link"]] = match

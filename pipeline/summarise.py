@@ -16,6 +16,7 @@ For each story you receive (a headline and a short description from one or more 
 - topic: the single best-fitting topic.
 - headline: a short, neutral headline (max 12 words) in your own words.
 - bullets: 2 to 4 short bullet points (max 25 words each) stating the key facts.
+- why_it_matters: one sentence (max 25 words) for a secondary-school or university student explaining the background or why the story matters. Use only general knowledge that is uncontroversial; no opinions.
 - significance: 1-10, how important the story is to a general international reader (10 = major world event, 1 = minor or local interest).
 
 Rules for the writing:
@@ -52,9 +53,10 @@ def story_schema(regions: list[str], topics: list[str]) -> dict:
                         "topic": {"type": "string", "enum": topics},
                         "headline": {"type": "string"},
                         "bullets": {"type": "array", "items": {"type": "string"}},
+                        "why_it_matters": {"type": "string"},
                         "significance": {"type": "integer"},
                     },
-                    "required": ["id", "region", "topic", "headline", "bullets", "significance"],
+                    "required": ["id", "region", "topic", "headline", "bullets", "why_it_matters", "significance"],
                     "additionalProperties": False,
                 },
             }
@@ -108,7 +110,7 @@ def estimate_tokens(stories: list[dict], batch_size: int) -> tuple[int, int]:
     story_chars = sum(len(json.dumps(story_input(s))) for s in stories)
     input_tokens = story_chars // 4 + batches * (len(SYSTEM_PROMPT) // 4 + 500)
     input_tokens += len(stories) * 25 + 300  # the top-stories request
-    output_tokens = len(stories) * 110 + 100
+    output_tokens = len(stories) * 140 + 100
     return input_tokens, output_tokens
 
 
@@ -157,6 +159,8 @@ def apply_result(story: dict, result: dict, regions: list[str], topics: list[str
     out["topic"] = result.get("topic") if result.get("topic") in topics else topics[0]
     out["headline"] = (result.get("headline") or story["title"]).strip()
     out["bullets"] = bullets[:4]
+    why = (result.get("why_it_matters") or "").strip()
+    out["why_it_matters"] = why if why and not copies_source(why, sources_text) else None
     out["significance"] = max(1, min(10, int(result.get("significance") or 1)))
     return out
 
@@ -253,7 +257,7 @@ def pick_top(client, model, stories, usage, count: int = 10) -> list[int]:
     return ids[:count]
 
 
-REUSED_FIELDS = ("headline", "bullets", "region", "topic", "significance")
+REUSED_FIELDS = ("headline", "bullets", "why_it_matters", "region", "topic", "significance")
 
 
 def reuse_previous(stories: list[dict], previous: Optional[dict]) -> tuple[list[dict], list[dict]]:
@@ -268,7 +272,7 @@ def reuse_previous(stories: list[dict], previous: Optional[dict]) -> tuple[list[
     for s in stories:
         match = next((by_link[src["link"]] for src in s["sources"] if src["link"] in by_link), None)
         if match:
-            reused.append({**s, **{k: match[k] for k in REUSED_FIELDS}})
+            reused.append({**s, **{k: match.get(k) for k in REUSED_FIELDS}})
         else:
             fresh.append(s)
     return reused, fresh

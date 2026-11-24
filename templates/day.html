@@ -2,26 +2,26 @@
 {% from "_macros.html" import story, region_block %}
 {% block title %}{{ digest.date | shortdate }} — {{ site.title }}{% endblock %}
 {% block content %}
-<section class="intro">
-  <p class="crumb"><a href="{{ root }}archive/index.html">← Archive</a></p>
+<section class="hero hero-small">
+  <p class="crumb"><a href="{{ root }}archive/index.html">← Back to the archive</a></p>
   <h1>{{ digest.date | longdate }}</h1>
-  <p>{{ digest.stories | length }} stories.</p>
+  <p>{{ digest.stories | length }} stories, as of {{ digest.generated_at[11:16] }} UTC.</p>
 </section>
 
 <section class="top" aria-labelledby="top-heading">
-  <h2 id="top-heading" class="band">Top stories</h2>
-  <div class="stories">
+  <h2 id="top-heading" class="section-title">⭐ Top stories</h2>
+  <div class="grid">
     {% for s in top %}
-    {{ story(s, root, region_slug, topic_slug, rank=loop.index) }}
+    {{ story(s, root, region_slug, topic_slug, topic_icons, show_images, digest.date, rank=loop.index) }}
     {% endfor %}
   </div>
 </section>
 
 <nav class="jump" aria-label="Jump to a region">
-  {% for region in world %}<a href="#{{ region_slug[region] }}">{{ region }}</a>{% endfor %}
+  {% for region in world %}<a href="#{{ region_slug[region] }}">{{ region_icons.get(region_slug[region], "🌐") }} {{ region }}</a>{% endfor %}
 </nav>
 
 {% for region, topics_map in world.items() %}
-{{ region_block(region, topics_map, root, region_slug, topic_slug, full=true) }}
+{{ region_block(region, topics_map, root, region_slug, topic_slug, region_icons, topic_icons, show_images, digest.date, full=true) }}
 {% endfor %}
 {% endblock %}

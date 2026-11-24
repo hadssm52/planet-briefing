@@ -23,7 +23,29 @@ def _env() -> Environment:
     )
     env.filters["longdate"] = lambda iso: date.fromisoformat(iso).strftime("%A %-d %B %Y")
     env.filters["shortdate"] = lambda iso: date.fromisoformat(iso).strftime("%-d %b %Y")
+    env.filters["pubtime"] = pubtime
     return env
+
+
+# Friendly icons shown on placeholders and continent tiles (keyed by slug).
+REGION_ICONS = {
+    "europe": "🌍", "africa": "🌍", "middle-east": "🌍",
+    "north-america": "🌎", "latin-america": "🌎", "asia-pacific": "🌏", "global": "🌐",
+}
+TOPIC_ICONS = {
+    "politics": "🏛️", "economics": "📈", "environment": "🌱", "science-technology": "🔬",
+    "conflict": "🛡️", "culture": "🎭", "sport": "⚽",
+}
+
+
+def pubtime(iso, today_iso: str = "") -> str:
+    """'14:05 UTC', or '23 Nov, 14:05 UTC' when not from the given day."""
+    if not iso:
+        return ""
+    dt = datetime.fromisoformat(iso)
+    if today_iso and dt.date().isoformat() != today_iso:
+        return dt.strftime("%-d %b, %H:%M UTC")
+    return dt.strftime("%H:%M UTC")
 
 
 def format_updated(iso: str) -> str:
@@ -84,6 +106,10 @@ def build_site(digests: list[dict], cfg: dict, out_dir: Path) -> list[Path]:
         "region_counts": region_counts,
         "topic_counts": topic_counts,
         "updated": format_updated(latest["generated_at"]),
+        "show_images": cfg["site"].get("show_images", True),
+        "summarised_by_ai": any(s.get("bullets") for s in latest["stories"]),
+        "region_icons": REGION_ICONS,
+        "topic_icons": TOPIC_ICONS,
         "today": latest["date"],
     }
 

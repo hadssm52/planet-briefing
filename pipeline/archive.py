@@ -10,7 +10,7 @@ DATE_FILE = re.compile(r"^(\d{4}-\d{2}-\d{2})\.json$")
 
 
 def make_digest(day: date, generated_at: str, stories: list[dict], top_ids: list[int], stats: dict) -> dict:
-    keep = ("id", "headline", "bullets", "excerpt", "region", "topic", "significance", "published")
+    keep = ("id", "headline", "bullets", "why_it_matters", "excerpt", "image", "region", "topic", "significance", "published")
     return {
         "date": day.isoformat(),
         "generated_at": generated_at,

@@ -84,3 +84,14 @@ def test_free_mode_excerpt_is_shown_with_credit(tmp_path):
     site.build_site([d], CFG, tmp_path)
     africa = (tmp_path / "region" / "africa" / "index.html").read_text()
     assert '<blockquote class="excerpt">The home side won 2-1. <cite>— Africanews</cite>' in africa
+
+
+def test_cards_show_images_placeholders_and_read_button(tmp_path):
+    d = make_digest()
+    d["stories"][0]["image"] = "https://img.example/deal.jpg"
+    site.build_site([d], CFG, tmp_path)
+    home = (tmp_path / "index.html").read_text()
+    assert '<img src="https://img.example/deal.jpg" alt="" loading="lazy"' in home
+    assert 'class="pic t-economics' in home  # coloured placeholder for a story without a photo
+    assert "Read the full story at BBC" in home
+    assert "New here? How to use Planet Briefing" in home

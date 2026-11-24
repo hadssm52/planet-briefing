@@ -202,7 +202,7 @@ The log of each successful run also shows which feeds were skipped, and the toke
 - **Wire services:** Reuters and AP no longer offer public RSS feeds, and AFP has no public English feed, so they can't be listed directly. Their reporting reaches the digest through outlets such as France 24 and Anadolu that carry wire copy in their own feeds.
 - **NHK World** is in `feeds.yaml` but switched off, because it doesn't currently publish a working English feed.
 - **Stays active:** GitHub pauses scheduled workflows in repositories with no activity for 60 days. The daily archive commit counts as activity, so this won't happen while runs succeed.
-- **Privacy:** no cookies, no analytics, no JavaScript, no login.
+- **Privacy:** no cookies, no analytics, no JavaScript, no login. Story photos load straight from the news outlets' own servers (without telling them which page they were on). Set `show_images: false` in `config.yaml` for a text-only site.
 - **Other commands:**
   - `.venv/bin/python run_local.py --rebuild` rebuilds the pages from saved days without fetching anything.
   - `.venv/bin/python -m http.server --directory _site 8000` lets you view the site at <http://localhost:8000> exactly as it will look online.

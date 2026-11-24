@@ -5,38 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="{{ site.tagline }}">
-  <title>{% block title %}{{ site.title }}{% endblock %}</title>
+  <meta name="referrer" content="no-referrer">
+  <title>{% block title %}{{ site.title }} — world news for students{% endblock %}</title>
   <link rel="stylesheet" href="{{ root }}style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%232563eb'/><ellipse cx='50' cy='50' rx='44' ry='16' fill='none' stroke='white' stroke-width='6'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%2316723a'/><ellipse cx='50' cy='50' rx='44' ry='16' fill='none' stroke='white' stroke-width='6'/><line x1='50' y1='6' x2='50' y2='94' stroke='white' stroke-width='6'/></svg>">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="masthead">
-    <div class="wrap">
-      <a class="brand" href="{{ root }}index.html">{{ site.title }}</a>
-      <p class="updated">Last updated: {{ updated }}</p>
+    <div class="wrap masthead-top">
+      <a class="brand" href="{{ root }}index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>
+          <span class="brand-name">{{ site.title }}</span>
+          <span class="brand-tag">{{ site.tagline }}</span>
+        </span>
+      </a>
+      <p class="updated"><span class="live-dot" aria-hidden="true"></span> Updated {{ updated }}</p>
     </div>
     <nav class="wrap nav" aria-label="Regions">
-      <a href="{{ root }}index.html"{% if page == "home" %} aria-current="page"{% endif %}>Today</a>
+      <a href="{{ root }}index.html"{% if page == "home" %} aria-current="page"{% endif %}>🏠 Today</a>
       {% for r in regions %}
       <a href="{{ root }}region/{{ r.slug }}/index.html"{% if page == "region:" ~ r.slug %} aria-current="page"{% endif %}>{{ r.name }}</a>
       {% endfor %}
-      <a href="{{ root }}archive/index.html"{% if page == "archive" %} aria-current="page"{% endif %}>Archive</a>
+      <a href="{{ root }}archive/index.html"{% if page == "archive" %} aria-current="page"{% endif %}>📅 Archive</a>
     </nav>
     <nav class="wrap nav nav-topics" aria-label="Topics">
       {% for t in topics %}
-      <a href="{{ root }}topic/{{ t.slug }}/index.html"{% if page == "topic:" ~ t.slug %} aria-current="page"{% endif %}>{{ t.name }}</a>
+      <a class="t-{{ t.slug }}" href="{{ root }}topic/{{ t.slug }}/index.html"{% if page == "topic:" ~ t.slug %} aria-current="page"{% endif %}><span class="dot t-{{ t.slug }}" aria-hidden="true"></span>{{ t.name }}</a>
       {% endfor %}
     </nav>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main" class="wrap" tabindex="-1">
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="wrap footer">
-    <p>Last updated: {{ updated }}</p>
-    <p>Summaries are written automatically by AI (Claude) from headlines and short descriptions in public news feeds. They can contain mistakes, so follow the source links for full reporting. No cookies, no tracking.</p>
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <section>
+        <h2>Using news in your schoolwork</h2>
+        <ul>
+          <li><strong>Go to the source.</strong> Click "Read the full story" and cite the original outlet, not this site.</li>
+          <li><strong>Compare outlets.</strong> Stories covered by several outlets show them all, so you can see different angles.</li>
+          <li><strong>Check the date.</strong> News changes quickly; note when a story was published.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>About {{ site.title }}</h2>
+        <p>Headlines and short summaries are gathered automatically from public news feeds around the world.
+          {% if summarised_by_ai %}Bullet points are written by AI (Claude) and can contain mistakes.{% else %}Each summary is quoted from the outlet named next to it.{% endif %}
+          Photos belong to the outlets that published them.</p>
+        <p>No sign-up, no cookies, no tracking. Last updated: {{ updated }}.</p>
+      </section>
+    </div>
   </footer>
 </body>
 </html>

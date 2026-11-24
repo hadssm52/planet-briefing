@@ -120,3 +120,15 @@ def test_feed_boilerplate_is_removed():
     </channel></rss>"""
     items = collect.parse_feed(xml, FEED)
     assert items[0]["description"] == "The new port opened on Monday."
+
+
+def test_feed_image_is_picked_largest_and_https():
+    xml = b"""<?xml version="1.0"?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>T</title>
+    <item><title>Port opens in Dakar</title><link>https://x.example/a</link>
+    <media:content url="http://img.example/small.jpg" width="140" medium="image"/>
+    <media:content url="http://img.example/big.jpg" width="460" medium="image"/></item>
+    <item><title>No picture here</title><link>https://x.example/b</link></item>
+    </channel></rss>"""
+    items = collect.parse_feed(xml, FEED)
+    assert items[0]["image"] == "https://img.example/big.jpg"
+    assert items[1]["image"] is None
