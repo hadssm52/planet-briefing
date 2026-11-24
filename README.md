@@ -142,7 +142,12 @@ From now on it runs by itself every 30 minutes. GitHub sometimes starts schedule
 ## Your web address
 
 The site lives at **https://planetbriefing.org** (registered at Cloudflare; renew it there each year, or turn on auto-renew).
-Its DNS records in Cloudflare point to GitHub Pages and must stay **DNS only** (grey cloud).
+Its DNS records in Cloudflare point to GitHub Pages and are **Proxied** (orange cloud), so Cloudflare counts every visit.
+Keep Cloudflare's **SSL/TLS → encryption mode on "Full"** (not "Flexible", which causes a redirect loop, and not "Full (strict)", which breaks when GitHub's own certificate expires).
+
+**Visitor numbers** are in two places in Cloudflare:
+- **Analytics → Web analytics → planetbriefing.org**: real people (visits, top pages, countries, devices). Misses visitors using ad blockers.
+- **planetbriefing.org → Analytics** (the domain's own page): every request that reached the site, including people with ad blockers, plus some bots.
 The old `hadssm52.github.io/planet-briefing` link redirects to it automatically.
 If you ever change the address, update `url:` in `config.yaml` and the custom domain in **Settings → Pages**.
 
