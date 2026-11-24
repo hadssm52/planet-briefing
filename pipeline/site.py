@@ -1,6 +1,7 @@
 """Building the static website from the archived daily digests."""
 from __future__ import annotations
 
+import hashlib
 import shutil
 from collections import OrderedDict
 from datetime import date, datetime
@@ -111,6 +112,8 @@ def build_site(digests: list[dict], cfg: dict, out_dir: Path) -> list[Path]:
         "region_icons": REGION_ICONS,
         "topic_icons": TOPIC_ICONS,
         "today": latest["date"],
+        # Changes whenever style.css changes, so browsers never mix old CSS with new pages.
+        "css_version": hashlib.md5((STATIC / "style.css").read_bytes()).hexdigest()[:8],
     }
 
     if out_dir.exists():

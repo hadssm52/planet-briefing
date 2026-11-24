@@ -51,7 +51,7 @@ def test_region_page_only_has_its_stories_and_relative_links(tmp_path):
     europe = (tmp_path / "region" / "europe" / "index.html").read_text()
     assert "Rates &lt;held&gt; steady" in europe
     assert "Climate deal" not in europe
-    assert 'href="../../style.css"' in europe
+    assert 'href="../../style.css?v=' in europe
 
 
 def test_archive_prune(tmp_path):
