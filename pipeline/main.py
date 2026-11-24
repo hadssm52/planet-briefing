@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
-from . import archive, collect, site, summarise
+from . import archive, classify, collect, site, summarise
 from .config import ROOT, load_config, load_feeds
 
 ARCHIVE_DIR = ROOT / "data" / "archive"
@@ -32,9 +32,13 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
         print(f"Rebuilt {len(pages)} pages into {SITE_DIR}")
         return
 
-    if not dry_run and not os.environ.get("ANTHROPIC_API_KEY"):
+    mode = cfg.get("summariser", "auto")
+    has_key = bool(os.environ.get("ANTHROPIC_API_KEY"))
+    use_claude = not dry_run and (mode == "claude" or (mode == "auto" and has_key))
+    if mode == "claude" and not dry_run and not has_key:
         raise PipelineError(
-            "ANTHROPIC_API_KEY is not set. Set it (see README) or use --dry-run to test without it."
+            "ANTHROPIC_API_KEY is not set. Set it (see README), use --dry-run, "
+            'or set summariser: "auto" or "free" in config.yaml.'
         )
 
     # 1. Collect
@@ -55,19 +59,22 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
           f"→ {len(chosen)} selected ({multi} covered by 2+ outlets)")
 
     # 3. Summarise
-    est_in, est_out = summarise.estimate_tokens(chosen, ccfg["batch_size"])
-    est_cost = summarise.cost_of(est_in, est_out, ccfg["input_price_per_mtok"], ccfg["output_price_per_mtok"])
-    print(f"\n[3/5] Summarising with {ccfg['model']}"
-          f" — estimate: ~{est_in:,} input + ~{est_out:,} output tokens ≈ ${est_cost:.4f}")
-    if dry_run:
-        print("  (dry run: using placeholder summaries, no API calls, $0)")
-        results, top_ids, usage = summarise.fake_summarise(chosen, cfg)
-    else:
+    results = None
+    if use_claude:
+        est_in, est_out = summarise.estimate_tokens(chosen, ccfg["batch_size"])
+        est_cost = summarise.cost_of(est_in, est_out, ccfg["input_price_per_mtok"], ccfg["output_price_per_mtok"])
+        print(f"\n[3/5] Summarising with {ccfg['model']}"
+              f" — estimate: ~{est_in:,} input + ~{est_out:,} output tokens ≈ ${est_cost:.4f}")
         try:
             results, top_ids, usage = summarise.summarise(chosen, cfg)
+            print(f"  actual usage: {usage.report()}")
         except summarise.FatalAPIError as exc:
-            raise PipelineError(str(exc)) from exc
-        print(f"  actual usage: {usage.report()}")
+            if mode == "claude":
+                raise PipelineError(str(exc)) from exc
+            print(f"  ! {exc}\n  ! Falling back to free mode for today.")
+    if results is None:
+        print("\n[3/5] Sorting stories (free mode: keyword rules and the outlets' own summaries, $0)")
+        results, top_ids, usage = classify.free_summarise(chosen, cfg)
     if len(results) < pcfg["min_stories"]:
         raise PipelineError(
             f"only {len(results)} stories summarised (minimum is {pcfg['min_stories']}) — not publishing"
@@ -93,7 +100,7 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
     # 5. Save today to the archive (only once the site built cleanly)
     print("\n[5/5] Updating the archive…")
     if dry_run:
-        print("  (dry run: today's placeholder digest is not saved)")
+        print("  (dry run: today's digest is not saved)")
     else:
         path = archive.save_digest(ARCHIVE_DIR, digest)
         print(f"  saved {path.relative_to(ROOT)}")
@@ -126,7 +133,7 @@ def main(argv: Optional[list] = None) -> int:
 
     parser = argparse.ArgumentParser(description="Run the Planet Briefing pipeline.")
     parser.add_argument("--dry-run", action="store_true",
-                        help="fetch real feeds but use placeholder summaries (no API key needed, costs nothing)")
+                        help="use free mode and don't save today to the archive (no API key needed, costs nothing)")
     parser.add_argument("--rebuild", action="store_true",
                         help="only rebuild the website from saved days (no fetching, no API calls)")
     args = parser.parse_args(argv)

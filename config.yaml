@@ -5,6 +5,14 @@ site:
   title: "Planet Briefing"
   tagline: "The world's news, briefly. Updated every morning."
 
+# How stories are summarised:
+#   "auto"   — use Claude when the ANTHROPIC_API_KEY secret holds a working key,
+#              otherwise fall back to free mode (the site still updates).
+#   "claude" — always use Claude; the run fails if the key doesn't work.
+#   "free"   — never use AI. Stories are sorted by keyword rules and show the
+#              short summary each outlet publishes in its feed. No cost.
+summariser: "auto"
+
 pipeline:
   # Only keep feed items published within this many hours of the run.
   max_age_hours: 30

@@ -20,5 +20,10 @@ def load_feeds(path: Path = ROOT / "feeds.yaml") -> list[dict]:
     for feed in data.get("feeds") or []:
         if not feed.get("url") or feed.get("enabled", True) is False:
             continue
-        feeds.append({"name": feed.get("name") or feed["url"], "url": feed["url"]})
+        feeds.append({
+            "name": feed.get("name") or feed["url"],
+            "url": feed["url"],
+            "region": feed.get("region"),  # optional hints used by free mode
+            "topic": feed.get("topic"),
+        })
     return feeds

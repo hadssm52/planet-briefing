@@ -37,6 +37,11 @@ ROUNDUP_RE = re.compile(
     r"|morning briefing|evening briefing|today\s*[-–|:]\s*\w+ \d|what we know so far|quiz",
     re.IGNORECASE,
 )
+# Footers some feeds append to every description.
+BOILERPLATE_RE = re.compile(
+    r"\s*(The post .+? appeared first on .+?$|Continue reading\W*$|Read more\W*$|\[(…|\.\.\.)\]\s*$)",
+    re.IGNORECASE,
+)
 PREFIX_RE = re.compile(r"^(live|watch|video|analysis|explainer|opinion|breaking)\s*[:|–-]\s*", re.IGNORECASE)
 
 
@@ -62,6 +67,7 @@ def parse_feed(content: bytes, feed: dict) -> list[dict]:
         if not title or not link.startswith("http") or ROUNDUP_RE.search(title):
             continue
         description = clean_text(entry.get("summary") or entry.get("description") or "")
+        description = BOILERPLATE_RE.sub("", description).strip()
         if description.lower() == title.lower():
             description = ""
         items.append(
@@ -71,6 +77,8 @@ def parse_feed(content: bytes, feed: dict) -> list[dict]:
                 "link": link,
                 "source": feed["name"],
                 "feed_url": feed["url"],
+                "region_hint": feed.get("region"),
+                "topic_hint": feed.get("topic"),
                 "published": entry_time(entry),
             }
         )
@@ -185,6 +193,8 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
                 "title": item["title"],
                 "description": item["description"],
                 "published": item["published"],
+                "region_hint": item.get("region_hint"),
+                "topic_hint": item.get("topic_hint"),
                 "sources": [],
                 "_tokens": [],
                 "_feeds": set(),
@@ -192,6 +202,8 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
             stories.append(match)
         elif not match["description"] and item["description"]:
             match["description"] = item["description"]
+        for key in ("region_hint", "topic_hint"):
+            match[key] = match.get(key) or item.get(key)
 
         by_link[item["link"]] = match
         match["_tokens"].append(tokens)

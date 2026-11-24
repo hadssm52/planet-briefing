@@ -8,9 +8,13 @@
   </p>
   {% endif %}
   <h4>{{ s.headline }}</h4>
+  {% if s.bullets %}
   <ul class="bullets">
     {% for b in s.bullets %}<li>{{ b }}</li>{% endfor %}
   </ul>
+  {% elif s.excerpt %}
+  <blockquote class="excerpt">{{ s.excerpt.text }} <cite>— {{ s.excerpt.source }}</cite></blockquote>
+  {% endif %}
   <p class="sources">
     <span>Source{% if s.sources|length > 1 %}s{% endif %}:</span>
     {% for src in s.sources %}<a href="{{ src.link }}" rel="noopener" target="_blank">{{ src.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}

@@ -127,6 +127,10 @@ h2.band {
 .bullets { margin: 0 0 8px; padding-left: 20px; }
 .bullets li { margin: 2px 0; }
 .bullets li::marker { color: var(--green); }
+.excerpt {
+  margin: 0 0 8px; padding: 2px 0 2px 12px; border-left: 2px solid var(--line); color: var(--text);
+}
+.excerpt cite { font-style: normal; font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
 .sources { margin: 0; font-size: 0.82rem; color: var(--muted); }
 .sources span { margin-right: 2px; }
 

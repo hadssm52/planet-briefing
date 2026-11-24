@@ -273,26 +273,3 @@ def summarise(stories: list[dict], cfg: dict, client=None) -> tuple[list[dict], 
 
     top_ids = pick_top(client, ccfg["model"], results, usage) if results else []
     return results, top_ids, usage
-
-
-def fake_summarise(stories: list[dict], cfg: dict) -> tuple[list[dict], list[int], Usage]:
-    """Offline stand-in for `summarise`, used by --dry-run and tests.
-    Costs nothing; text is placeholder only."""
-    regions = [r["name"] for r in cfg["regions"]]
-    topics = [t["name"] for t in cfg["topics"]]
-    results = []
-    for s in stories:
-        n = s["id"]
-        out = dict(s)
-        out["region"] = regions[n % len(regions)]
-        out["topic"] = topics[(n // len(regions)) % len(topics)]
-        out["headline"] = s["title"]
-        out["bullets"] = [
-            "[Dry run] Placeholder bullet: Claude's summary would appear here.",
-            f"Reported by {len(s['sources'])} outlet(s).",
-        ]
-        out["significance"] = min(10, len(s["sources"]) * 2 + n % 3)
-        results.append(out)
-    top = [s["id"] for s in sorted(results, key=lambda s: s["significance"], reverse=True)][:10]
-    usage = Usage(cfg["claude"]["input_price_per_mtok"], cfg["claude"]["output_price_per_mtok"])
-    return results, top, usage

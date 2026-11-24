@@ -111,3 +111,12 @@ def test_select_prefers_multi_source_and_mixes_feeds():
     assert names == {"Africanews", "Yonhap"}
     assert [c["id"] for c in chosen] == [1, 2, 3, 4, 5]
     assert all("_tokens" not in c for c in chosen)
+
+
+def test_feed_boilerplate_is_removed():
+    xml = b"""<?xml version="1.0"?><rss version="2.0"><channel><title>T</title>
+    <item><title>Port opens in Dakar</title><link>https://x.example/a</link>
+    <description>The new port opened on Monday. The post Port opens in Dakar appeared first on Example News.</description></item>
+    </channel></rss>"""
+    items = collect.parse_feed(xml, FEED)
+    assert items[0]["description"] == "The new port opened on Monday."

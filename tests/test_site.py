@@ -75,3 +75,12 @@ def test_homepage_splits_each_region_into_topic_subheadings(tmp_path):
     # The archive day page uses the same region → topic layout.
     day = (tmp_path / "archive" / "2026-11-24" / "index.html").read_text()
     assert 'id="latin-america-environment"' in day
+
+
+def test_free_mode_excerpt_is_shown_with_credit(tmp_path):
+    d = make_digest()
+    d["stories"][2]["bullets"] = []
+    d["stories"][2]["excerpt"] = {"text": "The home side won 2-1.", "source": "Africanews"}
+    site.build_site([d], CFG, tmp_path)
+    africa = (tmp_path / "region" / "africa" / "index.html").read_text()
+    assert '<blockquote class="excerpt">The home side won 2-1. <cite>— Africanews</cite>' in africa

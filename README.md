@@ -8,7 +8,9 @@ A world news digest that builds itself. Every morning at 06:00 UTC it:
 4. picks the 10 most significant stories of the day,
 5. publishes a fast, simple website on GitHub Pages, and saves the day to a 90-day archive.
 
-Once it's set up you don't need to do anything. A run costs about **1–2 US cents**.
+Once it's set up you don't need to do anything. With Claude a run costs about **1–2 US cents**.
+
+**No API key yet? It still works.** With the default `summariser: "auto"` setting in `config.yaml`, the site uses a **free mode** whenever the key is missing or doesn't work: stories are sorted by keyword rules, and each one shows the short summary its outlet publishes. As soon as a working key is saved as a GitHub secret, the next run switches to Claude's bullet points by itself.
 
 ---
 
@@ -51,7 +53,7 @@ python3 -m venv .venv
 
 You should see something like `15 passed`.
 
-**1d. Do a free practice run.** This fetches real news but uses placeholder text instead of Claude, so it costs nothing:
+**1d. Do a free practice run.** This fetches real news and builds the site in free mode (no Claude, costs nothing, nothing saved to the archive):
 
 ```bash
 .venv/bin/python run_local.py --dry-run
@@ -98,7 +100,9 @@ Your code is now at `https://github.com/YOUR-USERNAME/planet-briefing`.
 
 ---
 
-## Step 3 — Add your API key as a GitHub secret
+## Step 3 — Add your API key as a GitHub secret (optional, for AI summaries)
+
+Skip this step if you don't have a working key yet. The site runs in free mode until you add one.
 
 The daily run needs your Anthropic key. GitHub stores it encrypted, and it's never shown in logs.
 
@@ -175,7 +179,8 @@ Common problems:
 
 | Message | Fix |
 |---|---|
-| `ANTHROPIC_API_KEY is not set` | The secret is missing or misnamed. Redo Step 3. |
+| `ANTHROPIC_API_KEY is not set` | Only happens with `summariser: "claude"`. Add the secret (Step 3) or switch back to `"auto"`. |
+| `Falling back to free mode for today` | Not an error: the key was missing or rejected, so the site used free mode. Check the key in the Anthropic Console and update the secret. |
 | `authentication_error` / `401` | The key is wrong or was deleted. Make a new key at console.anthropic.com and update the secret. |
 | `credit balance is too low` | Add credit in the Anthropic Console (Billing). |
 | `only N stories summarised` | Most feeds or API calls failed. Usually temporary: press **Run workflow** to retry. |
@@ -189,7 +194,8 @@ The log of each successful run also shows which feeds were skipped, and the toke
 
 ## Good to know
 
-- **Costs:** the run prints an estimate before calling Claude and the actual figure after. With ~150 stories a day it's around $0.01–0.02 per run, or under $1 a month. Prices are set in `config.yaml` in case they change.
+- **Free mode** sorts stories by keyword lists in `pipeline/classify.py`. It is good but not perfect; add words there if stories land in the wrong place.
+- **Costs:** in Claude mode the run prints an estimate before calling Claude and the actual figure after. With ~150 stories a day it's around $0.01–0.02 per run, or under $1 a month. Prices are set in `config.yaml` in case they change.
 - **What's used from each outlet:** only the headline, the short description and the link from its public feed. Articles are never downloaded. Claude writes the bullets in its own words, and the code also rejects any bullet that repeats 8 or more words in a row from the source.
 - **Wire services:** Reuters and AP no longer offer public RSS feeds, and AFP has no public English feed, so they can't be listed directly. Their reporting reaches the digest through outlets such as France 24 and Anadolu that carry wire copy in their own feeds.
 - **NHK World** is in `feeds.yaml` but switched off, because it doesn't currently publish a working English feed.
