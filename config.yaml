@@ -9,6 +9,10 @@ site:
   # Show the photo each outlet attaches to its feed. Photos load from the
   # outlets' own servers; set to false for a text-only site.
   show_images: true
+  # Cloudflare Web Analytics site ID (public, not a password). Counts visits
+  # without cookies. Leave empty ("") to turn analytics off.
+  # See the stats at dash.cloudflare.com → Analytics → Web analytics.
+  cloudflare_analytics_token: "10d0d458de5645f5b905f15d3fe85a16"
 
 # How stories are summarised:
 #   "auto"   — use Claude when the ANTHROPIC_API_KEY secret holds a working key,

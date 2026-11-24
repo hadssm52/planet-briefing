@@ -20,6 +20,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0d4a25">
   <link rel="apple-touch-icon" href="{{ root }}og.png">
+  {% if site.cloudflare_analytics_token %}
+  <!-- Cloudflare Web Analytics: anonymous visit counts, no cookies -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+  {% endif %}
   <link rel="stylesheet" href="{{ root }}style.css?v={{ css_version }}">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%2316723a'/><ellipse cx='50' cy='50' rx='44' ry='16' fill='none' stroke='white' stroke-width='6'/><line x1='50' y1='6' x2='50' y2='94' stroke='white' stroke-width='6'/></svg>">
 </head>
@@ -69,7 +73,7 @@
         <p>Headlines and short summaries are gathered automatically from public news feeds around the world.
           {% if summarised_by_ai %}Bullet points are written by AI (Claude) and can contain mistakes.{% else %}Each summary is quoted from the outlet named next to it.{% endif %}
           Photos belong to the outlets that published them.</p>
-        <p>No sign-up, no cookies, no tracking. Last updated: {{ updated }}.</p>
+        <p>No sign-up and no cookies.{% if site.cloudflare_analytics_token %} We count visits anonymously (Cloudflare Web Analytics) to see how many people use the site; no personal data is collected.{% else %} No tracking.{% endif %} Last updated: {{ updated }}.</p>
       </section>
     </div>
   </footer>

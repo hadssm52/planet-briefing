@@ -109,3 +109,13 @@ def test_link_previews_and_sitemap(tmp_path):
     assert (tmp_path / "og.png").exists()
     sitemap = (tmp_path / "sitemap.xml").read_text()
     assert f"<loc>{url}region/europe/</loc>" in sitemap
+
+
+def test_analytics_snippet_only_when_configured(tmp_path):
+    site.build_site([make_digest()], CFG, tmp_path)
+    home = (tmp_path / "index.html").read_text()
+    token = CFG["site"].get("cloudflare_analytics_token")
+    assert (f'"token": "{token}"' in home) == bool(token)
+    off = dict(CFG, site=dict(CFG["site"], cloudflare_analytics_token=""))
+    site.build_site([make_digest()], off, tmp_path / "off")
+    assert "cloudflareinsights" not in (tmp_path / "off" / "index.html").read_text()
