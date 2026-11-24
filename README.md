@@ -139,6 +139,13 @@ From now on it runs by itself every 30 minutes. GitHub sometimes starts schedule
 
 ---
 
+## Your web address
+
+The site lives at **https://planetbriefing.org** (registered at Cloudflare; renew it there each year, or turn on auto-renew).
+Its DNS records in Cloudflare point to GitHub Pages and must stay **DNS only** (grey cloud).
+The old `hadssm52.github.io/planet-briefing` link redirects to it automatically.
+If you ever change the address, update `url:` in `config.yaml` and the custom domain in **Settings → Pages**.
+
 ## Changing the news sources
 
 Open `feeds.yaml` (on GitHub: click the file, then the ✏️ pencil icon). Each source looks like this:
