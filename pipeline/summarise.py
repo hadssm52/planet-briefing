@@ -253,8 +253,31 @@ def pick_top(client, model, stories, usage, count: int = 10) -> list[int]:
     return ids[:count]
 
 
-def summarise(stories: list[dict], cfg: dict, client=None) -> tuple[list[dict], list[int], Usage]:
-    """Summarise all stories. Returns (summarised stories, top story ids, usage)."""
+REUSED_FIELDS = ("headline", "bullets", "region", "topic", "significance")
+
+
+def reuse_previous(stories: list[dict], previous: Optional[dict]) -> tuple[list[dict], list[dict]]:
+    """Split stories into (already summarised by Claude in an earlier run today,
+    still to do). A story counts as done if any of its links was in that run."""
+    by_link = {}
+    for p in (previous or {}).get("stories", []):
+        if p.get("bullets"):
+            for src in p["sources"]:
+                by_link[src["link"]] = p
+    reused, fresh = [], []
+    for s in stories:
+        match = next((by_link[src["link"]] for src in s["sources"] if src["link"] in by_link), None)
+        if match:
+            reused.append({**s, **{k: match[k] for k in REUSED_FIELDS}})
+        else:
+            fresh.append(s)
+    return reused, fresh
+
+
+def summarise(stories: list[dict], cfg: dict, client=None,
+              previous: Optional[dict] = None) -> tuple[list[dict], list[int], Usage]:
+    """Summarise all stories. Returns (summarised stories, top story ids, usage).
+    `previous` is today's digest from an earlier run; its summaries are reused."""
     import anthropic
 
     ccfg = cfg["claude"]
@@ -263,13 +286,31 @@ def summarise(stories: list[dict], cfg: dict, client=None) -> tuple[list[dict], 
     usage = Usage(ccfg["input_price_per_mtok"], ccfg["output_price_per_mtok"])
     client = client or anthropic.Anthropic(max_retries=4, timeout=180)
 
+    results, fresh = reuse_previous(stories, previous)
+    if results:
+        print(f"  reusing {len(results)} summaries from earlier today; {len(fresh)} new stories")
+
     system = system_prompt(cfg)
     size = ccfg["batch_size"]
-    results: list[dict] = []
-    for start in range(0, len(stories), size):
-        batch = stories[start : start + size]
+    for start in range(0, len(fresh), size):
+        batch = fresh[start : start + size]
         print(f"  batch {start // size + 1}: {len(batch)} stories")
         results.extend(summarise_batch(client, ccfg["model"], system, batch, regions, topics, usage))
 
-    top_ids = pick_top(client, ccfg["model"], results, usage) if results else []
-    return results, top_ids, usage
+    if not results:
+        return results, [], usage
+    if not fresh and previous:
+        # Nothing new: keep the earlier ranking rather than paying to redo it.
+        ids = {s["id"]: s for s in results}
+        link_to_id = {src["link"]: s["id"] for s in results for src in s["sources"]}
+        prev_by_id = {s["id"]: s for s in previous["stories"]}
+        top_ids = []
+        for pid in previous.get("top_ids", []):
+            prev = prev_by_id.get(pid)
+            new_id = next((link_to_id[src["link"]] for src in (prev or {}).get("sources", [])
+                           if src["link"] in link_to_id), None)
+            if new_id in ids and new_id not in top_ids:
+                top_ids.append(new_id)
+        if len(top_ids) >= 5:
+            return results, top_ids[:10], usage
+    return results, pick_top(client, ccfg["model"], results, usage), usage

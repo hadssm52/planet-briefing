@@ -1,12 +1,14 @@
 # Planet Briefing
 
-A world news digest that builds itself. Every morning at 06:00 UTC it:
+A world news digest that builds itself. Every 30 minutes it:
 
 1. reads ~40 public news feeds from every continent,
 2. merges reports of the same story from different outlets,
 3. asks Claude (`claude-haiku-5-5`) to sort each story by region and topic and write 2–4 neutral bullet points,
 4. picks the 10 most significant stories of the day,
-5. publishes a fast, simple website on GitHub Pages, and saves the day to a 90-day archive.
+5. publishes a fast, simple website on GitHub Pages, and saves each day to a 90-day archive.
+
+Stories already summarised earlier in the day are reused, so updating every 30 minutes costs about the same as updating once a day.
 
 Once it's set up you don't need to do anything. With Claude a run costs about **1–2 US cents**.
 
@@ -133,7 +135,7 @@ That's all. There's nothing else to select.
 5. Your site is live at **`https://YOUR-USERNAME.github.io/planet-briefing/`**
    (the link is also shown on the finished run under *deploy*, and in Settings → Pages).
 
-From now on it runs by itself every day at 06:00 UTC. GitHub sometimes starts scheduled runs 5–30 minutes late, which is normal.
+From now on it runs by itself every 30 minutes. GitHub sometimes starts scheduled runs late, or skips one when it's very busy, which is normal.
 
 ---
 
@@ -161,7 +163,7 @@ Edit `config.yaml`:
 - `site: title:` sets the site name.
 - `regions:` / `topics:` set the categories. If you rename one, keep the `slug` simple (lowercase, no spaces).
 
-To change the time of day, edit the `cron: "0 6 * * *"` line in `.github/workflows/daily.yml`. The first number is minutes, the second is the hour in UTC.
+To change how often it runs, edit the `cron: "*/30 * * * *"` line in `.github/workflows/daily.yml`. For example `"0 * * * *"` is every hour and `"0 6 * * *"` is once a day at 06:00 UTC.
 
 ---
 

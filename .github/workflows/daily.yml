@@ -1,14 +1,14 @@
 # Planet Briefing — daily build and deploy.
 #
-# Runs every day at 06:00 UTC, and whenever you press "Run workflow" on the
-# Actions tab. If any step fails, nothing is deployed and yesterday's site
-# stays online.
+# Runs every 30 minutes, and whenever you press "Run workflow" on the
+# Actions tab. If any step fails, nothing is deployed and the previous
+# version of the site stays online.
 
 name: Daily briefing
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # 06:00 UTC daily (GitHub may start it a few minutes late)
+    - cron: "*/30 * * * *"   # every 30 minutes (GitHub may start runs a few minutes late)
   workflow_dispatch:       # the "Run workflow" button
 
 permissions:
@@ -59,7 +59,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No archive changes to commit."
           else
-            git commit -m "Daily briefing $(date -u +%Y-%m-%d)"
+            git commit -m "Update briefing $(date -u '+%Y-%m-%d %H:%M') UTC"
             git pull --rebase
             git push
           fi

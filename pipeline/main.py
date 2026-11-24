@@ -58,15 +58,18 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
     print(f"  {len(items)} items → {len(recent)} recent → {len(stories)} unique stories "
           f"→ {len(chosen)} selected ({multi} covered by 2+ outlets)")
 
-    # 3. Summarise
+    # 3. Summarise (reusing anything an earlier run today already did)
+    saved = archive.load_digests(ARCHIVE_DIR, today, pcfg["archive_days"])
+    earlier_today = next((d for d in saved if d["date"] == today.isoformat()), None)
     results = None
     if use_claude:
-        est_in, est_out = summarise.estimate_tokens(chosen, ccfg["batch_size"])
+        _, todo = summarise.reuse_previous(chosen, earlier_today)
+        est_in, est_out = summarise.estimate_tokens(todo, ccfg["batch_size"])
         est_cost = summarise.cost_of(est_in, est_out, ccfg["input_price_per_mtok"], ccfg["output_price_per_mtok"])
         print(f"\n[3/5] Summarising with {ccfg['model']}"
               f" — estimate: ~{est_in:,} input + ~{est_out:,} output tokens ≈ ${est_cost:.4f}")
         try:
-            results, top_ids, usage = summarise.summarise(chosen, cfg)
+            results, top_ids, usage = summarise.summarise(chosen, cfg, previous=earlier_today)
             print(f"  actual usage: {usage.report()}")
         except summarise.FatalAPIError as exc:
             if mode == "claude":
@@ -92,8 +95,8 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
         "cost_usd": round(usage.cost(), 5),
     }
     digest = archive.make_digest(today, now.isoformat(timespec="seconds"), results, top_ids, stats)
-    saved = [d for d in archive.load_digests(ARCHIVE_DIR, today, pcfg["archive_days"]) if d["date"] != digest["date"]]
-    pages = site.build_site([digest] + saved, cfg, SITE_DIR)
+    older = [d for d in saved if d["date"] != digest["date"]]
+    pages = site.build_site([digest] + older, cfg, SITE_DIR)
     check_site(SITE_DIR, len(top_ids))
     print(f"  {len(pages)} pages written to {SITE_DIR.relative_to(ROOT)}/")
 
@@ -114,8 +117,7 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
         print(f"  Skipped feeds ({len(failures)}):")
         for f in failures:
             print(f"    - {f}")
-    print(f"  Cost this run: ${usage.cost():.4f}"
-          f" (≈ ${usage.cost() * 30:.2f} per month at this rate)")
+    print(f"  Cost this run: ${usage.cost():.4f}")
 
 
 def check_site(site_dir: Path, top_count: int) -> None:

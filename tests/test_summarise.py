@@ -92,3 +92,28 @@ def test_bad_api_key_stops_immediately():
     else:
         raise AssertionError("expected FatalAPIError")
     assert client.calls == 1  # no pointless retries
+
+
+def test_earlier_summaries_are_reused_and_only_new_stories_sent():
+    old = story(1, title="Headline 1")
+    previous = {"date": "2026-11-24", "top_ids": [1], "stories": [
+        {**old, "headline": "Old summary", "bullets": ["Done earlier."], "region": "Europe",
+         "topic": "Politics", "significance": 7}]}
+    stories = [story(1, title="Headline 1"), story(2, title="Headline 2")]
+    client = FakeClient()
+    results, top, usage = summarise.summarise(stories, CFG, client=client, previous=previous)
+    by_id = {r["id"]: r for r in results}
+    assert by_id[1]["bullets"] == ["Done earlier."]      # reused, not re-sent
+    assert by_id[2]["headline"] == "Story 2"              # newly summarised
+    assert client.calls == 2                              # 1 batch (story 2 only) + top stories
+
+
+def test_no_new_stories_means_no_api_calls():
+    many = [story(n, title=f"H{n}") for n in range(1, 7)]
+    previous = {"date": "2026-11-24", "top_ids": [1, 2, 3, 4, 5, 6], "stories": [
+        {**s, "headline": "Old", "bullets": ["Done."], "region": "Europe", "topic": "Politics",
+         "significance": 5} for s in many]}
+    client = FakeClient()
+    results, top, usage = summarise.summarise(many, CFG, client=client, previous=previous)
+    assert client.calls == 0
+    assert top == [1, 2, 3, 4, 5, 6]
