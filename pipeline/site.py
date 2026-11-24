@@ -120,11 +120,15 @@ def build_site(digests: list[dict], cfg: dict, out_dir: Path) -> list[Path]:
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True)
     shutil.copy(STATIC / "style.css", out_dir / "style.css")
+    shutil.copy(STATIC / "og.png", out_dir / "og.png")
+    site_url = cfg["site"].get("url", "").rstrip("/") + "/"
     written: list[Path] = []
 
     def render(template: str, rel_path: str, **ctx) -> None:
         depth = rel_path.count("/")
-        html = env.get_template(template).render(root="../" * depth, **common, **ctx)
+        page_url = site_url + (rel_path[: -len("index.html")] if rel_path.endswith("index.html") else rel_path)
+        html = env.get_template(template).render(root="../" * depth, page_url=page_url,
+                                                 site_url=site_url, **common, **ctx)
         path = out_dir / rel_path
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(html, encoding="utf-8")
@@ -154,4 +158,19 @@ def build_site(digests: list[dict], cfg: dict, out_dir: Path) -> list[Path]:
         render("day.html", f"archive/{d['date']}/index.html", page="archive", digest=d,
                top=top_stories(d), world=group_nested(d["stories"], region_names, topic_names))
 
+    write_sitemap(out_dir, site_url, written, latest["generated_at"][:10])
     return written
+
+
+def write_sitemap(out_dir: Path, site_url: str, pages: list[Path], lastmod: str) -> None:
+    """sitemap.xml lists every page so search engines can find them."""
+    urls = []
+    for path in pages:
+        rel = path.relative_to(out_dir).as_posix()
+        rel = rel[: -len("index.html")] if rel.endswith("index.html") else rel
+        urls.append(f"  <url><loc>{site_url}{rel}</loc><lastmod>{lastmod}</lastmod></url>")
+    (out_dir / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + "\n</urlset>\n",
+        encoding="utf-8",
+    )

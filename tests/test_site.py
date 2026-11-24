@@ -95,3 +95,17 @@ def test_cards_show_images_placeholders_and_read_button(tmp_path):
     assert 'class="pic t-economics' in home  # coloured placeholder for a story without a photo
     assert "Read the full story at BBC" in home
     assert "New here? How to use Planet Briefing" in home
+
+
+def test_link_previews_and_sitemap(tmp_path):
+    site.build_site([make_digest()], CFG, tmp_path)
+    home = (tmp_path / "index.html").read_text()
+    url = CFG["site"]["url"]
+    assert f'<meta property="og:image" content="{url}og.png">' in home
+    assert f'<link rel="canonical" href="{url}">' in home
+    europe = (tmp_path / "region" / "europe" / "index.html").read_text()
+    assert f'<meta property="og:url" content="{url}region/europe/">' in europe
+    assert '<meta property="og:title" content="Europe — Planet Briefing">' in europe
+    assert (tmp_path / "og.png").exists()
+    sitemap = (tmp_path / "sitemap.xml").read_text()
+    assert f"<loc>{url}region/europe/</loc>" in sitemap
