@@ -23,8 +23,13 @@ site:
 summariser: "auto"
 
 pipeline:
-  # Only keep feed items published within this many hours of the run.
+  # Prefer feed items published within this many hours of the run…
   max_age_hours: 30
+  # …but reach back up to this many hours when a continent/topic is thin.
+  backfill_hours: 72
+  # Every continent shows at least this many stories in each topic (when the
+  # feeds have them). "Global" is not counted as a continent.
+  min_per_topic: 2
   # Maximum number of stories (after merging duplicates) sent to Claude each day.
   max_stories: 150
   # If fewer than this many stories are summarised, the run fails and

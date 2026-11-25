@@ -132,3 +132,26 @@ def test_feed_image_is_picked_largest_and_https():
     items = collect.parse_feed(xml, FEED)
     assert items[0]["image"] == "https://img.example/big.jpg"
     assert items[1]["image"] is None
+
+
+def test_selection_guarantees_stories_per_continent_and_topic():
+    def st(title, region, topic, published, n_sources=1, feed="f"):
+        return {"title": title, "description": "", "published": published, "pre_region": region,
+                "pre_topic": topic, "_feeds": {feed}, "_tokens": [],
+                "sources": [{"name": f"S{i}", "link": f"https://s{i}.example/{title}", "title": title}
+                            for i in range(n_sources)]}
+    fresh, old = "2026-11-24T05:00:00+00:00", "2026-11-22T10:00:00+00:00"
+    stories = [st(f"Big politics {i}", "Europe", "Politics", fresh, n_sources=5) for i in range(10)]
+    stories += [st("Gulf derby", "Middle East", "Sport", fresh),
+                st("Old Gulf race", "Middle East", "Sport", old),   # only used because the cell is thin
+                st("Older Gulf match", "Middle East", "Sport", "2026-11-21T10:00:00+00:00"),
+                st("Fresh Kenya art show", "Africa", "Culture", fresh)]
+    cells = [("Middle East", "Sport"), ("Africa", "Culture"), ("Europe", "Politics")]
+    chosen = collect.select_stories(stories, limit=6, cells=cells, per_cell=2,
+                                    fresh_after="2026-11-23T23:00:00+00:00")
+    titles = [c["title"] for c in chosen]
+    assert "Gulf derby" in titles and "Old Gulf race" in titles      # 2 for the thin cell, newest first
+    assert "Older Gulf match" not in titles
+    assert "Fresh Kenya art show" in titles                           # all the cell had
+    assert sum(t.startswith("Big politics") for t in titles) >= 2
+    assert all("_feeds" not in c for c in chosen)

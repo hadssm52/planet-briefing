@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -51,12 +51,17 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
 
     # 2. Dedupe and choose
     print("\n[2/5] Merging duplicate stories…")
-    recent = collect.filter_recent(items, pcfg["max_age_hours"], now)
-    stories = collect.dedupe(recent, pcfg["dedupe_threshold"])
-    chosen = collect.select_stories(stories, pcfg["max_stories"])
+    window = max(pcfg["max_age_hours"], pcfg.get("backfill_hours", 0))
+    recent = collect.filter_recent(items, window, now)
+    stories = classify.preclassify(collect.dedupe(recent, pcfg["dedupe_threshold"]), cfg)
+    cells = continent_topic_cells(cfg)
+    per_cell = pcfg.get("min_per_topic", 0)
+    fresh_after = (now - timedelta(hours=pcfg["max_age_hours"])).isoformat(timespec="seconds")
+    chosen = collect.select_stories(stories, pcfg["max_stories"], cells, per_cell, fresh_after)
     multi = sum(1 for s in chosen if len(s["sources"]) > 1)
     print(f"  {len(items)} items → {len(recent)} recent → {len(stories)} unique stories "
           f"→ {len(chosen)} selected ({multi} covered by 2+ outlets)")
+    report_gaps(chosen, cells, per_cell, "pre_region", "pre_topic")
 
     # 3. Summarise (reusing anything an earlier run today already did)
     saved = archive.load_digests(ARCHIVE_DIR, today, pcfg["archive_days"])
@@ -78,6 +83,8 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
     if results is None:
         print("\n[3/5] Sorting stories (free mode: keyword rules and the outlets' own summaries, $0)")
         results, top_ids, usage = classify.free_summarise(chosen, cfg)
+    if use_claude:
+        report_gaps(results, cells, per_cell, "region", "topic")
     if len(results) < pcfg["min_stories"]:
         raise PipelineError(
             f"only {len(results)} stories summarised (minimum is {pcfg['min_stories']}) — not publishing"
@@ -118,6 +125,26 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
         for f in failures:
             print(f"    - {f}")
     print(f"  Cost this run: ${usage.cost():.4f}")
+
+
+def continent_topic_cells(cfg: dict) -> list[tuple]:
+    """Every (continent, topic) pair that should have stories. Global is excluded."""
+    return [(r["name"], t["name"]) for r in cfg["regions"] if r["slug"] != "global" for t in cfg["topics"]]
+
+
+def report_gaps(stories: list[dict], cells: list[tuple], per_cell: int, rkey: str, tkey: str) -> None:
+    """Print any continent/topic with fewer than `per_cell` stories."""
+    if not per_cell:
+        return
+    counts: dict[tuple, int] = {}
+    for s in stories:
+        key = (s.get(rkey), s.get(tkey))
+        counts[key] = counts.get(key, 0) + 1
+    gaps = [f"{r} / {t} ({counts.get((r, t), 0)})" for r, t in cells if counts.get((r, t), 0) < per_cell]
+    if gaps:
+        print(f"  ! fewer than {per_cell} stories (the feeds had no more): " + ", ".join(gaps))
+    else:
+        print(f"  every continent has at least {per_cell} stories in every topic")
 
 
 def check_site(site_dir: Path, top_count: int) -> None:

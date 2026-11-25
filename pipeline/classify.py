@@ -21,6 +21,8 @@ REGION_WORDS = {
         ireland irish dublin greece greek athens hungary hungarian orban czech prague romania romanian
         bulgaria bulgarian serbia serbian croatia bosnia kosovo albania albanian moldova belarus
         lithuania latvia estonia baltic iceland slovakia slovenia starmer sarkozy nato
+        premier_league la_liga serie_a bundesliga ligue_1 manchester man_city man_united liverpool
+        arsenal chelsea tottenham real_madrid barcelona atletico bayern juventus psg wimbledon
     """,
     "north-america": """
         america american americans washington white_house trump congress senate pentagon new_york
@@ -32,7 +34,9 @@ REGION_WORDS = {
         milei buenos_aires colombia colombian bogota venezuela venezuelan maduro caracas chile chilean
         santiago peru peruvian lima ecuador bolivia paraguay uruguay cuba cuban havana haiti dominican
         guatemala honduras el_salvador nicaragua costa_rica panama caribbean rio sao_paulo puerto_rico
-        jamaica amazon
+        jamaica amazon copa_libertadores copa_sudamericana copa_america conmebol boca_juniors
+        river_plate flamengo palmeiras corinthians santos fluminense botafogo gremio america_mg
+        club_america chivas tigres monterrey liga_mx
     """,
     "asia-pacific": """
         asia asian asean china chinese beijing shanghai xi_jinping hong_kong taiwan taipei japan japanese
@@ -191,6 +195,19 @@ def excerpt(description: str, limit: int = 320) -> str:
     return text
 
 
+def preclassify(stories: list[dict], cfg: dict) -> list[dict]:
+    """Give every candidate story a keyword-based "pre_region"/"pre_topic",
+    so story selection can guarantee coverage of every continent and topic."""
+    region_names = {r["slug"]: r["name"] for r in cfg["regions"]}
+    topic_names = {t["slug"]: t["name"] for t in cfg["topics"]}
+    name_to_slug = {v: k for k, v in region_names.items()}
+    for s in stories:
+        probe = {**s, "region_hint_slug": name_to_slug.get(s.get("region_hint"))}
+        s["pre_region"] = classify_region(probe, region_names)
+        s["pre_topic"] = classify_topic(probe, topic_names)
+    return stories
+
+
 def free_summarise(stories: list[dict], cfg: dict):
     """Free alternative to summarise.summarise: no API calls, no cost.
     Returns (stories, top story ids, usage) in the same shape."""
@@ -204,8 +221,8 @@ def free_summarise(stories: list[dict], cfg: dict):
     for s in stories:
         out = dict(s)
         out["region_hint_slug"] = name_to_slug.get(s.get("region_hint"))
-        out["region"] = classify_region(out, region_names)
-        out["topic"] = classify_topic(out, topic_names)
+        out["region"] = s.get("pre_region") or classify_region(out, region_names)
+        out["topic"] = s.get("pre_topic") or classify_topic(out, topic_names)
         out["headline"] = s["title"]
         out["bullets"] = []
         text = excerpt(s.get("description", ""))

@@ -246,22 +246,53 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
     return stories
 
 
-def select_stories(stories: list[dict], limit: int) -> list[dict]:
-    """Pick up to `limit` stories: everything covered by 2+ outlets first,
-    then the rest taken in turn from each feed so no region is crowded out."""
-    multi = [s for s in stories if len(s["sources"]) >= 2]
-    multi.sort(key=lambda s: (len(s["sources"]), s["published"] or ""), reverse=True)
-    chosen = multi[:limit]
+def select_stories(stories: list[dict], limit: int, cells: tuple = (), per_cell: int = 0,
+                   fresh_after: Optional[str] = None) -> list[dict]:
+    """Pick about `limit` stories.
+
+    1. For every (region, topic) in `cells`, the best `per_cell` stories
+       (using each story's "pre_region"/"pre_topic"), preferring ones
+       published after `fresh_after` and reaching back further only when a
+       combination is thin.
+    2. Then fresh stories covered by 2+ outlets.
+    3. Then the rest, taken in turn from each feed so no region is crowded out.
+    """
+    def is_fresh(s):
+        return fresh_after is None or s["published"] is None or s["published"] >= fresh_after
+
+    def rank(s):
+        return (len(s["sources"]), s["published"] or "")
+
+    chosen: list[dict] = []
+    taken: set[int] = set()
+
+    def take(s):
+        chosen.append(s)
+        taken.add(id(s))
+
+    by_cell: dict[tuple, list[dict]] = defaultdict(list)
+    for s in stories:
+        by_cell[(s.get("pre_region"), s.get("pre_topic"))].append(s)
+    for cell in cells:
+        pool = sorted(by_cell.get(cell, []), key=lambda s: (is_fresh(s),) + rank(s), reverse=True)
+        for s in pool[:per_cell]:
+            take(s)
+
+    fresh = [s for s in stories if id(s) not in taken and is_fresh(s)]
+    for s in sorted((s for s in fresh if len(s["sources"]) >= 2), key=rank, reverse=True):
+        if len(chosen) >= limit:
+            break
+        take(s)
 
     queues: dict[str, list[dict]] = defaultdict(list)
-    for s in stories:
-        if len(s["sources"]) < 2:
+    for s in fresh:
+        if id(s) not in taken:
             queues[sorted(s["_feeds"])[0]].append(s)
     queue_list = list(queues.values())
     while len(chosen) < limit and any(queue_list):
         for q in queue_list:
             if q and len(chosen) < limit:
-                chosen.append(q.pop(0))
+                take(q.pop(0))
 
     result = []
     for n, s in enumerate(chosen, start=1):

@@ -172,6 +172,7 @@ Edit `config.yaml`:
 
 - `archive_days: 90` sets how many days of archive to keep.
 - `max_stories: 150` sets how many stories a day. More stories means a slightly higher cost.
+- `min_per_topic: 2` makes every continent show at least this many stories in each topic. If a combination is thin, it reaches back up to `backfill_hours` (72) for older stories. The run log lists any combination the feeds couldn't fill; adding a feed for that region or topic in `feeds.yaml` (with `region:` and `topic:` lines) fixes it.
 - `site: title:` sets the site name.
 - `regions:` / `topics:` set the categories. If you rename one, keep the `slug` simple (lowercase, no spaces).
 

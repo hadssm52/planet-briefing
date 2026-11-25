@@ -17,6 +17,7 @@ For each story you receive (a headline and a short description from one or more 
 - headline: a short, neutral headline (max 12 words) in your own words.
 - bullets: 2 to 4 short bullet points (max 25 words each) stating the key facts.
 - why_it_matters: one sentence (max 25 words) for a secondary-school or university student explaining the background or why the story matters. Use only general knowledge that is uncontroversial; no opinions.
+Each story may include a "suggested" region / topic from simple keyword rules. Keep it unless the story clearly belongs elsewhere.
 - significance: 1-10, how important the story is to a general international reader (10 = major world event, 1 = minor or local interest).
 
 Rules for the writing:
@@ -115,12 +116,15 @@ def estimate_tokens(stories: list[dict], batch_size: int) -> tuple[int, int]:
 
 
 def story_input(story: dict) -> dict:
-    return {
+    data = {
         "id": story["id"],
         "headline": story["title"],
         "description": story["description"],
         "outlets": [s["name"] for s in story["sources"]],
     }
+    if story.get("pre_region") and story.get("pre_topic"):
+        data["suggested"] = f"{story['pre_region']} / {story['pre_topic']}"
+    return data
 
 
 # ---------------------------------------------------------------- checks
