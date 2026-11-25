@@ -151,18 +151,16 @@ Keep Cloudflare's **SSL/TLS → encryption mode on "Full"** (not "Flexible", whi
 The old `hadssm52.github.io/planet-briefing` link redirects to it automatically.
 If you ever change the address, update `url:` in `config.yaml` and the custom domain in **Settings → Pages**.
 
-## The backup timer (Cloudflare)
+## How it updates every 30 minutes
 
-GitHub's own schedule often skips runs for new projects, so a small free Cloudflare Worker called
-**planet-briefing-timer** presses GitHub's "Run workflow" button at :07 and :37 past every hour.
-Its code is in `timer/worker.js`.
+GitHub's own schedule often skips runs for new projects, so the **Update timer** workflow
+(`.github/workflows/timer.yml`) does the timing: it starts the site update, waits 30 minutes,
+then starts itself again. It needs no keys or extra accounts.
 
-- See it at dash.cloudflare.com → **Workers & Pages → planet-briefing-timer**.
-- It uses a secret called `GITHUB_TOKEN`: a fine-grained GitHub token limited to this repository
-  with **Actions: Read and write**. **The token expires after a year.** When it does, the site stops
-  updating: create a new token (GitHub → Settings → Developer settings → Fine-grained tokens) and
-  replace the secret in the Worker's **Settings → Variables and Secrets**.
-- If the Worker ever fails, its **Logs** tab shows GitHub's reason.
+- **It stops?** Actions tab → **Update timer** → **Run workflow** restarts it. It also restarts
+  itself every 6 hours if the chain ever breaks.
+- **Want to pause updates?** Actions tab → **Update timer** → **⋯** → **Disable workflow**.
+- `timer/worker.js` is an optional alternative timer for Cloudflare Workers. It isn't needed.
 
 ## Changing the news sources
 

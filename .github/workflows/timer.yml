@@ -1,0 +1,44 @@
+# Planet Briefing — update timer.
+#
+# GitHub's own schedule (in daily.yml) often doesn't fire for this project,
+# so this workflow keeps the site updating every 30 minutes by itself:
+#   start the update → wait 30 minutes → start this timer again → …
+# It uses GitHub's built-in token: starting workflows this way is allowed,
+# so no extra keys or accounts are needed.
+#
+# To restart it by hand: Actions tab → "Update timer" → Run workflow.
+# To stop it: Actions tab → "Update timer" → ⋯ → Disable workflow.
+
+name: Update timer
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"   # restarts the chain if it ever breaks
+
+permissions:
+  actions: write   # to start workflows
+
+# Only one timer runs at a time; extra copies that queue up are cancelled,
+# so the chain can never multiply.
+concurrency:
+  group: update-timer
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Start the site update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run daily.yml --repo "${{ github.repository }}" --ref main
+
+      - name: Wait 30 minutes
+        run: sleep 1800
+
+      - name: Start the next tick
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run timer.yml --repo "${{ github.repository }}" --ref main
