@@ -8,18 +8,27 @@
 </div>
 {% endmacro %}
 
-{# A full story card. #}
+{# Short summary line for compact cards. #}
+{% macro summary(s) -%}
+{% if s.why_it_matters %}{{ s.why_it_matters }}{% elif s.bullets %}{{ s.bullets[0] }}{% elif s.excerpt %}{{ s.excerpt.text }}{% endif %}
+{%- endmacro %}
+
+{# Time and labels under a headline. #}
+{% macro meta(s, root, region_slug, topic_slug, today, show_region=true, show_topic=true) %}
+<p class="meta">
+  {% if s.published %}<span>{{ s.published | pubtime(today) }}</span>{% endif %}
+  {% if show_topic %}<a class="label t-{{ topic_slug[s.topic] }}" href="{{ root }}topic/{{ topic_slug[s.topic] }}/index.html">{{ s.topic }}</a>{% endif %}
+  {% if show_region %}<a class="label label-region" href="{{ root }}region/{{ region_slug[s.region] }}/index.html">{{ s.region }}</a>{% endif %}
+</p>
+{% endmacro %}
+
+{# A full story: picture, headline, summary, sources. #}
 {% macro story(s, root, region_slug, topic_slug, topic_icons, show_images, today,
                show_region=true, show_topic=true, rank=none, feature=false) %}
 <article class="story{% if feature %} feature{% endif %}" id="s{{ s.id }}">
-  {{ picture(s, topic_slug, topic_icons, show_images, "pic-wide") }}
+  <a class="pic-link" href="{{ s.sources[0].link }}" rel="noopener" target="_blank" tabindex="-1">{{ picture(s, topic_slug, topic_icons, show_images, "pic-wide") }}</a>
   <div class="story-body">
-    <p class="tags">
-      {% if rank %}<span class="rank" title="Top story number {{ rank }}">{{ rank }}</span>{% endif %}
-      {% if show_topic %}<a class="tag t-{{ topic_slug[s.topic] }}" href="{{ root }}topic/{{ topic_slug[s.topic] }}/index.html">{{ s.topic }}</a>{% endif %}
-      {% if show_region %}<a class="tag tag-region" href="{{ root }}region/{{ region_slug[s.region] }}/index.html">{{ s.region }}</a>{% endif %}
-    </p>
-    <h4>{{ s.headline }}</h4>
+    <h4><a href="{{ s.sources[0].link }}" rel="noopener" target="_blank">{{ s.headline }}</a></h4>
     {% if s.why_it_matters %}
     <p class="why"><strong>Why it matters:</strong> {{ s.why_it_matters }}</p>
     {% endif %}
@@ -30,12 +39,9 @@
     {% elif s.excerpt %}
     <blockquote class="excerpt">{{ s.excerpt.text }} <cite>— {{ s.excerpt.source }}</cite></blockquote>
     {% endif %}
-    <p class="meta">
-      {% if s.published %}<span>🕒 {{ s.published | pubtime(today) }}</span>{% endif %}
-      <span title="How many news outlets reported this story">📰 {{ s.sources | length }} {% if s.sources | length == 1 %}outlet{% else %}outlets{% endif %}</span>
-    </p>
+    {{ meta(s, root, region_slug, topic_slug, today, show_region, show_topic) }}
     <p class="sources">
-      <a class="read" href="{{ s.sources[0].link }}" rel="noopener" target="_blank">Read the full story at {{ s.sources[0].name }} →</a>
+      <a class="read" href="{{ s.sources[0].link }}" rel="noopener" target="_blank">Read the full story at {{ s.sources[0].name }}</a>
       {% if s.sources | length > 1 %}
       <span class="also">Also covered by:
         {% for src in s.sources[1:] %}<a href="{{ src.link }}" rel="noopener" target="_blank">{{ src.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
@@ -46,47 +52,65 @@
 </article>
 {% endmacro %}
 
-{# A small row: thumbnail + headline, linking to the full card on the region page. #}
-{% macro row(s, href, topic_slug, topic_icons, show_images) %}
-<li class="row">
+{# A compact card: picture, headline and one line of summary. #}
+{% macro card(s, root, region_slug, topic_slug, topic_icons, show_images, today, image=true, text=true) %}
+<article class="card" id="s{{ s.id }}">
+  <a class="card-link" href="{{ s.sources[0].link }}" rel="noopener" target="_blank">
+    {% if image %}{{ picture(s, topic_slug, topic_icons, show_images, "pic-wide") }}{% endif %}
+    <h3 class="card-title">{{ s.headline }}</h3>
+  </a>
+  {% if text %}{% set sm = summary(s) %}{% if sm %}<p class="card-text">{{ sm }}</p>{% endif %}{% endif %}
+  {{ meta(s, root, region_slug, topic_slug, today) }}
+</article>
+{% endmacro %}
+
+{# A row in a continent block, linking to the full story on the region page.
+   The first row in each topic shows a picture. #}
+{% macro row(s, href, topic_slug, topic_icons, show_images, lead=false) %}
+<li class="row{% if lead %} row-lead{% endif %}">
   <a href="{{ href }}">
-    {{ picture(s, topic_slug, topic_icons, show_images, "pic-thumb") }}
-    <span class="row-text">
-      <span class="row-title">{{ s.headline }}</span>
-      <span class="row-meta">{% if s.sources | length > 1 %}📰 {{ s.sources | length }} outlets{% else %}{{ s.sources[0].name }}{% endif %}</span>
-    </span>
+    {% if lead %}{{ picture(s, topic_slug, topic_icons, show_images, "pic-wide") }}{% endif %}
+    <span class="row-title">{{ s.headline }}</span>
+    <span class="row-meta">{% if s.sources | length > 1 %}{{ s.sources | length }} outlets{% else %}{{ s.sources[0].name }}{% endif %}</span>
   </a>
 </li>
 {% endmacro %}
 
-{# One continent with a subheading for each topic. `full` shows whole story
+{# One continent, with a column for each topic. `full` shows whole story
    cards; otherwise compact rows linking to the region page. #}
 {% macro region_block(region, topics_map, root, region_slug, topic_slug, region_icons, topic_icons,
                       show_images, today, full=false, preview=3) %}
 {% set rslug = region_slug[region] %}
 <section class="region" id="{{ rslug }}" aria-labelledby="h-{{ rslug }}">
   <div class="region-head">
-    <h2 id="h-{{ rslug }}"><span aria-hidden="true">{{ region_icons.get(rslug, "🌐") }}</span> {{ region }}</h2>
-    {% if not full %}<a class="button" href="{{ root }}region/{{ rslug }}/index.html">All {{ region }} stories →</a>{% endif %}
+    <h2 id="h-{{ rslug }}"><a href="{{ root }}region/{{ rslug }}/index.html">{{ region }}</a></h2>
+    {% if not full %}<a class="see-all" href="{{ root }}region/{{ rslug }}/index.html">All {{ region }} stories ›</a>{% endif %}
   </div>
+  {% if full %}
   {% for topic, items in topics_map.items() %}
   {% set tslug = topic_slug[topic] %}
   <section class="topic" id="{{ rslug }}-{{ tslug }}" aria-labelledby="h-{{ rslug }}-{{ tslug }}">
-    <h3 class="t-{{ tslug }}" id="h-{{ rslug }}-{{ tslug }}"><span class="dot t-{{ tslug }}" aria-hidden="true"></span>{{ topic }} <span class="count">{{ items | length }}</span></h3>
-    {% if full %}
+    <h3 class="topic-label t-{{ tslug }}" id="h-{{ rslug }}-{{ tslug }}">{{ topic }}</h3>
     <div class="grid">
       {% for s in items %}{{ story(s, root, region_slug, topic_slug, topic_icons, show_images, today, show_region=false, show_topic=false) }}{% endfor %}
     </div>
-    {% else %}
-    <ul class="rows">
-      {% for s in items[:preview] %}{{ row(s, root ~ "region/" ~ rslug ~ "/index.html#s" ~ s.id, topic_slug, topic_icons, show_images) }}{% endfor %}
-    </ul>
-    {% if items|length > preview %}
-    <p class="more"><a href="{{ root }}region/{{ rslug }}/index.html#{{ tslug }}">+ {{ items|length - preview }} more {{ topic }} stories</a></p>
-    {% endif %}
-    {% endif %}
   </section>
   {% endfor %}
-  <p class="to-top"><a href="#main">↑ Back to top</a></p>
+  {% else %}
+  <div class="topic-cols">
+    {% for topic, items in topics_map.items() %}
+    {% set tslug = topic_slug[topic] %}
+    <section class="topic t-{{ tslug }}" id="{{ rslug }}-{{ tslug }}" aria-labelledby="h-{{ rslug }}-{{ tslug }}">
+      <h3 class="topic-label t-{{ tslug }}" id="h-{{ rslug }}-{{ tslug }}">{{ topic }} <span class="count">{{ items | length }}</span></h3>
+      <ul class="rows">
+        {% for s in items[:preview] %}{{ row(s, root ~ "region/" ~ rslug ~ "/index.html#s" ~ s.id, topic_slug, topic_icons, show_images, lead=loop.first) }}{% endfor %}
+      </ul>
+      {% if items|length > preview %}
+      <p class="more"><a href="{{ root }}region/{{ rslug }}/index.html#{{ tslug }}">{{ items|length - preview }} more {{ topic }} stories ›</a></p>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>
 {% endmacro %}

@@ -1,51 +1,44 @@
 {% extends "base.html" %}
-{% from "_macros.html" import story, region_block %}
+{% from "_macros.html" import story, card, region_block %}
 {% block content %}
-<section class="hero">
-  <p class="eyebrow">Today's world news</p>
-  <h1>{{ digest.date | longdate }}</h1>
-  <p class="hero-stats">
-    <span><strong>{{ digest.stories | length }}</strong> stories</span>
-    <span><strong>{{ digest.stats.feeds_ok }}</strong> news sources</span>
-    <span><strong>{{ world | length }}</strong> regions</span>
-  </p>
+<div class="page-head">
+  <h1 class="dateline">{{ digest.date | longdate }}</h1>
+  <p class="page-stats">{{ digest.stories | length }} stories from {{ digest.stats.feeds_ok }} news sources across {{ world | length }} regions</p>
   <details class="howto">
     <summary>New here? How to use Planet Briefing</summary>
     <ol>
       <li><strong>Start with the Top stories</strong> below. They're today's biggest news, chosen by how many outlets around the world reported them.</li>
-      <li><strong>Pick a continent</strong> to see its news split into topics like Politics, Economics and Environment.</li>
-      <li><strong>Or pick a topic</strong> from the coloured links at the top to see it across every continent.</li>
-      <li><strong>Click "Read the full story"</strong> on any card for the complete article from the original news outlet.</li>
+      <li><strong>Pick a region</strong> from the menu to see its news split into topics like Politics, Economics and Environment.</li>
+      <li><strong>Or pick a topic</strong> from the coloured links at the top to see it across every region.</li>
+      <li><strong>Click a headline</strong> to read the complete article from the original news outlet.</li>
       <li>Want an older day? Every day of the last few months is kept in the <a href="{{ root }}archive/index.html">Archive</a>.</li>
     </ol>
   </details>
-</section>
-
-<nav class="continents" aria-label="Jump to a continent">
-  {% for r in regions if r.name in world %}
-  <a class="continent" href="#{{ r.slug }}">
-    <span class="continent-icon" aria-hidden="true">{{ region_icons.get(r.slug, "🌐") }}</span>
-    <span class="continent-name">{{ r.name }}</span>
-    <span class="continent-count">{{ region_counts.get(r.name, 0) }} stories</span>
-  </a>
-  {% endfor %}
-</nav>
+</div>
 
 <section class="top" aria-labelledby="top-heading">
-  <h2 id="top-heading" class="section-title">⭐ Top stories today</h2>
+  <h2 id="top-heading" class="section-title">Top stories today</h2>
   {% if top %}
-  <div class="feature-wrap">
-    {{ story(top[0], root, region_slug, topic_slug, topic_icons, show_images, today, rank=1, feature=true) }}
+  <div class="top-grid">
+    <div class="top-lead">
+      {{ story(top[0], root, region_slug, topic_slug, topic_icons, show_images, today, rank=1, feature=true) }}
+    </div>
+    <div class="top-side">
+      {% for s in top[1:3] %}{{ card(s, root, region_slug, topic_slug, topic_icons, show_images, today) }}{% endfor %}
+    </div>
+    <div class="top-list">
+      {% for s in top[3:7] %}{{ card(s, root, region_slug, topic_slug, topic_icons, show_images, today, image=false, text=false) }}{% endfor %}
+    </div>
   </div>
-  <div class="grid">
-    {% for s in top[1:] %}
-    {{ story(s, root, region_slug, topic_slug, topic_icons, show_images, today, rank=loop.index + 1) }}
-    {% endfor %}
+  {% if top | length > 7 %}
+  <div class="cards">
+    {% for s in top[7:] %}{{ card(s, root, region_slug, topic_slug, topic_icons, show_images, today) }}{% endfor %}
   </div>
+  {% endif %}
   {% endif %}
 </section>
 
-<h2 class="section-title around">🗺️ Around the world</h2>
+<h2 class="section-title around">Around the world</h2>
 {% for region, topics_map in world.items() %}
 {{ region_block(region, topics_map, root, region_slug, topic_slug, region_icons, topic_icons, show_images, today) }}
 {% endfor %}

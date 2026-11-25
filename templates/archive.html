@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Archive — {{ site.title }}{% endblock %}
 {% block content %}
-<section class="hero hero-small">
+<div class="page-head">
   <p class="eyebrow">Archive</p>
-  <h1>📅 Past briefings</h1>
-  <p>Every day from the last {{ digests | length }} {% if digests | length == 1 %}day{% else %}days{% endif %}. Useful for projects that need news from a particular date.</p>
-</section>
+  <h1>Past briefings</h1>
+  <p class="page-stats">Every day from the last {{ digests | length }} {% if digests | length == 1 %}day{% else %}days{% endif %}. Useful for projects that need news from a particular date.</p>
+</div>
 <ul class="archive-list">
   {% for d in digests %}
   <li>

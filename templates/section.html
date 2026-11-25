@@ -3,25 +3,24 @@
 {% block title %}{{ title }} — {{ site.title }}{% endblock %}
 {% block content %}
 {% set slugs = topic_slug if kind == "region" else region_slug %}
-<section class="hero hero-small">
+<div class="page-head">
   <p class="eyebrow">{% if kind == "region" %}Region{% else %}Topic{% endif %}</p>
-  <h1>{% if kind == "region" %}{{ region_icons.get(region_slug[title], "🌐") }}{% else %}{{ topic_icons.get(topic_slug[title], "📰") }}{% endif %} {{ title }}</h1>
-  <p>{{ total }} {% if total == 1 %}story{% else %}stories{% endif %} · {{ digest.date | longdate }}</p>
-</section>
+  <h1{% if kind == "topic" %} class="t-{{ topic_slug[title] }} topic-h1"{% endif %}>{{ title }}</h1>
+  <p class="page-stats">{{ total }} {% if total == 1 %}story{% else %}stories{% endif %} · {{ digest.date | longdate }}</p>
+</div>
 
 {% if groups %}
 <nav class="jump" aria-label="On this page">
-  {% for name, items in groups.items() %}<a href="#{{ slugs[name] }}">{% if kind == "region" %}<span class="dot t-{{ slugs[name] }}" aria-hidden="true"></span>{% endif %}{{ name }} <span class="count">{{ items | length }}</span></a>{% endfor %}
+  {% for name, items in groups.items() %}<a href="#{{ slugs[name] }}"{% if kind == "region" %} class="t-{{ slugs[name] }}"{% endif %}>{{ name }} <span class="count">{{ items | length }}</span></a>{% endfor %}
 </nav>
 {% for name, items in groups.items() %}
 <section class="topic block" id="{{ slugs[name] }}" aria-labelledby="h-{{ slugs[name] }}">
-  <h2 id="h-{{ slugs[name] }}" class="section-title">{% if kind == "region" %}<span class="dot t-{{ slugs[name] }}" aria-hidden="true"></span>{% endif %}{{ name }}</h2>
+  <h2 id="h-{{ slugs[name] }}" class="section-title{% if kind == 'region' %} t-{{ slugs[name] }} accent{% endif %}">{{ name }}</h2>
   <div class="grid">
     {% for s in items %}
     {{ story(s, root, region_slug, topic_slug, topic_icons, show_images, today, show_region=(kind != "region"), show_topic=(kind != "topic")) }}
     {% endfor %}
   </div>
-  <p class="to-top"><a href="#main">↑ Back to top</a></p>
 </section>
 {% endfor %}
 {% else %}

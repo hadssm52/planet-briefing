@@ -121,6 +121,7 @@ def build_site(digests: list[dict], cfg: dict, out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True)
     shutil.copy(STATIC / "style.css", out_dir / "style.css")
     shutil.copy(STATIC / "og.png", out_dir / "og.png")
+    shutil.copy(STATIC / "logo.png", out_dir / "logo.png")
     site_url = cfg["site"].get("url", "").rstrip("/") + "/"
     written: list[Path] = []
 
