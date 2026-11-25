@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "generated_at": "2026-11-25T22:13:50+00:00",
+ "generated_at": "2026-11-25T22:44:04+00:00",
  "top_ids": [
   17,
   64,
@@ -10,13 +10,13 @@
   46,
   18,
   36,
-  70,
-  12
+  12,
+  1
  ],
  "stats": {
   "feeds_ok": 69,
   "feeds_failed": 1,
-  "items": 2987,
+  "items": 2993,
   "stories": 250,
   "input_tokens": 0,
   "output_tokens": 0,
@@ -25,6 +25,39 @@
  "stories": [
   {
    "id": 1,
+   "headline": "Gordon Ramsay to Host Revival of BBC’s ‘Top Gear’",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "The British car show “Top Gear” paused production three years ago and is returning with a new host in 2028, the BBC said.",
+    "source": "The New York Times"
+   },
+   "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25xp-top-gear/25xp-top-gear-mediumSquareAt3X-v2.jpg",
+   "region": "Europe",
+   "topic": "Politics",
+   "significance": 10,
+   "published": "2026-11-25T22:23:18+00:00",
+   "sources": [
+    {
+     "name": "The New York Times",
+     "link": "https://www.nytimes.com/2026/11/25/arts/television/gordon-ramsay-top-gear-revival.html"
+    },
+    {
+     "name": "CBC News",
+     "link": "https://www.cbc.ca/news/entertainment/top-gear-gordon-ramsay-host-9.7435980?cmp=rss"
+    },
+    {
+     "name": "RNZ",
+     "link": "https://www.rnz.co.nz/life/screens/tv/top-gear-to-return-in-2028-with-celebrity-chef-gordon-ramsay-as-lead-host"
+    },
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/europe/gordon-ramsay-named-new-host-of-bbcs-top-gear/4137860"
+    }
+   ]
+  },
+  {
+   "id": 2,
    "headline": "Unannounced strike by Eurostar staff halts Paris-London trains",
    "bullets": [],
    "why_it_matters": null,
@@ -49,31 +82,6 @@
     {
      "name": "Le Monde",
      "link": "https://www.lemonde.fr/en/france/article/2026/11/25/surprise-eurostar-strike-hits-paris-london-trains_6788047_7.html"
-    }
-   ]
-  },
-  {
-   "id": 2,
-   "headline": "Abrego Garcia Can ‘Breathe Freely’ After He Arrives in Spain",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Kilmar Abrego Garcia, the Salvadoran man deported to a notorious prison in El Salvador in what US officials called an “administrative error,” said he “can breathe freely” after arriving to Spain.",
-    "source": "Bloomberg"
-   },
-   "image": "https://img.lemde.fr/2026/11/24/90/0/4195/2097/644/322/60/0/e4f50f9_ftp-1-ce7ldujkuzss-ee1643ee158a46c98bc8b60aab07c0f3-0-a58b35130153473f99988f587da6a986.jpg",
-   "region": "Europe",
-   "topic": "Politics",
-   "significance": 6,
-   "published": "2026-11-25T19:29:28+00:00",
-   "sources": [
-    {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/articles/2026-11-25/abrego-garcia-can-breathe-freely-after-he-arrives-in-spain"
-    },
-    {
-     "name": "Le Monde",
-     "link": "https://www.lemonde.fr/en/international/article/2026/11/25/kilmar-abrego-garcia-who-fought-being-mistakenly-sent-to-el-salvador-is-self-deporting-to-spain_6787783_4.html"
     }
    ]
   },
@@ -320,30 +328,34 @@
   },
   {
    "id": 12,
-   "headline": "British show Top Gear revived with Gordon Ramsay as new host",
+   "headline": "Andy Taylor, guitarist of new wave icons Duran Duran, dies at 65",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Rev up those engines — the British show that sparked the now globally-successful Top Gear franchise is returning, with celebrity chef Gordon Ramsay at the wheel as its new main presenter.",
-    "source": "CBC News"
+    "text": "Andy Taylor, the original guitarist of the 1980s English new wave band Duran Duran, has died. He was 65.",
+    "source": "CNA"
    },
-   "image": "https://i.cbc.ca/ais/1ccb8543-6863-4a5d-a24c-1cf9b7ab831a,1795634936526/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1784%2C1003%29%3B",
+   "image": "https://dam.mediacorp.sg/image/upload/s--xL-h_fiY--/fl_relative,g_south_east,l_one-cms:core:watermark:ap_data-1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/Andy_Taylor_87765.jpg?itok=_n5Iavpc",
    "region": "Europe",
    "topic": "Culture",
-   "significance": 8,
-   "published": "2026-11-25T19:50:40+00:00",
+   "significance": 10,
+   "published": "2026-11-25T22:35:13+00:00",
    "sources": [
     {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/world/andy-taylor-guitarist-new-wave-icons-duran-duran-dies-65-6582916"
+    },
+    {
      "name": "CBC News",
-     "link": "https://www.cbc.ca/news/entertainment/top-gear-gordon-ramsay-host-9.7435980?cmp=rss"
+     "link": "https://www.cbc.ca/news/entertainment/duran-duran-guitarist-andy-taylor-dead-9.7436261?cmp=rss"
     },
     {
-     "name": "RNZ",
-     "link": "https://www.rnz.co.nz/life/screens/tv/top-gear-to-return-in-2028-with-celebrity-chef-gordon-ramsay-as-lead-host"
+     "name": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-26/duran-duran-andy-taylor-dies/107428492"
     },
     {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/europe/gordon-ramsay-named-new-host-of-bbcs-top-gear/4137860"
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/music/2026/nov/25/andy-taylor-duran-duran-guitarist-dead"
     }
    ]
   },
@@ -374,22 +386,22 @@
   },
   {
    "id": 14,
-   "headline": "Gordon stars in comfortable Barca win over Sabah",
+   "headline": "PSG held by Roma as in-form Malen scores again",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Anthony Gordon scores Barcelona's opening two goals as they ease past Sabah with a 4-1 win in the Champions League.",
+    "text": "Donyell Malen scores for the fourth Champions League game running as Roma ends Paris St-Germain's 100% start to the competition.",
     "source": "BBC Sport"
    },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ebd6/live/0a4713c0-e903-11f1-a094-5fdc692f3e33.jpg",
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/174b/live/89b8f780-e91d-11f1-a094-5fdc692f3e33.jpg",
    "region": "Europe",
    "topic": "Sport",
    "significance": 4,
-   "published": "2026-11-25T22:07:02+00:00",
+   "published": "2026-11-25T22:27:14+00:00",
    "sources": [
     {
      "name": "BBC Sport",
-     "link": "https://www.bbc.co.uk/sport/football/videos/c6z74ljxjv2xo?at_medium=RSS&at_campaign=rss"
+     "link": "https://www.bbc.co.uk/sport/football/videos/cwvg2832elr4o?at_medium=RSS&at_campaign=rss"
     }
    ]
   },
@@ -567,18 +579,22 @@
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Preparations to hold the iconic celebration - known for the massive balloons that float past the city's skyscrapers - had already begun on Wednesday.",
+    "text": "The was the first time ever that the iconic celebration - known for its massive balloons floating past the city's skyscrapers - was delayed because of storms.",
     "source": "BBC News"
    },
    "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c21b/live/11998ed0-e914-11f1-8383-53f283141713.jpg",
    "region": "North America",
    "topic": "Environment",
-   "significance": 8,
-   "published": "2026-11-25T21:57:32+00:00",
+   "significance": 10,
+   "published": "2026-11-25T22:38:19+00:00",
    "sources": [
     {
      "name": "BBC News",
      "link": "https://www.bbc.co.uk/news/articles/cwkgr38l2g9yo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CBC News",
+     "link": "https://www.cbc.ca/news/world/macy-s-thanksgiving-parade-postponed-9.7436280?cmp=rss"
     },
     {
      "name": "PBS NewsHour",
@@ -707,18 +723,18 @@
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Acting Secretary of the Army Adam Telle said the operation was \"a huge success.\"",
+    "text": "Acting Secretary of the Army Adam Telle said the operation was \"a huge success\".",
     "source": "CNA"
    },
    "image": "https://dam.mediacorp.sg/image/upload/s--RFPAZ4Kz--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-25T155429Z_1_LYNXNPEMAO1G9_RTROPTP_3_IOWA-ARMY-DETONATION.JPG?itok=8yki0v-W",
    "region": "North America",
    "topic": "Conflict",
    "significance": 10,
-   "published": "2026-11-25T18:13:15+00:00",
+   "published": "2026-11-25T18:13:00+00:00",
    "sources": [
     {
      "name": "CNA",
-     "link": "https://www.channelnewsasia.com/world/us-army-detonates-toxic-explosives-in-iowa-despite-contamination-fears-6582536"
+     "link": "https://www.channelnewsasia.com/world/us-army-iowa-detonate-toxic-explosives-contamination-6582536"
     },
     {
      "name": "Euronews",
@@ -882,22 +898,22 @@
   },
   {
    "id": 30,
-   "headline": "Argentines Buy 3% Less at Supermarkets",
+   "headline": "Mexico Investigates Possible Cartel Links of Prosecutor Who Aided C.I.A.",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Argentine supermarket sales fell 3.0% in real terms in September from a year earlier, the ninth drop in a row, while peso sales rose 25.0%.",
-    "source": "The Rio Times"
+    "text": "The prosecutor recently fled to the United States after Mexico issued a warrant over his involvement with the C.I.A. Now authorities are investigating him for suspected cartel collusion.",
+    "source": "The New York Times"
    },
-   "image": null,
+   "image": "https://static01.nyt.com/images/2026/11/24/multimedia/24int-mexico-zuany-tqjc/24int-mexico-zuany-tqjc-mediumSquareAt3X.jpg",
    "region": "Latin America",
    "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T20:55:47+00:00",
+   "published": "2026-11-25T22:30:27+00:00",
    "sources": [
     {
-     "name": "The Rio Times",
-     "link": "https://www.riotimesonline.com/argentina-supermarket-sales-fall-3-percent-september-2026/"
+     "name": "The New York Times",
+     "link": "https://www.nytimes.com/2026/11/25/world/americas/mexico-prosecutor-cia-us.html"
     }
    ]
   },
@@ -928,22 +944,22 @@
   },
   {
    "id": 32,
-   "headline": "Job creation slows and unemployment ticks up in Mexico’s third quarter",
+   "headline": "Porky Ends Peru’s Election Year Nearly Empty-Handed",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "In the third quarter, the total number of people employed was 628,993 higher than a year earlier, however, the number of new jobs slumped from nearly half a million in the second quarter to 122,348.",
-    "source": "Mexico News Daily"
+    "text": "Rafael López Aliaga, Lima’s brash ex-mayor, ran for office three times this year, trying to become Peru’s president, a senator and finally, the capital’s mayor once again.",
+    "source": "Bloomberg"
    },
    "image": null,
    "region": "Latin America",
    "topic": "Economics",
    "significance": 4,
-   "published": "2026-11-25T21:14:50+00:00",
+   "published": "2026-11-25T22:07:41+00:00",
    "sources": [
     {
-     "name": "Mexico News Daily",
-     "link": "https://mexiconewsdaily.com/news/job-creation-slows-unemployment-mexico/"
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/articles/2026-11-25/porky-ends-peru-s-election-year-nearly-empty-handed"
     }
    ]
   },
@@ -1319,26 +1335,22 @@
   },
   {
    "id": 47,
-   "headline": "Australian politics live: Hanson ‘delighted’ as Liberal senator defects to One Nation; Bowen says global tensions ‘infected’ Cop31",
+   "headline": "It’s time for Australia to tax our gas industry. It is a public policy no-brainer | Rod Simms",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Get our breaking news email , free app or daily news podcast Pauline Hanson has released a statement this morning welcoming South Australian senator Leah Blyth to her party . Blyth is the second high-profile federal defection from the Coalition to One Nation – after Barnaby Joyce .",
+    "text": "Fossil fuel companies are effectively not paying for the gas in the ground on which their businesses depend Raising more tax revenue from our gas industry is the closest thing you will find to a public policy no-brainer .",
     "source": "The Guardian"
    },
-   "image": "https://i.guim.co.uk/img/media/ce6cb56abf202649179c638f3a9b93b6efd40887/817_0_3829_3065/master/3829.jpg?width=700&quality=85&auto=format&fit=max&s=13e38468bb20b12465f415deddc99dba",
+   "image": "https://i.guim.co.uk/img/media/1ca2bdf7608fe5bb1416d5a7e72e4d438ff90ae6/304_0_2829_2263/master/2829.jpg?width=700&quality=85&auto=format&fit=max&s=4151fcda8f7ee7063b0cd181c87c2818",
    "region": "Asia-Pacific",
    "topic": "Environment",
-   "significance": 6,
-   "published": "2026-11-25T21:58:48+00:00",
+   "significance": 4,
+   "published": "2026-11-25T22:00:37+00:00",
    "sources": [
     {
      "name": "The Guardian",
-     "link": "https://www.theguardian.com/australia-news/live/2026/nov/26/labor-anthony-albanese-pauline-hanson-one-nation-angus-taylor-coalition-ntwnfb"
-    },
-    {
-     "name": "ABC Australia",
-     "link": "https://www.abc.net.au/news/2026-11-26/federal-politics-live-blog-november-26/107427220"
+     "link": "https://www.theguardian.com/commentisfree/2026/nov/26/its-time-for-australia-to-tax-our-gas-industry-it-is-a-public-policy-no-brainer"
     }
    ]
   },
@@ -1369,22 +1381,22 @@
   },
   {
    "id": 49,
-   "headline": "Cancelled flight forces man to drive 1,000km to 'lifesaving' appointment",
+   "headline": "New US export rules threaten Asian AI buildout",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "John Barnes says an apology from Airnorth is not good enough after a flight cancellation could have threatened his health condition.",
-    "source": "ABC Australia"
+    "text": "Lenders paused billions in funding linked to Chinese hyperscalers, Bloomberg reported, imperiling the data center buildout across Asia.",
+    "source": "Semafor"
    },
-   "image": "https://live-production.wcms.abc-cdn.net.au/446ce505b879023339bea607aacba686?impolicy=wcms_crop_resize&cropH=909&cropW=1616&xPos=0&yPos=43&width=862&height=485",
+   "image": "https://img.semafor.com/295b07ddc7a2069315688ba27026ccb1c1c6115a-5500x3667.jpg",
    "region": "Asia-Pacific",
    "topic": "Science & Technology",
    "significance": 4,
-   "published": "2026-11-25T22:05:00+00:00",
+   "published": "2026-11-25T22:23:15+00:00",
    "sources": [
     {
-     "name": "ABC Australia",
-     "link": "https://www.abc.net.au/news/2026-11-26/wa-man-drives-1000km-cancelled-kununurra-flight/107425554"
+     "name": "Semafor",
+     "link": "https://www.semafor.com/article/11/25/2026/new-us-export-rules-threaten-asian-ai-buildout"
     }
    ]
   },
@@ -1436,31 +1448,6 @@
   },
   {
    "id": 52,
-   "headline": "Duran Duran guitarist Andy Taylor dies aged 65",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Taylor's death was confirmed by his family and bandmates in a statement posted on social media and Duran Duran's website.",
-    "source": "ABC Australia"
-   },
-   "image": "https://live-production.wcms.abc-cdn.net.au/ceed725ec699d3aca3cb6e36b8e87113?impolicy=wcms_crop_resize&cropH=1884&cropW=3350&xPos=0&yPos=1455&width=862&height=485",
-   "region": "Asia-Pacific",
-   "topic": "Culture",
-   "significance": 6,
-   "published": "2026-11-25T21:50:58+00:00",
-   "sources": [
-    {
-     "name": "ABC Australia",
-     "link": "https://www.abc.net.au/news/2026-11-26/duran-duran-andy-taylor-dies/107428492"
-    },
-    {
-     "name": "The Guardian",
-     "link": "https://www.theguardian.com/music/2026/nov/25/andy-taylor-duran-duran-guitarist-dead"
-    }
-   ]
-  },
-  {
-   "id": 53,
    "headline": "Chicken rice without chicken? Edward Chong puts a Singapore spin on fine Chinese dining at Peach Blossoms",
    "bullets": [],
    "why_it_matters": null,
@@ -1481,32 +1468,28 @@
    ]
   },
   {
-   "id": 54,
-   "headline": "F1 teams Williams and Alpine penalized for breaching 2025 cost cap rules",
+   "id": 53,
+   "headline": "SRM University-A.P. signs MoU with AiDEM to facilitate global career opportunities for students",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Williams exceeded spending limit by $822,000, while Alpine committed procedural breach without exceeding cap",
-    "source": "Anadolu Agency"
+    "text": "The collaboration is expected to provide students with structured international placement support, pre-placement orientation and exposure to Japanese workplace culture",
+    "source": "The Hindu"
    },
-   "image": null,
+   "image": "https://th-i.thgim.com/public/incoming/uxvob4/article71743994.ece/alternates/LANDSCAPE_1200/10745_25_11_2026_20_57_49_1_IMG_20261125_WA0035.JPG",
    "region": "Asia-Pacific",
-   "topic": "Sport",
-   "significance": 6,
-   "published": "2026-11-25T20:26:39+00:00",
+   "topic": "Culture",
+   "significance": 4,
+   "published": "2026-11-25T18:20:56+00:00",
    "sources": [
     {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/sports/f1-teams-williams-and-alpine-penalized-for-breaching-2025-cost-cap-rules/4138054"
-    },
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/sport/alpine-and-williams-breached-f1-cost-cap-rules-in-2025-6582486"
+     "name": "The Hindu",
+     "link": "https://www.thehindu.com/news/national/andhra-pradesh/srm-university-ap-signs-mou-with-aidem-to-facilitate-global-career-opportunities-for-students/article71743454.ece"
     }
    ]
   },
   {
-   "id": 55,
+   "id": 54,
    "headline": "'No grudges outside the ring': How a boxing ring under a Jakarta flyover is reducing gang violence",
    "bullets": [],
    "why_it_matters": null,
@@ -1527,7 +1510,53 @@
    ]
   },
   {
+   "id": 55,
+   "headline": "Star quarterback Rodgers released after stunning tirade against coach",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Steelers quarterback Aaron Rodgers is cut after launching a stunning tirade against his coach on the Pat McAfee Show.",
+    "source": "ABC Australia"
+   },
+   "image": "https://live-production.wcms.abc-cdn.net.au/b774b9d6397d0993dd8e905b8129f37f?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=0&width=862&height=485",
+   "region": "Asia-Pacific",
+   "topic": "Sport",
+   "significance": 4,
+   "published": "2026-11-25T21:05:37+00:00",
+   "sources": [
+    {
+     "name": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-26/nfl-aaron-rodgers-released-after-mike-mccarthy-tirade/107428264"
+    }
+   ]
+  },
+  {
    "id": 56,
+   "headline": "Israeli lawmakers advance October 7 inquiry opposed by Netanyahu",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Israel's new parliament on Wednesday took a first step to set up a state commission of inquiry into the security failures that led to Hamas's unprecedented October 7, 2023 attack, a move long opposed by caretaker Prime Minister Benjamin Netanyahu. FRANCE 24's Selina Sykes reports.",
+    "source": "France 24"
+   },
+   "image": "https://s.france24.com/media/display/30dabc2c-d09d-11f1-a1eb-4d317af013fd/w:1024/p:16x9/2026-10-24T174015Z-1419027181-RC2T9OAZQPTJ-RTRMADP-3-ISRAEL-ELECTION-RALLY.jpg",
+   "region": "Middle East",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-25T22:26:40+00:00",
+   "sources": [
+    {
+     "name": "France 24",
+     "link": "https://www.france24.com/en/israeli-lawmakers-advance-october-7-inquiry-opposed-by-netanyahu"
+    },
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/world/israel-gaza-netanyahu-eisenkot-6582466"
+    }
+   ]
+  },
+  {
+   "id": 57,
    "headline": "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
    "bullets": [],
    "why_it_matters": null,
@@ -1548,27 +1577,6 @@
     {
      "name": "Al Jazeera",
      "link": "https://www.aljazeera.com/news/2026/11/25/netanyahu-says-corruption-trial-must-end-as-court-suggests-dropping-case?traffic_source=rss"
-    }
-   ]
-  },
-  {
-   "id": 57,
-   "headline": "Israeli judges recommend prosecutors drop one bribery case against Netanyahu",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Israeli judges have recommended dropping one of three corruption cases against Israeli Prime Minister Benjamin Netanyahu and reconsidering another, in a trial that began in 2020.",
-    "source": "CNA"
-   },
-   "image": "https://dam.mediacorp.sg/image/upload/s--pwCNZXOK--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-25T201411Z_2_LYNXNPEMAO1SP_RTROPTP_3_ISRAEL-POLITICS-NETANYAHU-CORRUPTION.JPG?itok=vCch9tH-",
-   "region": "Middle East",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T21:24:07+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/world/israeli-judges-recommend-prosecutors-drop-one-bribery-case-against-netanyahu-6582791"
     }
    ]
   },
@@ -1595,22 +1603,22 @@
   },
   {
    "id": 59,
-   "headline": "Egypt Road Accident Kills at Least 30 in Greater Cairo",
+   "headline": "In crackdown, Iraqi premier orders nationwide troop deployment, closure of oil smuggling routes: Defense Ministry",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "At least 30 people were killed in Greater Cairo after a truck carrying petroleum products caught fire in one Egypt’s deadliest road accidents in years.",
-    "source": "Bloomberg"
+    "text": "Military units ordered to secure areas across all provinces, including Kirkuk, as Baghdad intensifies crackdown on oil smuggling",
+    "source": "Anadolu Agency"
    },
    "image": null,
    "region": "Middle East",
    "topic": "Economics",
    "significance": 4,
-   "published": "2026-11-25T20:08:21+00:00",
+   "published": "2026-11-25T18:38:29+00:00",
    "sources": [
     {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/articles/2026-11-25/egypt-road-accident-kills-at-least-30-in-greater-cairo"
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/middle-east/in-crackdown-iraqi-premier-orders-nationwide-troop-deployment-closure-of-oil-smuggling-routes-defense-ministry/4137906"
     }
    ]
   },
@@ -1637,22 +1645,19 @@
   },
   {
    "id": 61,
-   "headline": "The Guardian view on Cop31: a just transition needs more than fine words | Editorial",
+   "headline": "Gaza turned into ‘toxic wasteland with human survival under threat’",
    "bullets": [],
    "why_it_matters": null,
-   "excerpt": {
-    "text": "Petrostates blocked ambition while wealthy nations withheld cash support. The climate crisis demands the next UN summit turns promises into action In a negotiation the maxim is usually that no deal is better than a bad deal.",
-    "source": "The Guardian"
-   },
-   "image": "https://i.guim.co.uk/img/media/6818b2ea94ad11c2cbdf56bf8f969ad34332900e/752_0_5242_4195/master/5242.jpg?width=700&quality=85&auto=format&fit=max&s=ff3079916d3614385803a875865cec0f",
+   "excerpt": null,
+   "image": "https://www.thenationalnews.com/resizer/v2/DX6GQOHZ2YVMKFXE45RU7LENWA.jpg?auth=729618453b5b4309729e9c6b8d545109463be8efd951e11bdbbcccf41867417a&smart=true&width=5248&height=3504",
    "region": "Middle East",
    "topic": "Environment",
-   "significance": 4,
-   "published": "2026-11-23T18:29:05+00:00",
+   "significance": 3,
+   "published": "2026-11-23T11:25:28+00:00",
    "sources": [
     {
-     "name": "The Guardian",
-     "link": "https://www.theguardian.com/commentisfree/2026/nov/23/the-guardian-view-on-cop31-a-just-transition-needs-more-than-fine-words"
+     "name": "The National",
+     "link": "https://www.thenationalnews.com/climate/environment/2026/11/23/gaza-turned-into-toxic-wasteland-with-human-survival-under-threat/"
     }
    ]
   },
@@ -1697,19 +1702,27 @@
   },
   {
    "id": 64,
-   "headline": "At least 31 dead after fuel tanker fire in Egypt",
+   "headline": "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Thirty-one people were killed and 21 wounded in a fire after a vehicle carrying petroleum products overturned on a major ring road in Egypt, authorities said on Wednesday.",
-    "source": "CBC News"
+    "text": "Another 21 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital.",
+    "source": "BBC News"
    },
-   "image": "https://i.cbc.ca/ais/c5431289-648a-4c87-819b-5ec958f67888,1795643556639/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C3018%2C1697%29%3B",
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2d4b/live/5e57daf0-e91f-11f1-9108-c5b270b0703d.jpg",
    "region": "Middle East",
    "topic": "Conflict",
    "significance": 10,
-   "published": "2026-11-25T22:05:00+00:00",
+   "published": "2026-11-25T22:18:06+00:00",
    "sources": [
+    {
+     "name": "BBC News",
+     "link": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/world/2026/nov/25/people-killed-fuel-tanker-crash-ignites-large-fire-cairo-highway"
+    },
     {
      "name": "CBC News",
      "link": "https://www.cbc.ca/news/world/egypt-fire-petroleum-vehicle-overturns-9.7436271?cmp=rss"
@@ -1717,10 +1730,6 @@
     {
      "name": "The Hindu",
      "link": "https://www.thehindu.com/news/international/fuel-tanker-crash-ignites-massive-fire-on-highway-surrounding-cairo/article71744262.ece"
-    },
-    {
-     "name": "BBC News",
-     "link": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss"
     },
     {
      "name": "Africanews",
@@ -1976,31 +1985,6 @@
   },
   {
    "id": 74,
-   "headline": "Africa: COP31 - Is Article 6 Delivering Climate Finance?",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "[African Development Bank (AfDB)] Global carbon markets have built much of the infrastructure needed to finance emission reductions, yet adaptation still depends heavily on shrinking official development assistance (ODA) from public sources.",
-    "source": "AllAfrica"
-   },
-   "image": "https://img.semafor.com/015cd0bfe3d45f6eb21f07a880b1ea0d21d34f73-5332x3812.jpg",
-   "region": "Africa",
-   "topic": "Environment",
-   "significance": 6,
-   "published": "2026-11-25T04:04:46+00:00",
-   "sources": [
-    {
-     "name": "AllAfrica",
-     "link": "https://allafrica.com/stories/202611250044.html"
-    },
-    {
-     "name": "Semafor",
-     "link": "https://www.semafor.com/article/11/22/2026/cop31-collapse-highlights-africas-climate-finance-woes"
-    }
-   ]
-  },
-  {
-   "id": 75,
    "headline": "COASTAL EROSION: Richards Bay harbour faces increased risk of ocean flooding",
    "bullets": [],
    "why_it_matters": null,
@@ -2017,6 +2001,27 @@
     {
      "name": "Daily Maverick",
      "link": "https://www.dailymaverick.co.za/article/2026-11-25-richards-bay-harbour-faces-increased-risk-of-ocean-flooding/"
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "headline": "Beyond COP31: Turning climate investment into economic growth in Nigeria, By Amanda Archibong-Doukouré",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Nigeria’s ambitious climate agenda, with an estimated $337 billion financing requirement between 2026 and 2035, presents a significant opportunity to advance the country’s broader economic transformation.",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/Amanda-Archibong-Doukoure.jpeg?fit=554%2C554&ssl=1",
+   "region": "Africa",
+   "topic": "Environment",
+   "significance": 4,
+   "published": "2026-11-25T18:35:37+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/opinion/927943-beyond-cop31-turning-climate-investment-into-economic-growth-in-nigeria-by-amanda-archibong-doukoure.html"
     }
    ]
   },
@@ -2207,69 +2212,102 @@
   },
   {
    "id": 84,
-   "headline": "Borussia Dortmund fight back to draw with Arsenal",
+   "headline": "Senator Leah Blyth defects to One Nation saying Liberals can't 'save' Australia",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Borussia Dortmund fight back from a goal behind to draw with Arsenal in the Champions League.",
-    "source": "BBC Sport"
+    "text": "Opposition Leader Angus Taylor has been dealt a major blow as the South Australian senator announced her defection with a parting shot on her way out the door.",
+    "source": "ABC Australia"
    },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e240/live/832f36d0-e860-11f1-a094-5fdc692f3e33.jpg",
-   "region": "Europe",
-   "topic": "Sport",
-   "significance": 4,
-   "published": "2026-11-25T22:05:57+00:00",
+   "image": "https://live-production.wcms.abc-cdn.net.au/c41bedcc24eb1b53019fb7db3cd250ad?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=260&width=862&height=485",
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-25T22:27:08+00:00",
    "sources": [
     {
-     "name": "BBC Sport",
-     "link": "https://www.bbc.co.uk/sport/football/videos/cmedqg06d8vwo?at_medium=RSS&at_campaign=rss"
+     "name": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-26/leah-blyth-liberal-one-nation-angus-taylor-/107428224"
+    },
+    {
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/australia-news/2026/nov/26/liberal-senator-leah-blyth-defection-to-one-nation-ntwnfb"
     }
    ]
   },
   {
    "id": 85,
-   "headline": "Blunt Villa beaten by late Galatasaray winner",
+   "headline": "US economy expands at a rapid 4.3% in third quarter",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Deniz Gul scores a late winner for Galatasaray as Aston Villa slip to successive Champions League defeats.",
-    "source": "BBC Sport"
+    "text": "The latest figures bolstered the case for the Federal Reserve to raise interest rates despite the downturn in tech markets.",
+    "source": "Semafor"
    },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/af90/live/aa1d08d0-e860-11f1-99a1-253766e7ad8b.jpg",
-   "region": "Global",
-   "topic": "Sport",
-   "significance": 4,
-   "published": "2026-11-25T22:05:53+00:00",
+   "image": "https://img.semafor.com/1616be2aad7f78cda22fd1167321d7ea1e12b369-5472x3648.jpg",
+   "region": "North America",
+   "topic": "Economics",
+   "significance": 6,
+   "published": "2026-11-25T22:30:52+00:00",
    "sources": [
     {
-     "name": "BBC Sport",
-     "link": "https://www.bbc.co.uk/sport/football/videos/c6r7g92p5k79o?at_medium=RSS&at_campaign=rss"
+     "name": "Semafor",
+     "link": "https://www.semafor.com/article/11/25/2026/us-economy-expands-at-a-rapid-43-in-third-quarter"
+    },
+    {
+     "name": "Axios",
+     "link": "https://www.axios.com/2026/11/25/economy-gdp-inflation-ai"
     }
    ]
   },
   {
    "id": 86,
-   "headline": "Saudi-led coalition intercepts 2 Houthi ballistic missiles launched toward Riyadh",
+   "headline": "Farrell picks side to 'back up' South Africa win",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Air defenses intercepted and destroyed both missiles, coalition spokesman says, offering no details on possible casualties or damage",
-    "source": "Anadolu Agency"
+    "text": "Ireland head coach Andy Farrell believes the Nations Championship can be good preparation for next year's World Cup.",
+    "source": "BBC Sport"
    },
-   "image": null,
-   "region": "Middle East",
-   "topic": "Conflict",
-   "significance": 4,
-   "published": "2026-11-25T22:01:47+00:00",
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bd81/live/65e2d8b0-e910-11f1-8383-53f283141713.jpg",
+   "region": "Africa",
+   "topic": "Sport",
+   "significance": 6,
+   "published": "2026-11-25T22:12:19+00:00",
    "sources": [
     {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-intercepts-2-houthi-ballistic-missiles-launched-toward-riyadh/4138108"
+     "name": "BBC Sport",
+     "link": "https://www.bbc.co.uk/sport/rugby-union/articles/c6p3elx72l7qo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The National",
+     "link": "https://www.thenationalnews.com/opinion/comment/2026/11/24/icj-myanmar-rohingya-palestine-israel-gaza/"
     }
    ]
   },
   {
    "id": 87,
+   "headline": "Terrible Pavlovic own goal gifts Lille shock win against Bayern",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Bayern Munich suffer their first defeat of the Champions League campaign as Lille find the net twice in three minutes in the second half, including a comical Aleksander Pavlovic own goal, to inflict a huge upset.",
+    "source": "BBC Sport"
+   },
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2605/live/bdc03610-e91d-11f1-a094-5fdc692f3e33.jpg",
+   "region": "Europe",
+   "topic": "Sport",
+   "significance": 4,
+   "published": "2026-11-25T22:24:57+00:00",
+   "sources": [
+    {
+     "name": "BBC Sport",
+     "link": "https://www.bbc.co.uk/sport/football/videos/cq36gx1g10p6o?at_medium=RSS&at_campaign=rss"
+    }
+   ]
+  },
+  {
+   "id": 88,
    "headline": "North Korea closes Swiss diplomatic office in row over children’s camp",
    "bullets": [],
    "why_it_matters": null,
@@ -2294,112 +2332,49 @@
    ]
   },
   {
-   "id": 88,
-   "headline": "US stocks close lower in volatile session as AI trade remains under pressure",
+   "id": 89,
+   "headline": "US Treasury financial crime watchdog hit by suspected cyber attack",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Chip group Nvidia among losers but AI start-up Anthropic a bright spot as shares finish higher",
+    "text": "FinCen takes systems offline after detecting unauthorised access amid growing fears over vulnerability of technology systems",
     "source": "Financial Times"
    },
    "image": null,
    "region": "North America",
    "topic": "Science & Technology",
    "significance": 4,
-   "published": "2026-11-25T21:26:33+00:00",
+   "published": "2026-11-25T22:24:37+00:00",
    "sources": [
     {
      "name": "Financial Times",
-     "link": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a?syn-25a6b1a6=1"
-    }
-   ]
-  },
-  {
-   "id": 89,
-   "headline": "The fund manager’s dilemma over AI",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Assessing concentration risks may be more complicated than it seems",
-    "source": "Financial Times"
-   },
-   "image": null,
-   "region": "Global",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T18:05:53+00:00",
-   "sources": [
-    {
-     "name": "Financial Times",
-     "link": "https://www.ft.com/content/c62ca4c2-dfc4-4943-86a4-fee8fd5a1f4a?syn-25a6b1a6=1"
+     "link": "https://www.ft.com/content/43aa7321-2a95-463c-8cb9-77fcc7e39291?syn-25a6b1a6=1"
     }
    ]
   },
   {
    "id": 90,
-   "headline": "INEC sets up AI unit to combat election misinformation ahead of 2027 polls",
+   "headline": "Beige Book confirms hot US economy and signs of wage pressure building",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "The commission says deepfakes, fabricated audio and coordinated online campaigns pose growing threats to electoral integrity as it steps up preparations for the 2027 elections.",
-    "source": "Premium Times"
+    "text": "The report will help cement the coming December Federal Reserve interest rate rise",
+    "source": "Financial Times"
    },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/WhatsApp-Image-2026-11-25-at-6.52.10-PM-1.jpeg?fit=1080%2C720&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
+   "image": null,
+   "region": "North America",
+   "topic": "Economics",
    "significance": 4,
-   "published": "2026-11-25T21:50:41+00:00",
+   "published": "2026-11-25T22:17:53+00:00",
    "sources": [
     {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/news/top-news/928071-inec-sets-up-ai-unit-to-combat-election-misinformation-ahead-of-2027-polls.html"
+     "name": "Financial Times",
+     "link": "https://www.ft.com/content/fb4f6707-274e-4f93-bcfb-7cce28d4a4ea"
     }
    ]
   },
   {
    "id": 91,
-   "headline": "Delta Killings: Assembly demands justice for slain ex-lawmaker, five others",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "The speaker described the incident as “shocking” and condemned political violence, thuggery, intimidation and lawlessness ahead of the 2027 general elections",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2020/07/Delta-State-House-Of-Assembly.jpg?fit=650%2C350&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T20:54:51+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/regional/south-south-regional/928066-delta-killings-assembly-demands-justice-for-slain-ex-lawmaker-five-others.html"
-    }
-   ]
-  },
-  {
-   "id": 92,
-   "headline": "Delta Assembly passes 2027 appropriation bill of N1.272trn",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Governor Sheriff Oborevwori presented a budget proposal of N1.23 trillion to the Assembly for approval on 16 November.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/07/Delta-State-House-of-Assembly-complex.jpg?fit=727%2C476&ssl=1",
-   "region": "Africa",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T20:50:16+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/news/top-news/927998-delta-assembly-passes-2027-appropriation-bill-of-n1-272trn.html"
-    }
-   ]
-  },
-  {
-   "id": 93,
    "headline": "'My new friend Rylan': Jack Johnson pulls Kiwi fan on stage to perform",
    "bullets": [],
    "why_it_matters": null,
@@ -2420,7 +2395,70 @@
    ]
   },
   {
+   "id": 92,
+   "headline": "Saudi-led coalition intercepts 2 Houthi ballistic missiles launched toward Riyadh",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Air defenses intercepted and destroyed both missiles, coalition spokesman says, offering no details on possible casualties or damage",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "Middle East",
+   "topic": "Conflict",
+   "significance": 4,
+   "published": "2026-11-25T22:01:47+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-intercepts-2-houthi-ballistic-missiles-launched-toward-riyadh/4138108"
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "headline": "(EDITORIAL from Korea JoongAng Daily on Nov. 26)",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "A series of cyberattacks targeting U.S. intelligence agencies has heightened con...",
+    "source": "Yonhap"
+   },
+   "image": null,
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:12:36+00:00",
+   "sources": [
+    {
+     "name": "Yonhap",
+     "link": "https://en.yna.co.kr/view/AEN20261126000900315"
+    }
+   ]
+  },
+  {
    "id": 94,
+   "headline": "Top headlines in major S. Korean newspapers",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "SEOUL, Nov. 26 (Yonhap) -- The following are the top headlines in major South Ko...",
+    "source": "Yonhap"
+   },
+   "image": null,
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:11:19+00:00",
+   "sources": [
+    {
+     "name": "Yonhap",
+     "link": "https://en.yna.co.kr/view/AEN20261126000600315"
+    }
+   ]
+  },
+  {
+   "id": 95,
    "headline": "N.K. leader stresses use of tactical nukes in diverse areas",
    "bullets": [],
    "why_it_matters": null,
@@ -2441,65 +2479,44 @@
    ]
   },
   {
-   "id": 95,
-   "headline": "U.S. proposes excess capacity tariffs on S. Korean goods within agreed 15 pct ceiling",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "WASHINGTON, Nov. 25 (Yonhap) -- The United States proposed Wednesday imposing ta...",
-    "source": "Yonhap"
-   },
-   "image": "https://img.yna.co.kr/etc/inner/EN/2026/11/26/AEN20261126000200315_01_i_P2.jpg",
-   "region": "North America",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T18:10:25+00:00",
-   "sources": [
-    {
-     "name": "Yonhap",
-     "link": "https://en.yna.co.kr/view/AEN20261126000200315"
-    }
-   ]
-  },
-  {
    "id": 96,
-   "headline": "FM Cho asks Omani counterpart to keep backing Cheonghae unit",
+   "headline": "INEC sets up AI unit to combat election misinformation ahead of 2027 polls",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "SEOUL, Nov. 25 (Yonhap) -- Foreign Minister Cho Hyun met his Omani counterpart, ...",
-    "source": "Yonhap"
+    "text": "The commission says deepfakes, fabricated audio and coordinated online campaigns pose growing threats to electoral integrity as it steps up preparations for the 2027 elections.",
+    "source": "Premium Times"
    },
-   "image": "https://img.yna.co.kr/etc/inner/EN/2026/11/25/AEN20261125010600315_01_i_P2.jpg",
-   "region": "Asia-Pacific",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/WhatsApp-Image-2026-11-25-at-6.52.10-PM-1.jpeg?fit=1080%2C720&ssl=1",
+   "region": "Africa",
    "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T13:05:55+00:00",
+   "published": "2026-11-25T21:50:41+00:00",
    "sources": [
     {
-     "name": "Yonhap",
-     "link": "https://en.yna.co.kr/view/AEN20261125010600315"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/news/top-news/928071-inec-sets-up-ai-unit-to-combat-election-misinformation-ahead-of-2027-polls.html"
     }
    ]
   },
   {
    "id": 97,
-   "headline": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+   "headline": "Delta Killings: Assembly demands justice for slain ex-lawmaker, five others",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "The Macy's Thanksgiving Day Parade has been postponed for the first time in the event's history, the retailer confirmed Wednesday.",
-    "source": "Axios"
+    "text": "The speaker described the incident as “shocking” and condemned political violence, thuggery, intimidation and lawlessness ahead of the 2027 general elections",
+    "source": "Premium Times"
    },
-   "image": "https://images.axios.com/WpsVxuu_Uf3T6oqolhQMrOJ-Ils=/0x297:7356x4435/1366x768/2026/11/25/1795627145730.jpg",
-   "region": "North America",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2020/07/Delta-State-House-Of-Assembly.jpg?fit=650%2C350&ssl=1",
+   "region": "Africa",
    "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T21:28:25+00:00",
+   "published": "2026-11-25T20:54:51+00:00",
    "sources": [
     {
-     "name": "Axios",
-     "link": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/regional/south-south-regional/928066-delta-killings-assembly-demands-justice-for-slain-ex-lawmaker-five-others.html"
     }
    ]
   },
@@ -2610,6 +2627,27 @@
   },
   {
    "id": 103,
+   "headline": "Job creation slows and unemployment ticks up in Mexico’s third quarter",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "In the third quarter, the total number of people employed was 628,993 higher than a year earlier, however, the number of new jobs slumped from nearly half a million in the second quarter to 122,348.",
+    "source": "Mexico News Daily"
+   },
+   "image": null,
+   "region": "Latin America",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-25T21:14:50+00:00",
+   "sources": [
+    {
+     "name": "Mexico News Daily",
+     "link": "https://mexiconewsdaily.com/news/job-creation-slows-unemployment-mexico/"
+    }
+   ]
+  },
+  {
+   "id": 104,
    "headline": "A ‘unique’ human skeleton found during AIFA airport construction may date back 13,000 years",
    "bullets": [],
    "why_it_matters": null,
@@ -2630,7 +2668,7 @@
    ]
   },
   {
-   "id": 104,
+   "id": 105,
    "headline": "Inside the Scramble to Avert Conflict With Russia in the Baltic",
    "bullets": [],
    "why_it_matters": null,
@@ -2651,7 +2689,7 @@
    ]
   },
   {
-   "id": 105,
+   "id": 106,
    "headline": "Fragrance Giants Handed $630 Million in EU, U.K. Antitrust Fines",
    "bullets": [],
    "why_it_matters": null,
@@ -2672,7 +2710,7 @@
    ]
   },
   {
-   "id": 106,
+   "id": 107,
    "headline": "Why We Must Defeat China",
    "bullets": [],
    "why_it_matters": null,
@@ -2693,7 +2731,7 @@
    ]
   },
   {
-   "id": 107,
+   "id": 108,
    "headline": "US gives SpaceX approval for data centres in space",
    "bullets": [],
    "why_it_matters": null,
@@ -2722,7 +2760,28 @@
    ]
   },
   {
-   "id": 108,
+   "id": 109,
+   "headline": "Argentines Buy 3% Less at Supermarkets",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Argentine supermarket sales fell 3.0% in real terms in September from a year earlier, the ninth drop in a row, while peso sales rose 25.0%.",
+    "source": "The Rio Times"
+   },
+   "image": null,
+   "region": "Latin America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T20:55:47+00:00",
+   "sources": [
+    {
+     "name": "The Rio Times",
+     "link": "https://www.riotimesonline.com/argentina-supermarket-sales-fall-3-percent-september-2026/"
+    }
+   ]
+  },
+  {
+   "id": 110,
    "headline": "Kenyan Bank NCBA Profit Rises 14.5%",
    "bullets": [],
    "why_it_matters": null,
@@ -2743,7 +2802,7 @@
    ]
   },
   {
-   "id": 109,
+   "id": 111,
    "headline": "Chile Power Group Owners Seek New Partner",
    "bullets": [],
    "why_it_matters": null,
@@ -2764,7 +2823,7 @@
    ]
   },
   {
-   "id": 110,
+   "id": 112,
    "headline": "São Paulo Water Firm Denies E. coli Claims",
    "bullets": [],
    "why_it_matters": null,
@@ -2785,7 +2844,7 @@
    ]
   },
   {
-   "id": 111,
+   "id": 113,
    "headline": "Labour report says over 60% of self-employed youths are underemployed in Argentina",
    "bullets": [],
    "why_it_matters": null,
@@ -2806,7 +2865,7 @@
    ]
   },
   {
-   "id": 112,
+   "id": 114,
    "headline": "Argentina's government rules out economic policy changes despite creeping recession",
    "bullets": [],
    "why_it_matters": null,
@@ -2827,7 +2886,7 @@
    ]
   },
   {
-   "id": 113,
+   "id": 115,
    "headline": "French judo legend and Olympic medalist Teddy Riner says Ukraine is not France's war",
    "bullets": [],
    "why_it_matters": null,
@@ -2852,7 +2911,7 @@
    ]
   },
   {
-   "id": 114,
+   "id": 116,
    "headline": "EU nationals will pay higher tuition fees than UK students, Burnham indicates",
    "bullets": [],
    "why_it_matters": null,
@@ -2877,7 +2936,7 @@
    ]
   },
   {
-   "id": 115,
+   "id": 117,
    "headline": "Tusk government ‘facing armageddon’ as European court resumes cases against Poland",
    "bullets": [],
    "why_it_matters": null,
@@ -2898,7 +2957,7 @@
    ]
   },
   {
-   "id": 116,
+   "id": 118,
    "headline": "“Les COP, c’est une blague” : les critiques enflent contre les sommets climatiques après l’échec à Antalya",
    "bullets": [],
    "why_it_matters": null,
@@ -2919,7 +2978,7 @@
    ]
   },
   {
-   "id": 117,
+   "id": 119,
    "headline": "Don’t ‘backslide’ on defense spending, senior US lawmaker tells Europe",
    "bullets": [],
    "why_it_matters": null,
@@ -2940,7 +2999,32 @@
    ]
   },
   {
-   "id": 118,
+   "id": 120,
+   "headline": "Abrego Garcia Can ‘Breathe Freely’ After He Arrives in Spain",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Kilmar Abrego Garcia, the Salvadoran man deported to a notorious prison in El Salvador in what US officials called an “administrative error,” said he “can breathe freely” after arriving to Spain.",
+    "source": "Bloomberg"
+   },
+   "image": "https://img.lemde.fr/2026/11/24/90/0/4195/2097/644/322/60/0/e4f50f9_ftp-1-ce7ldujkuzss-ee1643ee158a46c98bc8b60aab07c0f3-0-a58b35130153473f99988f587da6a986.jpg",
+   "region": "Europe",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-25T19:29:28+00:00",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/articles/2026-11-25/abrego-garcia-can-breathe-freely-after-he-arrives-in-spain"
+    },
+    {
+     "name": "Le Monde",
+     "link": "https://www.lemonde.fr/en/international/article/2026/11/25/kilmar-abrego-garcia-who-fought-being-mistakenly-sent-to-el-salvador-is-self-deporting-to-spain_6787783_4.html"
+    }
+   ]
+  },
+  {
+   "id": 121,
    "headline": "French FM defends Ukraine's attacks on Russian ships in Libya",
    "bullets": [],
    "why_it_matters": null,
@@ -2965,7 +3049,7 @@
    ]
   },
   {
-   "id": 119,
+   "id": 122,
    "headline": "Israel accused of preventing births in Gaza as Amnesty seeks genocide probe",
    "bullets": [],
    "why_it_matters": null,
@@ -2990,7 +3074,7 @@
    ]
   },
   {
-   "id": 120,
+   "id": 123,
    "headline": "Digital tax and farm aid at stake as EU budget talks resume",
    "bullets": [],
    "why_it_matters": null,
@@ -3011,7 +3095,7 @@
    ]
   },
   {
-   "id": 121,
+   "id": 124,
    "headline": "Moroccan football federation vows to continue legal fight over 2025 AFCON win",
    "bullets": [],
    "why_it_matters": null,
@@ -3032,7 +3116,7 @@
    ]
   },
   {
-   "id": 122,
+   "id": 125,
    "headline": "Young Spanish voters are frustrated. Far-right Vox hopes to benefit.",
    "bullets": [],
    "why_it_matters": null,
@@ -3053,7 +3137,7 @@
    ]
   },
   {
-   "id": 123,
+   "id": 126,
    "headline": "Why more Indian families are making chess their next move",
    "bullets": [],
    "why_it_matters": null,
@@ -3074,7 +3158,7 @@
    ]
   },
   {
-   "id": 124,
+   "id": 127,
    "headline": "Flooded tents and blocked aid: Gaza waits for relief as winter arrives",
    "bullets": [],
    "why_it_matters": null,
@@ -3095,7 +3179,7 @@
    ]
   },
   {
-   "id": 125,
+   "id": 128,
    "headline": "First Eastern Europe, now Libya: The Ukraine war expands its reach",
    "bullets": [],
    "why_it_matters": null,
@@ -3116,7 +3200,7 @@
    ]
   },
   {
-   "id": 126,
+   "id": 129,
    "headline": "El Salvador put soldiers on the streets of Haiti’s capital. It’s not clear how long they’ll stay.",
    "bullets": [],
    "why_it_matters": null,
@@ -3137,7 +3221,7 @@
    ]
   },
   {
-   "id": 127,
+   "id": 130,
    "headline": "Can Europe fix its chronic medicine shortage and supply chain disruptions?",
    "bullets": [],
    "why_it_matters": null,
@@ -3162,7 +3246,7 @@
    ]
   },
   {
-   "id": 128,
+   "id": 131,
    "headline": "Peter Magyar meets Volodymyr Zelenskyy: Hungary and Ukraine make a fresh start after the icy relations of the Viktor Orban era",
    "bullets": [],
    "why_it_matters": null,
@@ -3183,7 +3267,7 @@
    ]
   },
   {
-   "id": 129,
+   "id": 132,
    "headline": "Why Indian nationals are still ending up in Russia's war on Ukraine",
    "bullets": [],
    "why_it_matters": null,
@@ -3204,7 +3288,7 @@
    ]
   },
   {
-   "id": 130,
+   "id": 133,
    "headline": "MEA separates Sheikh Hasina’s plans to return to Bangladesh from issue of extradition",
    "bullets": [],
    "why_it_matters": null,
@@ -3229,7 +3313,7 @@
    ]
   },
   {
-   "id": 131,
+   "id": 134,
    "headline": "Japanese judge dismissed over online casino gambling",
    "bullets": [],
    "why_it_matters": null,
@@ -3250,7 +3334,7 @@
    ]
   },
   {
-   "id": 132,
+   "id": 135,
    "headline": "Japan mulls new Japanese-language test for foreign workers",
    "bullets": [],
    "why_it_matters": null,
@@ -3271,7 +3355,7 @@
    ]
   },
   {
-   "id": 133,
+   "id": 136,
    "headline": "Japan to declare aim to become AI nation after U.S. and China",
    "bullets": [],
    "why_it_matters": null,
@@ -3292,7 +3376,7 @@
    ]
   },
   {
-   "id": 134,
+   "id": 137,
    "headline": "Ex-CDP chief Izumi proposes two-bloc political system in Japan",
    "bullets": [],
    "why_it_matters": null,
@@ -3313,7 +3397,7 @@
    ]
   },
   {
-   "id": 135,
+   "id": 138,
    "headline": "Malawi: Chipungu Delays Kasasile Move, Prioritises Water, Schools and Health Care",
    "bullets": [],
    "why_it_matters": null,
@@ -3334,28 +3418,49 @@
    ]
   },
   {
-   "id": 136,
-   "headline": "Africa: AfDB and Ebrd Set Out a Shared Vision for a Stronger Partnership Across Africa",
+   "id": 139,
+   "headline": "Gambia: Almameh Gibba Promises to Address Killings &amp; Conflict Along Foni Borderline",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "[African Development Bank (AfDB)] Leaders of the African Development Bank Group (AfDB) and the European Bank for Reconstruction and Development (EBRD) met in Abidjan on Tuesday 24 November to set out a shared vision for the next phase of their well-established partnership, building on their complementary strengths and…",
+    "text": "[Foroyaa] Independent presidential candidate and Foni Kansala National Assembly Member Almameh Gibba has pledged to address insecurity and recurring violence in communities along The Gambia's border with Senegal if elected on December 5.",
     "source": "AllAfrica"
    },
    "image": null,
    "region": "Africa",
-   "topic": "Economics",
+   "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T17:05:28+00:00",
+   "published": "2026-11-25T17:02:58+00:00",
    "sources": [
     {
      "name": "AllAfrica",
-     "link": "https://allafrica.com/stories/202611250665.html"
+     "link": "https://allafrica.com/stories/202611250660.html"
     }
    ]
   },
   {
-   "id": 137,
+   "id": 140,
+   "headline": "Gambia: Touray Vows Constitutional Reform, Accountability At Simoto Tuba Rally",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "[Foroyaa] Independent presidential candidate Isatou Touray pledged to overhaul The Gambia's constitution and enforce strict presidential term limits during a campaign stop in the Upper River Region, sharpening her criticism of President Adama Barrow's administration ahead of the Dec. 5 election.",
+    "source": "AllAfrica"
+   },
+   "image": null,
+   "region": "Africa",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T17:02:20+00:00",
+   "sources": [
+    {
+     "name": "AllAfrica",
+     "link": "https://allafrica.com/stories/202611250658.html"
+    }
+   ]
+  },
+  {
+   "id": 141,
    "headline": "Brazil's falling real and pressure on the Argentine peso are \"bad news\" for Uruguay's summer",
    "bullets": [],
    "why_it_matters": null,
@@ -3376,7 +3481,7 @@
    ]
   },
   {
-   "id": 138,
+   "id": 142,
    "headline": "Falklands, growing interest in adjacent areas to Navitas Sea Lion",
    "bullets": [],
    "why_it_matters": null,
@@ -3397,7 +3502,7 @@
    ]
   },
   {
-   "id": 139,
+   "id": 143,
    "headline": "Falklands at JMC: UK steps up security support for British Overseas Territories",
    "bullets": [],
    "why_it_matters": null,
@@ -3418,7 +3523,7 @@
    ]
   },
   {
-   "id": 140,
+   "id": 144,
    "headline": "Argentina interested in purchasing three Italian made built light frigates",
    "bullets": [],
    "why_it_matters": null,
@@ -3439,7 +3544,7 @@
    ]
   },
   {
-   "id": 141,
+   "id": 145,
    "headline": "U.S. blacklists Megaspeed chip firm linked to Nvidia scandal",
    "bullets": [],
    "why_it_matters": null,
@@ -3468,7 +3573,7 @@
    ]
   },
   {
-   "id": 142,
+   "id": 146,
    "headline": "The Rising Cost of Thanksgiving, From Travel to Turkey",
    "bullets": [],
    "why_it_matters": null,
@@ -3493,7 +3598,7 @@
    ]
   },
   {
-   "id": 143,
+   "id": 147,
    "headline": "US stocks tumble as AI rout and Trump tariffs rattle markets",
    "bullets": [],
    "why_it_matters": null,
@@ -3518,12 +3623,12 @@
    ]
   },
   {
-   "id": 144,
+   "id": 148,
    "headline": "U.S. army says detonation of bomb chemicals in Iowa a success despite toxic plume concerns",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "The U.S. Army intentionally blew up the nation's entire stockpile of lead azide, a chemical used to make explosives, saying early signs Wednesday indicated the controlled detonation in Iowa did not allow any toxic dust to spread to nearby homes and farms.",
+    "text": "The U.S. Army intentionally blew up the nation's entire stockpile of lead azide, a chemical used to make explosives, saying the first checks show Wednesday's controlled detonation in Iowa didn't spread toxic dust to nearby homes and farms.",
     "source": "CBC News"
    },
    "image": "https://i.cbc.ca/ais/40681863-5ba0-4c32-b449-1d0c63f29704,1795620479022/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C128%2C2457%2C1382%29%3B",
@@ -3543,7 +3648,7 @@
    ]
   },
   {
-   "id": 145,
+   "id": 149,
    "headline": "Kremlin declines comment on reports 700,000 Russian soldiers killed in Ukraine war",
    "bullets": [],
    "why_it_matters": null,
@@ -3568,7 +3673,7 @@
    ]
   },
   {
-   "id": 146,
+   "id": 150,
    "headline": "Yemen's Houthis claim attack on major Saudi oil refinery",
    "bullets": [],
    "why_it_matters": null,
@@ -3593,7 +3698,7 @@
    ]
   },
   {
-   "id": 147,
+   "id": 151,
    "headline": "Australia follows EU with new online safety law, putting Big Tech at risk of multibillion-dollar fines",
    "bullets": [],
    "why_it_matters": null,
@@ -3618,7 +3723,7 @@
    ]
   },
   {
-   "id": 148,
+   "id": 152,
    "headline": "Trump announces new tariffs on EU, China despite US midterms defeat",
    "bullets": [],
    "why_it_matters": null,
@@ -3643,7 +3748,7 @@
    ]
   },
   {
-   "id": 149,
+   "id": 153,
    "headline": "Defending Aden, Yemen’s Holdout Against the Houthis",
    "bullets": [],
    "why_it_matters": null,
@@ -3668,7 +3773,7 @@
    ]
   },
   {
-   "id": 150,
+   "id": 154,
    "headline": "Bangladesh garment workers win 36% minimum wage rise after protests",
    "bullets": [],
    "why_it_matters": null,
@@ -3693,7 +3798,7 @@
    ]
   },
   {
-   "id": 151,
+   "id": 155,
    "headline": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
    "bullets": [],
    "why_it_matters": null,
@@ -3718,7 +3823,7 @@
    ]
   },
   {
-   "id": 152,
+   "id": 156,
    "headline": "Ex-French president and wife to face trial in witness tampering case",
    "bullets": [],
    "why_it_matters": null,
@@ -3743,7 +3848,7 @@
    ]
   },
   {
-   "id": 153,
+   "id": 157,
    "headline": "Yemen’s Houthis threaten to target Jeddah and other Saudi Red Sea ports",
    "bullets": [],
    "why_it_matters": null,
@@ -3768,7 +3873,7 @@
    ]
   },
   {
-   "id": 154,
+   "id": 158,
    "headline": "China investigates politburo star in Xi Jinping’s latest purge",
    "bullets": [],
    "why_it_matters": null,
@@ -3793,7 +3898,7 @@
    ]
   },
   {
-   "id": 155,
+   "id": 159,
    "headline": "Canada says it ‘does not report to the US’ after Pentagon criticizes military spending",
    "bullets": [],
    "why_it_matters": null,
@@ -3818,7 +3923,7 @@
    ]
   },
   {
-   "id": 156,
+   "id": 160,
    "headline": "'Quid pro quo’: Nvidia too big to fail or ‘too close to personal interest of people around Trump’?",
    "bullets": [],
    "why_it_matters": null,
@@ -3843,7 +3948,112 @@
    ]
   },
   {
-   "id": 157,
+   "id": 161,
+   "headline": "Still in Early Innings of AI Adoption: PSP’s Momei Qu",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Momei Qu, Managing Director and Head of Venture at PSP Growth, says Anthropic is in a period of price discovery as public-market investors work out how to value a frontier AI company.",
+    "source": "Bloomberg"
+   },
+   "image": null,
+   "region": "Global",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-25T22:39:03+00:00",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/videos/2026-11-25/still-in-early-innings-of-ai-adoption-psp-s-momei-qu-video"
+    }
+   ]
+  },
+  {
+   "id": 162,
+   "headline": "Netanyahu gets boost in long-running corruption trial",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Judges overseeing the case against the Israeli prime minister recommended that prosecutors drop the most serious charge.",
+    "source": "Semafor"
+   },
+   "image": "https://img.semafor.com/1f7abd19d0bb582fb0b33a95c6be8a1833536401-2684x1789.jpg",
+   "region": "Middle East",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:35:24+00:00",
+   "sources": [
+    {
+     "name": "Semafor",
+     "link": "https://www.semafor.com/article/11/25/2026/netanyahu-gets-boost-in-long-running-corruption-trial"
+    }
+   ]
+  },
+  {
+   "id": 163,
+   "headline": "Senate committee recommends changing Liberals' data access bill following cybersecurity concerns",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Senators on the national security committee want to see some changes made to a deeply divisive Liberal bill that would give police and intelligence agencies easier access to Canadians' private information.",
+    "source": "CBC News"
+   },
+   "image": "https://i.cbc.ca/ais/db52ea27-7f21-470c-a64a-a9bd5fbbc5a2,1795645423961/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C307%2C2659%2C1495%29%3B",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:33:14+00:00",
+   "sources": [
+    {
+     "name": "CBC News",
+     "link": "https://www.cbc.ca/news/politics/bill-c-22-lawful-access-security-9.7436101?cmp=rss"
+    }
+   ]
+  },
+  {
+   "id": 164,
+   "headline": "Next 20 Days Is ‘Mission Critical’ for Retailers: Yih",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Adrienne Yih, Barclays Managing Director and Senior Retail Analyst, says consumer spending is holding up despite shoppers’ concerns about high prices. She argues that household income and purchasing power have adjusted alongside inflation and wage growth, helping explain continued spending.",
+    "source": "Bloomberg"
+   },
+   "image": null,
+   "region": "Global",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-25T22:31:57+00:00",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/videos/2026-11-25/next-20-days-is-mission-critical-for-retailers-yih-video"
+    }
+   ]
+  },
+  {
+   "id": 165,
+   "headline": "Ábrego García, a Salvadoran mistakenly deported by U.S., goes to Spain but hopes to return after Trump",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Kilmar Ábrego García, a Salvadoran national who fought his mistaken deportation from the United States, arrived in Spain on Wednesday after what his lawyer described as a temporary departure, with hopes of returning to his family's home in Maryland after President Donald Trump leaves office.",
+    "source": "PBS NewsHour"
+   },
+   "image": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-25T124130Z_2129615499_RC20VOAI57QL_RTRMADP_3_USA-TRUMP-MIGRATION-ABREGO-1024x683.jpg",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:30:20+00:00",
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "link": "https://www.pbs.org/newshour/politics/abrego-garcia-a-salvadoran-mistakenly-deported-by-u-s-goes-to-spain-but-hopes-to-return-after-trump"
+    }
+   ]
+  },
+  {
+   "id": 166,
    "headline": "XENOBAROMETER: Home Affairs urged to halt Beitbridge refugee office plans amid rights concerns",
    "bullets": [],
    "why_it_matters": null,
@@ -3864,7 +4074,88 @@
    ]
   },
   {
-   "id": 158,
+   "id": 167,
+   "headline": "Australian politics live: Greens say Liberal-One Nation defector just ‘changing billionaire donor’",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Get our breaking news email , free app or daily news podcast Pauline Hanson has released a statement this morning welcoming South Australian senator Leah Blyth to her party . Blyth is the second high-profile federal defection from the Coalition to One Nation – after Barnaby Joyce .",
+    "source": "The Guardian"
+   },
+   "image": "https://i.guim.co.uk/img/media/268377c3499d542a8941cdae822ad8c48c840b31/688_0_6880_5504/master/6880.jpg?width=700&quality=85&auto=format&fit=max&s=59bbf9e4377dad06e9627d115ac704ed",
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:27:07+00:00",
+   "sources": [
+    {
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/australia-news/live/2026/nov/26/labor-anthony-albanese-pauline-hanson-one-nation-angus-taylor-coalition-ntwnfb"
+    }
+   ]
+  },
+  {
+   "id": 168,
+   "headline": "Plan for 200ha kelp farm off NSW coast sparks debate",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "A proposal to build the state's first commercial kelp farm south of Eden is being considered by the NSW Independent Planning Commission.",
+    "source": "ABC Australia"
+   },
+   "image": "https://live-production.wcms.abc-cdn.net.au/d1d2275e1673907daf5b7f94bb1f2ed7?impolicy=wcms_crop_resize&cropH=851&cropW=1512&xPos=0&yPos=583&width=862&height=485",
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:24:31+00:00",
+   "sources": [
+    {
+     "name": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-26/public-speaks-on-first-commercial-kelp-farm-proposed-for-nsw/107421622"
+    }
+   ]
+  },
+  {
+   "id": 169,
+   "headline": "Moody's says Nvidia's Huang reinstatement eases uncertainty, ratings unchanged",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": null,
+   "image": null,
+   "region": "Asia-Pacific",
+   "topic": "Science & Technology",
+   "significance": 3,
+   "published": "2026-11-25T22:21:27+00:00",
+   "sources": [
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/business/moodys-says-nvidias-huang-reinstatement-eases-uncertainty-ratings-unchanged-6582956"
+    }
+   ]
+  },
+  {
+   "id": 170,
+   "headline": "Lukoil to Sell Foreign Assets, but Not to Kushner and Witkoff Associates",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Valuable properties belonging to the Russian energy giant will be sold to an American-led consortium. But Middle Eastern business contacts of the two Trump envoys pulled out because of political winds.",
+    "source": "The New York Times"
+   },
+   "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25dc-lukoil-fjvh/25dc-lukoil-fjvh-mediumSquareAt3X.jpg",
+   "region": "North America",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-25T22:16:50+00:00",
+   "sources": [
+    {
+     "name": "The New York Times",
+     "link": "https://www.nytimes.com/2026/11/25/us/politics/lukoil-deal.html"
+    }
+   ]
+  },
+  {
+   "id": 171,
    "headline": "New US tariffs: 'Trump lashing out really indiscriminately', expert says",
    "bullets": [],
    "why_it_matters": null,
@@ -3885,49 +4176,46 @@
    ]
   },
   {
-   "id": 159,
-   "headline": "Cherki rescues point for Man City against Napoli",
+   "id": 172,
+   "headline": "Isak scores twice as clinical Liverpool beat Brugge",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Rayan Cherki's late equaliser rescues a point for Manchester City at home to Napoli in the Champions League, who have now won just one of their past seven games in all competitions.",
+    "text": "Liverpool defeat Club Brugge in a clinical performance thanks to goals from Alexander Isak and Florian Wirtz, bouncing back after a defeat in their last Champions League match.",
     "source": "BBC Sport"
    },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7d0a/live/4cdf0f20-e85f-11f1-99a1-253766e7ad8b.jpg",
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7011/live/1961c530-e91c-11f1-99b6-a35a62fa4264.jpg",
    "region": "Europe",
    "topic": "Sport",
    "significance": 4,
-   "published": "2026-11-25T22:05:49+00:00",
+   "published": "2026-11-25T22:12:19+00:00",
    "sources": [
     {
      "name": "BBC Sport",
-     "link": "https://www.bbc.co.uk/sport/football/videos/cjy5xwygqg9do?at_medium=RSS&at_campaign=rss"
+     "link": "https://www.bbc.co.uk/sport/football/videos/cqvg28l0z8mro?at_medium=RSS&at_campaign=rss"
     }
    ]
   },
   {
-   "id": 160,
-   "headline": "These young Republicans have a message for their party: It's time to 'grow up'",
+   "id": 173,
+   "headline": "Two members of Syrian security forces killed in ISIS attack, state media says",
    "bullets": [],
    "why_it_matters": null,
-   "excerpt": {
-    "text": "Three weeks after midterm elections that devastated the Republican Party, several dozen of its more youthful members gathered at a brewery to sort through the pieces.",
-    "source": "PBS NewsHour"
-   },
-   "image": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/AP26328606354498-1024x683.jpg",
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T22:00:15+00:00",
+   "excerpt": null,
+   "image": "https://www.thenationalnews.com/resizer/v2/XMBIQB4YBBE6PDXYOJHW3FEYRM.jpg?auth=b4e12aca629d3f329bf38d220ca669a8f920b16379950d6f3afa2a3840cd2c97&smart=true&width=5100&height=3182",
+   "region": "Middle East",
+   "topic": "Conflict",
+   "significance": 3,
+   "published": "2026-11-25T22:09:30+00:00",
    "sources": [
     {
-     "name": "PBS NewsHour",
-     "link": "https://www.pbs.org/newshour/politics/these-young-republicans-have-a-message-for-their-party-its-time-to-grow-up"
+     "name": "The National",
+     "link": "https://www.thenationalnews.com/news/mena/2026/11/25/two-members-of-syrian-security-forces-killed-in-isis-attack-state-media-says/"
     }
    ]
   },
   {
-   "id": 161,
+   "id": 174,
    "headline": "As US and China battle for AI dominance, small fry figure out what works",
    "bullets": [],
    "why_it_matters": null,
@@ -3948,49 +4236,28 @@
    ]
   },
   {
-   "id": 162,
-   "headline": "What Prabowo’s two vice-presidential picks bring to the table",
+   "id": 175,
+   "headline": "Tech leaders push back against Anthropic’s view on handing power to AI: Report",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Andi Amran Sulaiman and Sugiono both offer different advantages and potentially different risks, say experts.",
-    "source": "CNA"
+    "text": "Meta and OpenAI executives warn ceding control threatens human agency, according to US media",
+    "source": "Anadolu Agency"
    },
-   "image": "https://dam.mediacorp.sg/image/upload/s--j0Zxxbra--/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/24/andi-sugi_8.jpeg?itok=4gmeJors",
-   "region": "Asia-Pacific",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T22:00:00+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/asia/indonesia-vice-president-candidates-prabowo-sugiono-sulaiman-6577801"
-    }
-   ]
-  },
-  {
-   "id": 163,
-   "headline": "Chris Van Hollen picks up more support for Senate majority leader role ahead of Democrats vote next week – live",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Senator-elect Troy Jackson, of Maine, announced he would support the progressive over the current minority leader, Chuck Schumer Sign up for the Breaking News US email US trade representative Jamieson Greer claimed this morning that he did not expect the new proposed tariffs to rattle the global economy.",
-    "source": "The Guardian"
-   },
-   "image": "https://i.guim.co.uk/img/media/1ded0ee0250a7ae31faed7b6ee3dc216c3eee7d6/683_0_6827_5464/master/6827.jpg?width=700&quality=85&auto=format&fit=max&s=68d3bfbc4e3e807ac3a13135c9091ca0",
+   "image": null,
    "region": "North America",
-   "topic": "Politics",
+   "topic": "Science & Technology",
    "significance": 4,
-   "published": "2026-11-25T21:59:05+00:00",
+   "published": "2026-11-25T21:54:52+00:00",
    "sources": [
     {
-     "name": "The Guardian",
-     "link": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates"
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/artificial-intelligence/tech-leaders-push-back-against-anthropic-s-view-on-handing-power-to-ai-report/4138104"
     }
    ]
   },
   {
-   "id": 164,
+   "id": 176,
    "headline": "Mozambique advance to Round of 32 after 2-2 draw with Australia",
    "bullets": [],
    "why_it_matters": null,
@@ -4011,28 +4278,7 @@
    ]
   },
   {
-   "id": 165,
-   "headline": "Lukoil to Sell Foreign Assets, but Not to Kushner and Witkoff Associates",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Valuable properties belonging to the Russian energy giant will be sold to an American-led consortium. But Middle Eastern business contacts of the two Trump envoys pulled out because of political winds.",
-    "source": "The New York Times"
-   },
-   "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25dc-lukoil-fjvh/25dc-lukoil-fjvh-mediumSquareAt3X.jpg",
-   "region": "North America",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T21:52:41+00:00",
-   "sources": [
-    {
-     "name": "The New York Times",
-     "link": "https://www.nytimes.com/2026/11/25/us/politics/lukoil-deal.html"
-    }
-   ]
-  },
-  {
-   "id": 166,
+   "id": 177,
    "headline": "North Korea expels Swiss diplomat in sanctions row",
    "bullets": [],
    "why_it_matters": null,
@@ -4053,49 +4299,7 @@
    ]
   },
   {
-   "id": 167,
-   "headline": "1Password Says Hacker Accessed User Data, Passwords Remain Safe",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "1Password said a hacker accessed some of its internal systems and obtained a limited amount of account information from users, but the company noted that passwords were not compromised.",
-    "source": "Bloomberg"
-   },
-   "image": null,
-   "region": "Global",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T21:48:37+00:00",
-   "sources": [
-    {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/articles/2026-11-25/1password-says-hacker-accessed-user-data-passwords-remain-safe"
-    }
-   ]
-  },
-  {
-   "id": 168,
-   "headline": "M&A Maintains Amid Selloff, AI Credit Risk Rises",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "A weekly, midday program that delivers high-impact, editorially driven coverage of the most important corporate transactions shaping the global market.",
-    "source": "Bloomberg"
-   },
-   "image": null,
-   "region": "Global",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T21:45:37+00:00",
-   "sources": [
-    {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/videos/2026-11-25/bloomberg-deals-11-25-2026-video"
-    }
-   ]
-  },
-  {
-   "id": 169,
+   "id": 178,
    "headline": "US stocks fall further as fears over AI intensify",
    "bullets": [],
    "why_it_matters": null,
@@ -4116,7 +4320,7 @@
    ]
   },
   {
-   "id": 170,
+   "id": 179,
    "headline": "Cape Town court shuts down Ramaphosa's Farmgate scandal",
    "bullets": [],
    "why_it_matters": null,
@@ -4137,28 +4341,28 @@
    ]
   },
   {
-   "id": 171,
-   "headline": "Renegades WBBL player bowled without facing a ball",
+   "id": 180,
+   "headline": "Macy's Thanksgiving parade postponed for the first time in the event's history",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Melbourne Renegades snuck home on the last delivery against Brisbane Heat but not before Deandra Dottin was dismissed via the most bizarre wicket of the WBBL season.",
-    "source": "ABC Australia"
+    "text": "The Macy's Thanksgiving Day Parade has been postponed for the first time in the event's history, the retailer confirmed Wednesday.",
+    "source": "Axios"
    },
-   "image": "https://live-production.wcms.abc-cdn.net.au/90227f6f5ec5996fb171c9094e94a6fe?impolicy=wcms_crop_resize&cropH=2586&cropW=4598&xPos=0&yPos=130&width=862&height=485",
-   "region": "Asia-Pacific",
+   "image": "https://images.axios.com/WpsVxuu_Uf3T6oqolhQMrOJ-Ils=/0x297:7356x4435/1366x768/2026/11/25/1795627145730.jpg",
+   "region": "North America",
    "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T21:34:37+00:00",
+   "published": "2026-11-25T21:28:25+00:00",
    "sources": [
     {
-     "name": "ABC Australia",
-     "link": "https://www.abc.net.au/news/2026-11-26/wbbl-deandra-dottin-melbourne-renegades-bowled/107428262"
+     "name": "Axios",
+     "link": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
     }
    ]
   },
   {
-   "id": 172,
+   "id": 181,
    "headline": "Nasdaq 100 Bounces Off Tech-Driven Lows",
    "bullets": [],
    "why_it_matters": null,
@@ -4179,7 +4383,28 @@
    ]
   },
   {
-   "id": 173,
+   "id": 182,
+   "headline": "US stocks close lower in volatile session as AI trade remains under pressure",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Chip group Nvidia among losers but AI start-up Anthropic a bright spot as shares finish higher",
+    "source": "Financial Times"
+   },
+   "image": null,
+   "region": "North America",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-25T21:26:33+00:00",
+   "sources": [
+    {
+     "name": "Financial Times",
+     "link": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a?syn-25a6b1a6=1"
+    }
+   ]
+  },
+  {
+   "id": 183,
    "headline": "Supreme Court suggests referring KMC delimitation case back to High Court for fresh look",
    "bullets": [],
    "why_it_matters": null,
@@ -4200,7 +4425,7 @@
    ]
   },
   {
-   "id": 174,
+   "id": 184,
    "headline": "Canada partners with Qatar for consular services to Canadians in Afghanistan",
    "bullets": [],
    "why_it_matters": null,
@@ -4221,7 +4446,7 @@
    ]
   },
   {
-   "id": 175,
+   "id": 185,
    "headline": "Winter rains threaten 1,000 Gaza shelter sites, councils warn",
    "bullets": [],
    "why_it_matters": null,
@@ -4242,28 +4467,28 @@
    ]
   },
   {
-   "id": 176,
-   "headline": "Brent crude jumps over 3% to $94.3 on Saudi drone attack, smaller US stock build",
+   "id": 186,
+   "headline": "Delta Assembly passes 2027 appropriation bill of N1.272trn",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "US reports 1.1M-barrel rise in US commercial crude stocks, below 2M-barrel market forecast, alongside Cushing draw",
-    "source": "Anadolu Agency"
+    "text": "Governor Sheriff Oborevwori presented a budget proposal of N1.23 trillion to the Assembly for approval on 16 November.",
+    "source": "Premium Times"
    },
-   "image": null,
-   "region": "North America",
-   "topic": "Conflict",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/07/Delta-State-House-of-Assembly-complex.jpg?fit=727%2C476&ssl=1",
+   "region": "Africa",
+   "topic": "Economics",
    "significance": 4,
-   "published": "2026-11-25T20:49:16+00:00",
+   "published": "2026-11-25T20:50:16+00:00",
    "sources": [
     {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/economy/brent-crude-jumps-over-3-to-943-on-saudi-drone-attack-smaller-us-stock-build/4138078"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/news/top-news/927998-delta-assembly-passes-2027-appropriation-bill-of-n1-272trn.html"
     }
    ]
   },
   {
-   "id": 177,
+   "id": 187,
    "headline": "Brazil’s Real Rallies as Dollar Drops 1.5%",
    "bullets": [],
    "why_it_matters": null,
@@ -4284,7 +4509,7 @@
    ]
   },
   {
-   "id": 178,
+   "id": 188,
    "headline": "US clears SpaceX to launch up to one million orbital data center satellites",
    "bullets": [],
    "why_it_matters": null,
@@ -4305,7 +4530,7 @@
    ]
   },
   {
-   "id": 179,
+   "id": 189,
    "headline": "One EU budget. Too many priorities? MEPs join The Ring in Strasbourg",
    "bullets": [],
    "why_it_matters": null,
@@ -4326,7 +4551,7 @@
    ]
   },
   {
-   "id": 180,
+   "id": 190,
    "headline": "‘Terrorist attack’ caused major blackout in Colombia, president says",
    "bullets": [],
    "why_it_matters": null,
@@ -4347,28 +4572,7 @@
    ]
   },
   {
-   "id": 181,
-   "headline": "Buster the hamster home safe after hitching ride in Halloween pumpkin",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "An adventurous hamster named Buster is back home in Arnprior, Ont., three weeks after hitching a ride inside a discarded Halloween pumpkin and ending up on a farm about 20 kilometres away.",
-    "source": "CBC News"
-   },
-   "image": "https://i.cbc.ca/ais/71842113-5276-4f71-b45f-9614d71a77ce,1795634942425/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C306%2C684%2C384%29%3B",
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T20:39:33+00:00",
-   "sources": [
-    {
-     "name": "CBC News",
-     "link": "https://www.cbc.ca/news/canada/ottawa/buster-the-hamster-home-safe-after-hitching-ride-in-halloween-pumpkin-9.7435959?cmp=rss"
-    }
-   ]
-  },
-  {
-   "id": 182,
+   "id": 191,
    "headline": "Did GTA 6 really recreate Charlie Kirk's assassination?",
    "bullets": [],
    "why_it_matters": null,
@@ -4389,49 +4593,7 @@
    ]
   },
   {
-   "id": 183,
-   "headline": "\"The flashing red lights couldn't be brighter\": Democrats demand new restrictions on AI",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Prominent Democrats are calling for new restrictions on AI development following Axios reporting that employees at OpenAI and Anthropic increasingly fear their most powerful models cannot be safely released.",
-    "source": "Axios"
-   },
-   "image": "https://images.axios.com/9ApTB3IREJaBROzB77X--l7XqJU=/0x0:1920x1080/1366x768/2026/02/12/1770932307221.jpeg",
-   "region": "North America",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T20:19:21+00:00",
-   "sources": [
-    {
-     "name": "Axios",
-     "link": "https://www.axios.com/2026/11/25/democrats-ai-safety-restrictions-openai-anthropic-axios"
-    }
-   ]
-  },
-  {
-   "id": 184,
-   "headline": "2027: Mbah commissions projects in Oji-River, pledges more development",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "The governor urged residents to sustain the development gains recorded in the state, describing the ongoing transformation as irreversible.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/49916f43-3f9e-4596-8876-87f4f6d1f4d2-e1795637443569.jpeg?fit=853%2C533&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T20:14:08+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/promoted/928053-2027-mbah-commissions-projects-in-oji-river-pledges-more-development.html"
-    }
-   ]
-  },
-  {
-   "id": 185,
+   "id": 192,
    "headline": "Moment Nasa spacecraft hit asteroid - and what happened next",
    "bullets": [],
    "why_it_matters": null,
@@ -4452,7 +4614,7 @@
    ]
   },
   {
-   "id": 186,
+   "id": 193,
    "headline": "El Jalapeño: Mexico’s new Animal Welfare Law officially reclassifies Mexico City roof dogs as municipal early-warning infrastructure",
    "bullets": [],
    "why_it_matters": null,
@@ -4473,7 +4635,7 @@
    ]
   },
   {
-   "id": 187,
+   "id": 194,
    "headline": "EU says 'strongly' rejects premise of new US tariffs",
    "bullets": [],
    "why_it_matters": null,
@@ -4494,7 +4656,7 @@
    ]
   },
   {
-   "id": 188,
+   "id": 195,
    "headline": "Israeli judges recommend dropping most serious charges against Netanyahu",
    "bullets": [],
    "why_it_matters": null,
@@ -4515,7 +4677,7 @@
    ]
   },
   {
-   "id": 189,
+   "id": 196,
    "headline": "In boost for Netanyahu, judges question corruption trial charges",
    "bullets": [],
    "why_it_matters": null,
@@ -4536,28 +4698,7 @@
    ]
   },
   {
-   "id": 190,
-   "headline": "House Democrats chart path on trading bans",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Democrats may ban members from using prediction markets as part of a measure governing the House — then vote on standalone legislation that would prevent elected officials from trading individual stocks and most cryptocurrencies, Rep. Seth Magaziner, D-R.I., told Semafor.",
-    "source": "Semafor"
-   },
-   "image": "https://img.semafor.com/e2cb452a118bf8ffe7c6436f42c98304becf4478-5246x3498.jpg",
-   "region": "Global",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T19:27:44+00:00",
-   "sources": [
-    {
-     "name": "Semafor",
-     "link": "https://www.semafor.com/article/11/25/2026/house-democrats-chart-path-on-trading-bans"
-    }
-   ]
-  },
-  {
-   "id": 191,
+   "id": 197,
    "headline": "Do Americans have a right to own assault rifles?",
    "bullets": [],
    "why_it_matters": null,
@@ -4578,25 +4719,7 @@
    ]
   },
   {
-   "id": 192,
-   "headline": "US-led group reaches deal to acquire Lukoil's global assets",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": null,
-   "image": "https://www.thenationalnews.com/resizer/v2/H4ADRK2DPC5PAA4OZZC3NLWV54.jpg?auth=2cc2fb4791d3475d2346db3f8b5d4bbabed607c1b8ca2d20cf59fe25baf859da&smart=true&width=4720&height=3286",
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 3,
-   "published": "2026-11-25T18:52:48+00:00",
-   "sources": [
-    {
-     "name": "The National",
-     "link": "https://www.thenationalnews.com/business/energy/2026/11/25/todd-boehly-lukoil/"
-    }
-   ]
-  },
-  {
-   "id": 193,
+   "id": 198,
    "headline": "Cloud of smoke seen after US army detonates bomb-making chemicals in Iowa – video",
    "bullets": [],
    "why_it_matters": null,
@@ -4617,7 +4740,28 @@
    ]
   },
   {
-   "id": 194,
+   "id": 199,
+   "headline": "U.S. proposes excess capacity tariffs on S. Korean goods within agreed 15 pct ceiling",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "WASHINGTON, Nov. 25 (Yonhap) -- The United States proposed Wednesday imposing ta...",
+    "source": "Yonhap"
+   },
+   "image": "https://img.yna.co.kr/etc/inner/EN/2026/11/26/AEN20261126000200315_01_i_P2.jpg",
+   "region": "North America",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-25T18:10:25+00:00",
+   "sources": [
+    {
+     "name": "Yonhap",
+     "link": "https://en.yna.co.kr/view/AEN20261126000200315"
+    }
+   ]
+  },
+  {
+   "id": 200,
    "headline": "Ukraine says it struck two oil refineries in Russia's Samara region",
    "bullets": [],
    "why_it_matters": null,
@@ -4638,28 +4782,7 @@
    ]
   },
   {
-   "id": 195,
-   "headline": "UK inflation may peak at lower rate than BoE forecast, says governor",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "But Andrew Bailey refuses to rule out another interest rate increase next month",
-    "source": "Financial Times"
-   },
-   "image": null,
-   "region": "Europe",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T17:55:48+00:00",
-   "sources": [
-    {
-     "name": "Financial Times",
-     "link": "https://www.ft.com/content/402e640b-8933-4b3c-bb4c-ce12a7994ac6?syn-25a6b1a6=1"
-    }
-   ]
-  },
-  {
-   "id": 196,
+   "id": 201,
    "headline": "Grand Theft Auto VI: The Album review – even GTA sceptics will warm to this zeitgeisty, star-packed soundtrack",
    "bullets": [],
    "why_it_matters": null,
@@ -4680,7 +4803,7 @@
    ]
   },
   {
-   "id": 197,
+   "id": 202,
    "headline": "'Justice for sport' - reaction to Afcon final verdict",
    "bullets": [],
    "why_it_matters": null,
@@ -4701,28 +4824,7 @@
    ]
   },
   {
-   "id": 198,
-   "headline": "Gambia: Almameh Gibba Promises to Address Killings &amp; Conflict Along Foni Borderline",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "[Foroyaa] Independent presidential candidate and Foni Kansala National Assembly Member Almameh Gibba has pledged to address insecurity and recurring violence in communities along The Gambia's border with Senegal if elected on December 5.",
-    "source": "AllAfrica"
-   },
-   "image": null,
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T17:02:58+00:00",
-   "sources": [
-    {
-     "name": "AllAfrica",
-     "link": "https://allafrica.com/stories/202611250660.html"
-    }
-   ]
-  },
-  {
-   "id": 199,
+   "id": 203,
    "headline": "Les centristes en quête d’un candidat",
    "bullets": [],
    "why_it_matters": null,
@@ -4743,7 +4845,7 @@
    ]
   },
   {
-   "id": 200,
+   "id": 204,
    "headline": "Nigeria: Bauchi Assembly Probes Alleged Exclusion of Miyetti Allah From Forest Allocation",
    "bullets": [],
    "why_it_matters": null,
@@ -4764,7 +4866,7 @@
    ]
   },
   {
-   "id": 201,
+   "id": 205,
    "headline": "Nigeria: Fashion Takes Centre Stage in Telling Plateau's Story",
    "bullets": [],
    "why_it_matters": null,
@@ -4785,7 +4887,7 @@
    ]
   },
   {
-   "id": 202,
+   "id": 206,
    "headline": "Smoke appears after explosion heard in Iowa near Army detonation site",
    "bullets": [],
    "why_it_matters": null,
@@ -4806,7 +4908,28 @@
    ]
   },
   {
-   "id": 203,
+   "id": 207,
+   "headline": "Nigeria: President Tinubu Felicitates ADC Presidential Candidate Atiku Abubakar At 80",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "[Presidency Nigeria] I extend my warmest congratulations to former Vice President and African Democratic Congress Presidential Candidate, Alhaji Atiku Abubakar, on his 80th birthday today, November 25, 2026.",
+    "source": "AllAfrica"
+   },
+   "image": null,
+   "region": "Africa",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T15:35:02+00:00",
+   "sources": [
+    {
+     "name": "AllAfrica",
+     "link": "https://allafrica.com/stories/202611250548.html"
+    }
+   ]
+  },
+  {
+   "id": 208,
    "headline": "BOE’s Bailey Sees Lower Peak for Inflation if Energy Prices Stay Where They Are",
    "bullets": [],
    "why_it_matters": null,
@@ -4827,7 +4950,7 @@
    ]
   },
   {
-   "id": 204,
+   "id": 209,
    "headline": "EU plans €50bn tech fund to compete with US and China in the quantum race",
    "bullets": [],
    "why_it_matters": null,
@@ -4848,7 +4971,7 @@
    ]
   },
   {
-   "id": 205,
+   "id": 210,
    "headline": "Five Russian military jets hit in airfield strike, says Ukraine",
    "bullets": [],
    "why_it_matters": null,
@@ -4869,7 +4992,7 @@
    ]
   },
   {
-   "id": 206,
+   "id": 211,
    "headline": "UBA authorities block controversial tribute to ERP guerrilla leader Mario Roberto Santucho",
    "bullets": [],
    "why_it_matters": null,
@@ -4890,7 +5013,7 @@
    ]
   },
   {
-   "id": 207,
+   "id": 212,
    "headline": "In Afghanistan, no female doctor often means no treatment for women",
    "bullets": [],
    "why_it_matters": null,
@@ -4911,28 +5034,7 @@
    ]
   },
   {
-   "id": 208,
-   "headline": "Additional personal info leaked from Bithumb in hacks",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "SEOUL, Nov. 25 (Yonhap) -- More personal information than initially reported had...",
-    "source": "Yonhap"
-   },
-   "image": "https://img.yna.co.kr/etc/inner/EN/2026/11/25/AEN20261125010400320_01_i_P2.jpg",
-   "region": "Asia-Pacific",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T11:17:54+00:00",
-   "sources": [
-    {
-     "name": "Yonhap",
-     "link": "https://en.yna.co.kr/view/AEN20261125010400320"
-    }
-   ]
-  },
-  {
-   "id": 209,
+   "id": 213,
    "headline": "British heritage in Chile, 1858 Catedral de San Pablo, refurbished in city-port Valparaiso",
    "bullets": [],
    "why_it_matters": null,
@@ -4953,7 +5055,7 @@
    ]
   },
   {
-   "id": 210,
+   "id": 214,
    "headline": "Greetings from Mount Kilimanjaro, Africa's highest point in all its splendor",
    "bullets": [],
    "why_it_matters": null,
@@ -4974,7 +5076,7 @@
    ]
   },
   {
-   "id": 211,
+   "id": 215,
    "headline": "EA adds AI-generated John Motson to FC 27 video game",
    "bullets": [],
    "why_it_matters": null,
@@ -4995,7 +5097,7 @@
    ]
   },
   {
-   "id": 212,
+   "id": 216,
    "headline": "BOJ’s faster inflation indicator backs case for another hike",
    "bullets": [],
    "why_it_matters": null,
@@ -5016,7 +5118,7 @@
    ]
   },
   {
-   "id": 213,
+   "id": 217,
    "headline": "The rich world’s sexual recession is getting worse",
    "bullets": [],
    "why_it_matters": null,
@@ -5037,7 +5139,7 @@
    ]
   },
   {
-   "id": 214,
+   "id": 218,
    "headline": "UN slams Iran after it flogs singer for performing without veil",
    "bullets": [],
    "why_it_matters": null,
@@ -5058,25 +5160,130 @@
    ]
   },
   {
-   "id": 215,
-   "headline": "Japan arcade snags world record with 600 claw machines",
+   "id": 219,
+   "headline": "Nvidia turmoil casts pall over high-flying global AI chip industry",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": null,
    "image": null,
    "region": "Asia-Pacific",
-   "topic": "Politics",
+   "topic": "Science & Technology",
    "significance": 3,
    "published": null,
    "sources": [
     {
      "name": "Nikkei Asia",
-     "link": "https://asia.nikkei.com/business/media-entertainment/japan-arcade-snags-world-record-with-600-claw-machines"
+     "link": "https://asia.nikkei.com/business/tech/semiconductors/nvidia-turmoil-casts-pall-over-high-flying-global-ai-chip-industry"
     }
    ]
   },
   {
-   "id": 216,
+   "id": 220,
+   "headline": "Financials, Healthcare Will Be Big AI Winners: Yardeni",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Ed Yardeni, President and Chief Investment Strategist at Yardeni Research, described the market’s sharp intraday reversal as another attempt to find a bottom, following recent steep losses and Monday’s dramatic rebound.",
+    "source": "Bloomberg"
+   },
+   "image": null,
+   "region": "Global",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-25T22:28:32+00:00",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/videos/2026-11-25/financials-healthcare-will-be-big-ai-winners-yardeni-video"
+    }
+   ]
+  },
+  {
+   "id": 221,
+   "headline": "Tech selloff extends on AI, neocloud jitters",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Swaps on CoreWeave’s debt priced in a more than 70% chance of default within the next five years, as worries intensified around highly leveraged neoclouds.",
+    "source": "Semafor"
+   },
+   "image": "https://img.semafor.com/0250436a5fafdb7a070d76f8e9faaf43644b460a-4498x2999.jpg",
+   "region": "Global",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-25T22:27:13+00:00",
+   "sources": [
+    {
+     "name": "Semafor",
+     "link": "https://www.semafor.com/article/11/25/2026/tech-selloff-extends-on-ai-neocloud-jitters"
+    }
+   ]
+  },
+  {
+   "id": 222,
+   "headline": "Buster the hamster home safe after hitching ride in Halloween pumpkin",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "An adventurous hamster named Buster is back home in Arnprior, Ont., three weeks after hitching a ride inside a discarded Halloween pumpkin and ending up on a farm about 20 kilometres away.",
+    "source": "CBC News"
+   },
+   "image": "https://i.cbc.ca/ais/71842113-5276-4f71-b45f-9614d71a77ce,1795634942425/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C306%2C684%2C384%29%3B",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T20:39:33+00:00",
+   "sources": [
+    {
+     "name": "CBC News",
+     "link": "https://www.cbc.ca/news/canada/ottawa/buster-the-hamster-home-safe-after-hitching-ride-in-halloween-pumpkin-9.7435959?cmp=rss"
+    }
+   ]
+  },
+  {
+   "id": 223,
+   "headline": "Stocks Pare AI-Driven Losses as Dip Buyers Emerge",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Wild swings lashed Wall Street again, with dip buyers fading a stock selloff that had briefly sent the Nasdaq 100 to the brink of a bear market. The tech-heavy gauge fell 1%, trimming most of plunge that was driven by worries over the outlook for the artificial-intelligence trade.",
+    "source": "Bloomberg"
+   },
+   "image": null,
+   "region": "North America",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-25T22:21:45+00:00",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "link": "https://www.bloomberg.com/news/videos/2026-11-25/stocks-pare-ai-driven-losses-as-dip-buyers-emerge-video"
+    }
+   ]
+  },
+  {
+   "id": 224,
+   "headline": "These young Republicans have a message for their party: It's time to 'grow up'",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Three weeks after midterm elections that devastated the Republican Party, several dozen of its more youthful members gathered at a brewery to sort through the pieces.",
+    "source": "PBS NewsHour"
+   },
+   "image": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/AP26328606354498-1024x683.jpg",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:00:15+00:00",
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "link": "https://www.pbs.org/newshour/politics/these-young-republicans-have-a-message-for-their-party-its-time-to-grow-up"
+    }
+   ]
+  },
+  {
+   "id": 225,
    "headline": "Permanent capture protest: Safcei quits Baboon Advisory Group",
    "bullets": [],
    "why_it_matters": null,
@@ -5097,154 +5304,70 @@
    ]
   },
   {
-   "id": 217,
-   "headline": "'We need to stop the war in Iran': US Congresswoman Pramila Jayapal",
+   "id": 226,
+   "headline": "Chris Van Hollen picks up more support for Senate majority leader role ahead of Democrats vote next week – live",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "In an interview with FRANCE 24, Democratic Congresswoman Pramila Jayapal laid out her priorities for the new Congress: ending the war in Iran, tackling the cost-of-living crisis, curbing political corruption and holding the Trump administration accountable for its immigration crackdown.",
-    "source": "France 24"
-   },
-   "image": "https://s.france24.com/media/display/33fdce0e-e8c0-11f1-b0b2-95e072ff0a91/w:1024/p:16x9/pramila.png",
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T15:46:59+00:00",
-   "sources": [
-    {
-     "name": "France 24",
-     "link": "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20261125-we-need-to-stop-the-war-in-iran-us-congresswoman-pramila-jayapal"
-    }
-   ]
-  },
-  {
-   "id": 218,
-   "headline": "Real Madrid put in a five star second half to win against PSV",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Jude Bellingham comes off the bench to score a stunning goal as Real Madrid come from behind to beat PSV Eindhoven and maintain their 100% record in the Champions League.",
-    "source": "BBC Sport"
-   },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1ba5/live/0ccb6090-e8f6-11f1-99a1-253766e7ad8b.jpg",
-   "region": "Europe",
-   "topic": "Sport",
-   "significance": 4,
-   "published": "2026-11-25T22:05:45+00:00",
-   "sources": [
-    {
-     "name": "BBC Sport",
-     "link": "https://www.bbc.co.uk/sport/football/videos/c5evr0y83197o?at_medium=RSS&at_campaign=rss"
-    }
-   ]
-  },
-  {
-   "id": 219,
-   "headline": "The holiday season can be expensive. Here are some tips for keeping credit card debt in check",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "About 76% of people who said they would throw down money this holiday season identified at least one reason they might overspend, including fear of missing out or not spending enough time planning, a NerdWallet survey found.",
-    "source": "PBS NewsHour"
-   },
-   "image": "https://d3i6fh83elv35t.cloudfront.net/static/2024/11/2024-11-29T070048Z_1806439686_RC2UDBAMMPP1_RTRMADP_3_RETAIL-HOLIDAYSHOPPING-BLACK-FRIDAY-1024x683.jpg",
-   "region": "North America",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T21:49:34+00:00",
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "link": "https://www.pbs.org/newshour/economy/the-holiday-season-can-be-expensive-here-are-some-tips-for-keeping-credit-card-debt-in-check"
-    }
-   ]
-  },
-  {
-   "id": 220,
-   "headline": "Grand gestures at Apec in Shenzhen. But what about the small things?",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "As soon as world leaders left the Apec venues in downtown Shenzhen last Thursday, food deliveries resumed in the area and it started to drizzle. The area had been immaculate during the previous few days, and the weather had cooperated pretty well.",
-    "source": "South China Morning Post"
-   },
-   "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/c52b32d9-b30f-4a13-b3cd-29cad75e2bf8_f3b6b049.jpg?itok=fnywbh0X&v=1795505698",
-   "region": "North America",
-   "topic": "Environment",
-   "significance": 4,
-   "published": "2026-11-25T21:30:08+00:00",
-   "sources": [
-    {
-     "name": "South China Morning Post",
-     "link": "https://www.scmp.com/opinion/china-opinion/article/3375592/grand-gestures-apec-shenzhen-what-about-small-things"
-    }
-   ]
-  },
-  {
-   "id": 221,
-   "headline": "Commentary: From solving to ‘digesting’: How mathematicians can adapt to the dramatic changes of AI",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "If AI can generate papers that would take a human mathematician years to research and write, does that mean mathematics is dead? A professor gives his take.",
-    "source": "CNA"
-   },
-   "image": "https://dam.mediacorp.sg/image/upload/s--P8pxg1W8--/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/25/robot_education_istock.jpg?itok=r1INtR3g",
-   "region": "Asia-Pacific",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T21:59:00+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/commentary/claude-ai-solves-mathematics-riemann-hypothesis-6581176"
-    }
-   ]
-  },
-  {
-   "id": 222,
-   "headline": "Flinders Island bushfire grows to 13,000 hectares with Tasmanian homes and properties at risk",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Fire making a ‘significant run’ towards the southwest of the island on Thursday, Tasmania Fire Service says Get our breaking news email , free app or daily news podcast Homes and properties on a picturesque remote island remain under threat from an out-of-control bushfire that has sent smoke hundreds of kilometres…",
+    "text": "Senator-elect Troy Jackson, of Maine, announced he would support the progressive over the current minority leader, Chuck Schumer Sign up for the Breaking News US email US trade representative Jamieson Greer claimed this morning that he did not expect the new proposed tariffs to rattle the global economy.",
     "source": "The Guardian"
    },
-   "image": "https://i.guim.co.uk/img/media/233bcc415b139a4c7cb303ad0a176d9ff6433c48/66_0_880_704/master/880.jpg?width=700&quality=85&auto=format&fit=max&s=b512821f0403dac931cfaa24a88d55df",
-   "region": "Global",
+   "image": "https://i.guim.co.uk/img/media/1ded0ee0250a7ae31faed7b6ee3dc216c3eee7d6/683_0_6827_5464/master/6827.jpg?width=700&quality=85&auto=format&fit=max&s=68d3bfbc4e3e807ac3a13135c9091ca0",
+   "region": "North America",
    "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T21:32:12+00:00",
+   "published": "2026-11-25T21:59:05+00:00",
    "sources": [
     {
      "name": "The Guardian",
-     "link": "https://www.theguardian.com/australia-news/2026/nov/25/large-bushfire-threatens-homes-and-properties-on-remote-island-off-tasmania"
+     "link": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates"
     }
    ]
   },
   {
-   "id": 223,
-   "headline": "Uganda storm into U-17 World Cup round of 32 with 6-0 win",
+   "id": 227,
+   "headline": "Cancelled flight forces man to drive 1,000km to 'lifesaving' appointment",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Uganda sealed qualification for the FIFA U-17 World Cup round of 32 with a commanding 6-0 win over New Caledonia.",
-    "source": "Africanews"
+    "text": "John Barnes says an apology from Airnorth is not good enough after a flight cancellation could have threatened his health condition.",
+    "source": "ABC Australia"
    },
-   "image": "https://images.euronews.com/articles/stories/10/00/81/20/640x360_cmsv2_35fe23e1-9eca-5d8b-baef-0710da46f37b-10008120.jpg?1795613561",
-   "region": "Africa",
-   "topic": "Sport",
+   "image": "https://live-production.wcms.abc-cdn.net.au/446ce505b879023339bea607aacba686?impolicy=wcms_crop_resize&cropH=909&cropW=1616&xPos=0&yPos=43&width=862&height=485",
+   "region": "Asia-Pacific",
+   "topic": "Science & Technology",
    "significance": 4,
-   "published": "2026-11-25T19:42:55+00:00",
+   "published": "2026-11-25T22:05:00+00:00",
    "sources": [
     {
-     "name": "Africanews",
-     "link": "http://www.africanews.com/2026/11/25/uganda-storm-into-u-17-world-cup-round-of-32-with-6-0-win/"
+     "name": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-26/wa-man-drives-1000km-cancelled-kununurra-flight/107425554"
     }
    ]
   },
   {
-   "id": 224,
+   "id": 228,
+   "headline": "What Prabowo’s two vice-presidential picks bring to the table",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Andi Amran Sulaiman and Sugiono both offer different advantages and potentially different risks, say experts.",
+    "source": "CNA"
+   },
+   "image": "https://dam.mediacorp.sg/image/upload/s--j0Zxxbra--/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/24/andi-sugi_8.jpeg?itok=4gmeJors",
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T22:00:00+00:00",
+   "sources": [
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/asia/indonesia-vice-president-candidates-prabowo-sugiono-sulaiman-6577801"
+    }
+   ]
+  },
+  {
+   "id": 229,
    "headline": "Road Fire Near Cairo Kills Dozens After Petroleum-Laden Truck Crashes",
    "bullets": [],
    "why_it_matters": null,
@@ -5265,7 +5388,130 @@
    ]
   },
   {
-   "id": 225,
+   "id": 230,
+   "headline": "'We need to stop the war in Iran': US Congresswoman Pramila Jayapal",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "In an interview with FRANCE 24, Democratic Congresswoman Pramila Jayapal laid out her priorities for the new Congress: ending the war in Iran, tackling the cost-of-living crisis, curbing political corruption and holding the Trump administration accountable for its immigration crackdown.",
+    "source": "France 24"
+   },
+   "image": "https://s.france24.com/media/display/33fdce0e-e8c0-11f1-b0b2-95e072ff0a91/w:1024/p:16x9/pramila.png",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-25T15:46:59+00:00",
+   "sources": [
+    {
+     "name": "France 24",
+     "link": "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20261125-we-need-to-stop-the-war-in-iran-us-congresswoman-pramila-jayapal"
+    }
+   ]
+  },
+  {
+   "id": 231,
+   "headline": "Gordon stars in comfortable Barca win over Sabah",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Anthony Gordon scores Barcelona's opening two goals as they ease past Sabah with a 4-1 win in the Champions League.",
+    "source": "BBC Sport"
+   },
+   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ebd6/live/0a4713c0-e903-11f1-a094-5fdc692f3e33.jpg",
+   "region": "Europe",
+   "topic": "Sport",
+   "significance": 4,
+   "published": "2026-11-25T22:07:02+00:00",
+   "sources": [
+    {
+     "name": "BBC Sport",
+     "link": "https://www.bbc.co.uk/sport/football/videos/c6z74ljxjv2xo?at_medium=RSS&at_campaign=rss"
+    }
+   ]
+  },
+  {
+   "id": 232,
+   "headline": "US-led group reaches deal to acquire Lukoil's global assets",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": null,
+   "image": "https://www.thenationalnews.com/resizer/v2/H4ADRK2DPC5PAA4OZZC3NLWV54.jpg?auth=2cc2fb4791d3475d2346db3f8b5d4bbabed607c1b8ca2d20cf59fe25baf859da&smart=true&width=4720&height=3286",
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 3,
+   "published": "2026-11-25T18:52:48+00:00",
+   "sources": [
+    {
+     "name": "The National",
+     "link": "https://www.thenationalnews.com/business/energy/2026/11/25/todd-boehly-lukoil/"
+    }
+   ]
+  },
+  {
+   "id": 233,
+   "headline": "Grand gestures at Apec in Shenzhen. But what about the small things?",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "As soon as world leaders left the Apec venues in downtown Shenzhen last Thursday, food deliveries resumed in the area and it started to drizzle. The area had been immaculate during the previous few days, and the weather had cooperated pretty well.",
+    "source": "South China Morning Post"
+   },
+   "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/c52b32d9-b30f-4a13-b3cd-29cad75e2bf8_f3b6b049.jpg?itok=fnywbh0X&v=1795505698",
+   "region": "North America",
+   "topic": "Environment",
+   "significance": 4,
+   "published": "2026-11-25T21:30:08+00:00",
+   "sources": [
+    {
+     "name": "South China Morning Post",
+     "link": "https://www.scmp.com/opinion/china-opinion/article/3375592/grand-gestures-apec-shenzhen-what-about-small-things"
+    }
+   ]
+  },
+  {
+   "id": 234,
+   "headline": "Brent crude jumps over 3% to $94.3 on Saudi drone attack, smaller US stock build",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "US reports 1.1M-barrel rise in US commercial crude stocks, below 2M-barrel market forecast, alongside Cushing draw",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "North America",
+   "topic": "Conflict",
+   "significance": 4,
+   "published": "2026-11-25T20:49:16+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/economy/brent-crude-jumps-over-3-to-943-on-saudi-drone-attack-smaller-us-stock-build/4138078"
+    }
+   ]
+  },
+  {
+   "id": 235,
+   "headline": "Uganda storm into U-17 World Cup round of 32 with 6-0 win",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Uganda sealed qualification for the FIFA U-17 World Cup round of 32 with a commanding 6-0 win over New Caledonia.",
+    "source": "Africanews"
+   },
+   "image": "https://images.euronews.com/articles/stories/10/00/81/20/640x360_cmsv2_35fe23e1-9eca-5d8b-baef-0710da46f37b-10008120.jpg?1795613561",
+   "region": "Africa",
+   "topic": "Sport",
+   "significance": 4,
+   "published": "2026-11-25T19:42:55+00:00",
+   "sources": [
+    {
+     "name": "Africanews",
+     "link": "http://www.africanews.com/2026/11/25/uganda-storm-into-u-17-world-cup-round-of-32-with-6-0-win/"
+    }
+   ]
+  },
+  {
+   "id": 236,
    "headline": "Two children among six dead after plane crash off Mississippi coast",
    "bullets": [],
    "why_it_matters": null,
@@ -5286,49 +5532,7 @@
    ]
   },
   {
-   "id": 226,
-   "headline": "Anthropic’s Stock Sparks Rare Divide Inside One Wall Street Firm",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Two equity analysts at a single Wall Street research firm have taken the unusual step of posting conflicting views on the outlook for the hottest stock in the market: Anthropic PBC’s newly listed shares.",
-    "source": "Bloomberg"
-   },
-   "image": null,
-   "region": "North America",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T21:35:47+00:00",
-   "sources": [
-    {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/articles/2026-11-25/anthropic-s-stock-sparks-rare-divide-inside-one-wall-street-firm"
-    }
-   ]
-  },
-  {
-   "id": 227,
-   "headline": "Anthropic Rebounds From 10% Drop as Markets Stage Dramatic Recovery | Closing Bell",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Carol Massar and Lisa Mateo. (Source: Bloomberg)",
-    "source": "Bloomberg"
-   },
-   "image": null,
-   "region": "North America",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-25T21:38:39+00:00",
-   "sources": [
-    {
-     "name": "Bloomberg",
-     "link": "https://www.bloomberg.com/news/videos/2026-11-25/anthropic-rebounds-from-selloff-closing-bell-video"
-    }
-   ]
-  },
-  {
-   "id": 228,
+   "id": 237,
    "headline": "Poundland collapses putting 11,000 jobs at risk",
    "bullets": [],
    "why_it_matters": null,
@@ -5349,28 +5553,28 @@
    ]
   },
   {
-   "id": 229,
-   "headline": "Copper theft costing SEQ ratepayers a small fortune",
+   "id": 238,
+   "headline": "\"The flashing red lights couldn't be brighter\": Democrats demand new restrictions on AI",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Copper thefts on council assets have doubled and even quadrupled in some local government areas. Here's what it is costing you.",
-    "source": "ABC Australia"
+    "text": "Prominent Democrats are calling for new restrictions on AI development following Axios reporting that employees at OpenAI and Anthropic increasingly fear their most powerful models cannot be safely released.",
+    "source": "Axios"
    },
-   "image": "https://live-production.wcms.abc-cdn.net.au/433ca10ad24eb5605a04f0bf66d7cfcb?impolicy=wcms_crop_resize&cropH=456&cropW=810&xPos=0&yPos=7&width=862&height=485",
-   "region": "Asia-Pacific",
-   "topic": "Politics",
+   "image": "https://images.axios.com/9ApTB3IREJaBROzB77X--l7XqJU=/0x0:1920x1080/1366x768/2026/02/12/1770932307221.jpeg",
+   "region": "North America",
+   "topic": "Science & Technology",
    "significance": 4,
-   "published": "2026-11-25T21:25:33+00:00",
+   "published": "2026-11-25T20:19:21+00:00",
    "sources": [
     {
-     "name": "ABC Australia",
-     "link": "https://www.abc.net.au/news/2026-11-26/copper-theft-costs-greater-brisbane-ratepayers-millions/107427286"
+     "name": "Axios",
+     "link": "https://www.axios.com/2026/11/25/democrats-ai-safety-restrictions-openai-anthropic-axios"
     }
    ]
   },
   {
-   "id": 230,
+   "id": 239,
    "headline": "Inside Hong Kong's Deadly Fire",
    "bullets": [],
    "why_it_matters": null,
@@ -5391,7 +5595,28 @@
    ]
   },
   {
-   "id": 231,
+   "id": 240,
+   "headline": "The fund manager’s dilemma over AI",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Assessing concentration risks may be more complicated than it seems",
+    "source": "Financial Times"
+   },
+   "image": null,
+   "region": "Global",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-25T18:05:53+00:00",
+   "sources": [
+    {
+     "name": "Financial Times",
+     "link": "https://www.ft.com/content/c62ca4c2-dfc4-4943-86a4-fee8fd5a1f4a?syn-25a6b1a6=1"
+    }
+   ]
+  },
+  {
+   "id": 241,
    "headline": "Governor seeks CM’s report on compliance with SC’s directions",
    "bullets": [],
    "why_it_matters": null,
@@ -5409,7 +5634,7 @@
    ]
   },
   {
-   "id": 232,
+   "id": 242,
    "headline": "NATO's No. 2 commander strikes different tone on Canada than Pentagon",
    "bullets": [],
    "why_it_matters": null,
@@ -5430,7 +5655,7 @@
    ]
   },
   {
-   "id": 233,
+   "id": 243,
    "headline": "US Education Department probes Virginia schools after sexual abuse scandal",
    "bullets": [],
    "why_it_matters": null,
@@ -5451,28 +5676,28 @@
    ]
   },
   {
-   "id": 234,
-   "headline": "ISIS attack on military headquarters kills 2 in northeastern Syria, official says",
+   "id": 244,
+   "headline": "2027: Mbah commissions projects in Oji-River, pledges more development",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Bomb-laden motorcycle explodes at entrance to security post in Al-Mushairifah neighborhood",
-    "source": "Anadolu Agency"
+    "text": "The governor urged residents to sustain the development gains recorded in the state, describing the ongoing transformation as irreversible.",
+    "source": "Premium Times"
    },
-   "image": null,
-   "region": "Middle East",
-   "topic": "Conflict",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/49916f43-3f9e-4596-8876-87f4f6d1f4d2-e1795637443569.jpeg?fit=853%2C533&ssl=1",
+   "region": "Africa",
+   "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-25T20:47:15+00:00",
+   "published": "2026-11-25T20:14:08+00:00",
    "sources": [
     {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/middle-east/isis-attack-on-military-headquarters-kills-2-in-northeastern-syria-official-says/4138076"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/promoted/928053-2027-mbah-commissions-projects-in-oji-river-pledges-more-development.html"
     }
    ]
   },
   {
-   "id": 235,
+   "id": 245,
    "headline": "Ecuador Campaign Ends, Silence Fines Apply",
    "bullets": [],
    "why_it_matters": null,
@@ -5493,7 +5718,7 @@
    ]
   },
   {
-   "id": 236,
+   "id": 246,
    "headline": "How Ukraine is disrupting Russia's Africa operations by hitting arms shipments in the Mediterranean",
    "bullets": [],
    "why_it_matters": null,
@@ -5514,7 +5739,7 @@
    ]
   },
   {
-   "id": 237,
+   "id": 247,
    "headline": "Wrongly deported Salvadoran arrives in Spain after US legal battle",
    "bullets": [],
    "why_it_matters": null,
@@ -5535,7 +5760,7 @@
    ]
   },
   {
-   "id": 238,
+   "id": 248,
    "headline": "Israeli parliament advances bill that could block Netanyahu from forming government",
    "bullets": [],
    "why_it_matters": null,
@@ -5556,28 +5781,7 @@
    ]
   },
   {
-   "id": 239,
-   "headline": "PQ urges other parties urged to sit in Quebec legislature — despite recent ruling ordering oath to King",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "The battle over whether Quebec legislators will have to swear an oath to the King continues, with an appeal hearing scheduled for Friday. The premier wants his opponents to join him in sitting in the legislative session, regardless of the outcome of the court ruling.",
-    "source": "CBC News"
-   },
-   "image": "https://i.cbc.ca/ais/3396f23c-e65a-4139-aaaa-9470647e51ea,1795633607768/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3B",
-   "region": "North America",
-   "topic": "Culture",
-   "significance": 4,
-   "published": "2026-11-25T20:33:50+00:00",
-   "sources": [
-    {
-     "name": "CBC News",
-     "link": "https://www.cbc.ca/news/canada/montreal/oath-king-quebec-pq-constitution-9.7435914?cmp=rss"
-    }
-   ]
-  },
-  {
-   "id": 240,
+   "id": 249,
    "headline": "Campaign rules for influencers? French regulator targets content creators",
    "bullets": [],
    "why_it_matters": null,
@@ -5598,49 +5802,7 @@
    ]
   },
   {
-   "id": 241,
-   "headline": "Anthropic CEO pushes back on Axios reporting on AI and free will",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Anthropic CEO Dario Amodei on Wednesday rejected the notion that humans should surrender free will to AI, pushing back on Axios' reporting about a growing ideological divide among top AI executives. Why it matters: This is Amodei's most significant public remarks since the company went public last week.",
-    "source": "Axios"
-   },
-   "image": "https://images.axios.com/S-eVrQNX69ZyMSR4Iu5sBjrBDw0=/0x0:1920x1080/1366x768/2026/09/23/1790194223976.jpeg",
-   "region": "North America",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T19:28:00+00:00",
-   "sources": [
-    {
-     "name": "Axios",
-     "link": "https://www.axios.com/2026/11/25/anthropic-dario-amodei-ai-free-will-contro-axios"
-    }
-   ]
-  },
-  {
-   "id": 242,
-   "headline": "NEC appeals ruling ordering Adebutu‘a inclusion in 2027 Ogun governorship election",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "INEC filed its notice of appeal on Wednesday, asking the Court of Appeal to review the ruling that ordered the commission to recognise Adebutu as the PDP candidate for the forthcoming Ogun governorship election.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2025/03/ekiti-byeelection-p4sdl815tfmjkhn7i8wcrhkl2ubmo0zqbtqaogntdc.jpg?fit=1300%2C600&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T19:55:38+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/promoted/928050-nec-appeals-ruling-ordering-adebutua-inclusion-in-2027-ogun-governorship-election.html"
-    }
-   ]
-  },
-  {
-   "id": 243,
+   "id": 250,
    "headline": "US Army says controlled blast of explosives in Iowa was 'huge success'",
    "bullets": [],
    "why_it_matters": null,
@@ -5657,150 +5819,6 @@
     {
      "name": "BBC News",
      "link": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss"
-    }
-   ]
-  },
-  {
-   "id": 244,
-   "headline": "Sheinbaum marks Day Against Violence Toward Women, questions US over unfulfilled extraditions: Wednesday’s mañanera recapped",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "On Wednesday, Sheinbaum again mentioned that many of Mexico's extradition requests to the United States haven't been granted, and drew attention to the fact that U.S. authorities deported a criminal to Spain even though there is an outstanding warrant for her arrest here.",
-    "source": "Mexico News Daily"
-   },
-   "image": null,
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T18:18:43+00:00",
-   "sources": [
-    {
-     "name": "Mexico News Daily",
-     "link": "https://mexiconewsdaily.com/politics/sheinbaum-us-extraditions-mananera-wednesday/"
-    }
-   ]
-  },
-  {
-   "id": 245,
-   "headline": "Poland says will create no-fly zone at Ukraine border after repeated airspace violations",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Poland will soon create a no-fly zone near the Ukrainian border, a deputy defence minister announced on Wednesday, after several incursions into its airspace it blamed on Russia.",
-    "source": "France 24"
-   },
-   "image": "https://s.france24.com/media/display/008c6c02-e905-11f1-b02d-1991d4929b54/w:1024/p:16x9/EN-20261125-200844-201037-CS.jpg",
-   "region": "Europe",
-   "topic": "Conflict",
-   "significance": 4,
-   "published": "2026-11-25T19:22:43+00:00",
-   "sources": [
-    {
-     "name": "France 24",
-     "link": "https://www.france24.com/en/poland-says-will-create-no-fly-zone-at-ukraine-border-after-repeated-airspace-violations"
-    }
-   ]
-  },
-  {
-   "id": 246,
-   "headline": "Protesters call on Israel to free Palestinian student held without charge",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Mahdi Tunsi, 26, was taken from his university dormitory earlier this month and has since been held without charge.",
-    "source": "BBC News"
-   },
-   "image": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3883/live/d69e8c10-e8b7-11f1-a094-5fdc692f3e33.jpg",
-   "region": "Middle East",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-25T10:03:42+00:00",
-   "sources": [
-    {
-     "name": "BBC News",
-     "link": "https://www.bbc.co.uk/news/articles/cw62p8z9edjlo?at_medium=RSS&at_campaign=rss"
-    }
-   ]
-  },
-  {
-   "id": 247,
-   "headline": "Libya’s Haftar visits old foe Turkey for first time in ‘new phase’ of ties",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Eastern Libya military commander Khalifa Haftar met Turkish President Recep Tayyip Erdogan in Ankara on Wednesday during his first official visit to Turkey, marking a major thaw in relations between the longtime rivals.",
-    "source": "France 24"
-   },
-   "image": "https://s.france24.com/media/display/a319b25e-e900-11f1-8c6b-1991d4929b54/w:1024/p:16x9/f72d2eb3b332f9447b99127eb2578ee67c9a340c.jpg",
-   "region": "Middle East",
-   "topic": "Conflict",
-   "significance": 4,
-   "published": "2026-11-25T15:19:19+00:00",
-   "sources": [
-    {
-     "name": "France 24",
-     "link": "https://www.france24.com/en/middle-east/20261125-libya-s-haftar-visits-old-foe-turkey-in-a-first-hails-new-phase-of-ties"
-    }
-   ]
-  },
-  {
-   "id": 248,
-   "headline": "ASML's CEO makes the case for selling chips to China",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "“You need [export controls] to protect very advanced technology, but you also have to use export control in such a way that you don't completely frustrate a country and invite that country to basically double down or triple down on development,” Fouquet said on Semafor’s Future Proof.",
-    "source": "Semafor"
-   },
-   "image": "https://www.semafor.com/_next/static/media/semafor-og-lg.30379187.png",
-   "region": "Asia-Pacific",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T17:48:26+00:00",
-   "sources": [
-    {
-     "name": "Semafor",
-     "link": "https://www.semafor.com/article/11/25/2026/asml-makes-the-case-for-selling-chips-to-china"
-    }
-   ]
-  },
-  {
-   "id": 249,
-   "headline": "For most mothers, mental health improves after birth",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Many are told to expect the worst",
-    "source": "The Economist"
-   },
-   "image": null,
-   "region": "Global",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-25T18:36:31+00:00",
-   "sources": [
-    {
-     "name": "The Economist",
-     "link": "https://www.economist.com/science-and-technology/2026/11/25/for-most-mothers-mental-health-improves-after-birth"
-    }
-   ]
-  },
-  {
-   "id": 250,
-   "headline": "Will Nvidia's Jensen Huang be sworn in during Congress testimony?",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": null,
-   "image": "https://www.thenationalnews.com/resizer/v2/XOWWPCL6ZFBRTE7WSLCVBKOYFM?auth=b8fbceea4f832e6da94fbfc055d8f71e7c68ebde17b8d7202fcd699ef21e976d&smart=true&width=2832&height=1593",
-   "region": "North America",
-   "topic": "Science & Technology",
-   "significance": 3,
-   "published": "2026-11-25T18:00:18+00:00",
-   "sources": [
-    {
-     "name": "The National",
-     "link": "https://www.thenationalnews.com/future/technology/2026/11/25/when-will-jensen-huang-testify-in-congress/"
     }
    ]
   }
