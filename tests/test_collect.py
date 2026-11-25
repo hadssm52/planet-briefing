@@ -155,3 +155,25 @@ def test_selection_guarantees_stories_per_continent_and_topic():
     assert "Fresh Kenya art show" in titles                           # all the cell had
     assert sum(t.startswith("Big politics") for t in titles) >= 2
     assert all("_feeds" not in c for c in chosen)
+
+
+def test_selection_shows_every_outlet_at_least_per_source_times():
+    items = [item(t, "BBC") for t in ["Storm hits Lisbon", "Kenya wins marathon", "Mars probe launches",
+                                      "Tokyo stocks rise", "Peru elects mayor", "Cairo metro opens"]]
+    items += [item(t, "Semafor") for t in ["Chip makers merge", "Bond yields climb", "Senate passes bill",
+                                           "Oil output steady", "Rail strike looms", "Wheat prices fall"]]
+    items += [item("Tiny outlet lone story", "Tiny")]
+    chosen = collect.select_stories(collect.dedupe(items), limit=3, per_source=5)
+    count = lambda name: sum(any(s["name"] == name for s in c["sources"]) for c in chosen)
+    assert count("Semafor") == 5
+    assert count("Tiny") == 1          # all it had
+    assert count("BBC") >= 5
+
+
+def test_german_headlines_are_skipped():
+    xml = """<?xml version="1.0"?><rss version="2.0"><channel><title>T</title>
+    <item><title>Der Kampf um die „Remigration“</title><link>https://x.example/de</link></item>
+    <item><title>Dozens die as floods hit the coast</title><link>https://x.example/en</link></item>
+    </channel></rss>""".encode()
+    titles = [i["title"] for i in collect.parse_feed(xml, FEED)]
+    assert titles == ["Dozens die as floods hit the coast"]

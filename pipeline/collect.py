@@ -42,6 +42,8 @@ BOILERPLATE_RE = re.compile(
     r"\s*(The post .+? appeared first on .+?$|Continue reading\W*$|Read more\W*$|\[(…|\.\.\.)\]\s*$)",
     re.IGNORECASE,
 )
+# A few English-language feeds (e.g. Politico Europe) mix in German articles.
+NON_ENGLISH_RE = re.compile(r"„|\b(der|die|das|und|ist|nicht|mit|für|über)\b")
 PREFIX_RE = re.compile(r"^(live|watch|video|analysis|explainer|opinion|breaking)\s*[:|–-]\s*", re.IGNORECASE)
 
 
@@ -65,6 +67,8 @@ def parse_feed(content: bytes, feed: dict) -> list[dict]:
         title = PREFIX_RE.sub("", clean_text(entry.get("title", "")))
         link = (entry.get("link") or "").strip()
         if not title or not link.startswith("http") or ROUNDUP_RE.search(title):
+            continue
+        if len(NON_ENGLISH_RE.findall(title)) >= 2 or "„" in title:
             continue
         description = clean_text(entry.get("summary") or entry.get("description") or "")
         description = BOILERPLATE_RE.sub("", description).strip()
@@ -247,15 +251,17 @@ def dedupe(items: list[dict], threshold: float = 0.6) -> list[dict]:
 
 
 def select_stories(stories: list[dict], limit: int, cells: tuple = (), per_cell: int = 0,
-                   fresh_after: Optional[str] = None) -> list[dict]:
+                   fresh_after: Optional[str] = None, per_source: int = 0) -> list[dict]:
     """Pick about `limit` stories.
 
     1. For every (region, topic) in `cells`, the best `per_cell` stories
        (using each story's "pre_region"/"pre_topic"), preferring ones
        published after `fresh_after` and reaching back further only when a
        combination is thin.
-    2. Then fresh stories covered by 2+ outlets.
-    3. Then the rest, taken in turn from each feed so no region is crowded out.
+    2. Then enough stories that every news outlet appears at least
+       `per_source` times (when its feeds have that many).
+    3. Then fresh stories covered by 2+ outlets.
+    4. Then the rest, taken in turn from each feed so no region is crowded out.
     """
     def is_fresh(s):
         return fresh_after is None or s["published"] is None or s["published"] >= fresh_after
@@ -277,6 +283,24 @@ def select_stories(stories: list[dict], limit: int, cells: tuple = (), per_cell:
         pool = sorted(by_cell.get(cell, []), key=lambda s: (is_fresh(s),) + rank(s), reverse=True)
         for s in pool[:per_cell]:
             take(s)
+
+    if per_source:
+        shown: dict[str, int] = defaultdict(int)
+        for s in chosen:
+            for src in s["sources"]:
+                shown[src["name"]] += 1
+        by_source: dict[str, list[dict]] = defaultdict(list)
+        for s in stories:
+            for src in s["sources"]:
+                by_source[src["name"]].append(s)
+        for name, pool in by_source.items():
+            for s in sorted(pool, key=lambda s: (is_fresh(s),) + rank(s), reverse=True):
+                if shown[name] >= per_source:
+                    break
+                if id(s) not in taken:
+                    take(s)
+                    for src in s["sources"]:
+                        shown[src["name"]] += 1
 
     fresh = [s for s in stories if id(s) not in taken and is_fresh(s)]
     for s in sorted((s for s in fresh if len(s["sources"]) >= 2), key=rank, reverse=True):

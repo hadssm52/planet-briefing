@@ -57,7 +57,8 @@ def run(dry_run: bool = False, rebuild_only: bool = False, now: Optional[datetim
     cells = continent_topic_cells(cfg)
     per_cell = pcfg.get("min_per_topic", 0)
     fresh_after = (now - timedelta(hours=pcfg["max_age_hours"])).isoformat(timespec="seconds")
-    chosen = collect.select_stories(stories, pcfg["max_stories"], cells, per_cell, fresh_after)
+    chosen = collect.select_stories(stories, pcfg["max_stories"], cells, per_cell, fresh_after,
+                                    pcfg.get("min_per_source", 0))
     multi = sum(1 for s in chosen if len(s["sources"]) > 1)
     print(f"  {len(items)} items → {len(recent)} recent → {len(stories)} unique stories "
           f"→ {len(chosen)} selected ({multi} covered by 2+ outlets)")

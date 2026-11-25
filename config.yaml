@@ -30,8 +30,12 @@ pipeline:
   # Every continent shows at least this many stories in each topic (when the
   # feeds have them). "Global" is not counted as a continent.
   min_per_topic: 2
+  # Every news outlet in feeds.yaml shows at least this many stories (when
+  # its feeds have them).
+  min_per_source: 5
   # Maximum number of stories (after merging duplicates) sent to Claude each day.
-  max_stories: 150
+  # The two minimums above can take it a little over this.
+  max_stories: 250
   # If fewer than this many stories are summarised, the run fails and
   # yesterday's site stays online.
   min_stories: 15
