@@ -153,7 +153,9 @@ def check_site(site_dir: Path, top_count: int) -> None:
     if not index.exists():
         raise PipelineError("site build produced no index.html")
     html = index.read_text(encoding="utf-8")
-    if top_count == 0 or html.count('class="story"') < min(top_count, 3):
+    # Top stories appear as full stories ("story") or compact cards ("card").
+    shown = html.count('class="story') + html.count('class="card"')
+    if top_count == 0 or shown < min(top_count, 3):
         raise PipelineError("homepage has no top stories — not publishing")
 
 
