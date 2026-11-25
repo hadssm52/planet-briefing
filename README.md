@@ -151,6 +151,19 @@ Keep Cloudflare's **SSL/TLS → encryption mode on "Full"** (not "Flexible", whi
 The old `hadssm52.github.io/planet-briefing` link redirects to it automatically.
 If you ever change the address, update `url:` in `config.yaml` and the custom domain in **Settings → Pages**.
 
+## The backup timer (Cloudflare)
+
+GitHub's own schedule often skips runs for new projects, so a small free Cloudflare Worker called
+**planet-briefing-timer** presses GitHub's "Run workflow" button at :07 and :37 past every hour.
+Its code is in `timer/worker.js`.
+
+- See it at dash.cloudflare.com → **Workers & Pages → planet-briefing-timer**.
+- It uses a secret called `GITHUB_TOKEN`: a fine-grained GitHub token limited to this repository
+  with **Actions: Read and write**. **The token expires after a year.** When it does, the site stops
+  updating: create a new token (GitHub → Settings → Developer settings → Fine-grained tokens) and
+  replace the secret in the Worker's **Settings → Variables and Secrets**.
+- If the Worker ever fails, its **Logs** tab shows GitHub's reason.
+
 ## Changing the news sources
 
 Open `feeds.yaml` (on GitHub: click the file, then the ✏️ pencil icon). Each source looks like this:
