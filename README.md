@@ -175,7 +175,7 @@ Edit `config.yaml`:
 - `site: title:` sets the site name.
 - `regions:` / `topics:` set the categories. If you rename one, keep the `slug` simple (lowercase, no spaces).
 
-To change how often it runs, edit the `cron: "*/30 * * * *"` line in `.github/workflows/daily.yml`. For example `"0 * * * *"` is every hour and `"0 6 * * *"` is once a day at 06:00 UTC.
+To change how often it runs, edit the `cron: "7,37 * * * *"` line in `.github/workflows/daily.yml`. For example `"7 * * * *"` is every hour and `"0 6 * * *"` is once a day at 06:00 UTC.
 
 ---
 

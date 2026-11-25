@@ -8,7 +8,9 @@ name: Daily briefing
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # every 30 minutes (GitHub may start runs a few minutes late)
+    # Every 30 minutes, at :07 and :37. GitHub often delays or skips runs set
+    # for exactly :00/:30 because so many projects use those times.
+    - cron: "7,37 * * * *"
   workflow_dispatch:       # the "Run workflow" button
 
 permissions:
