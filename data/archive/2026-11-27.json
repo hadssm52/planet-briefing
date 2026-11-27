@@ -1,22 +1,22 @@
 {
  "date": "2026-11-27",
- "generated_at": "2026-11-27T12:54:58+00:00",
+ "generated_at": "2026-11-27T13:00:50+00:00",
  "top_ids": [
   61,
   9,
   11,
+  21,
   55,
   19,
   37,
   41,
   1,
-  62,
-  21
+  62
  ],
  "stats": {
   "feeds_ok": 69,
   "feeds_failed": 1,
-  "items": 2968,
+  "items": 2969,
   "stories": 250,
   "input_tokens": 0,
   "output_tokens": 0,
@@ -201,7 +201,7 @@
    "image": "https://i.guim.co.uk/img/media/ecca9af59662e10c267bb8178c969d23ff13ef74/994_0_5006_4004/master/5006.jpg?width=700&quality=85&auto=format&fit=max&s=7015cbabbd80b40df694f2065eb3ca82",
    "region": "Europe",
    "topic": "Science & Technology",
-   "significance": 8,
+   "significance": 6,
    "published": "2026-11-27T12:46:43+00:00",
    "sources": [
     {
@@ -211,10 +211,6 @@
     {
      "name": "Financial Times",
      "link": "https://www.ft.com/content/59a87442-51ad-47b7-ba11-e36876456fd4?syn-25a6b1a6=1"
-    },
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/europe/uk-department-for-work-and-pensions-services-taken-offline-after-cyber-incident/4140121"
     }
    ]
   },
@@ -581,19 +577,23 @@
   },
   {
    "id": 21,
-   "headline": "Hackers breach US Air Force Cloud One platform, putting military data at risk",
+   "headline": "Hackers breach U.S. Air Force flagship Cloud One computing platform",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Hackers have breached the US Air Force’s flagship cloud computing platform, three people familiar with the matter said, in a development that could jeopardise a vast swathe of sensitive tactical, personnel and logistics data.",
-    "source": "South China Morning Post"
+    "text": "The intrusion at Cloud One was discovered within the past month or so ⁠during work to upgrade the system, two people familiar with the matter said",
+    "source": "The Hindu"
    },
-   "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/27/c6acc802-0762-4130-b8e1-8e0c782557b3_75a05897.jpg?itok=otAeOadi&v=1795782314",
+   "image": "https://th-i.thgim.com/public/incoming/ahyovp/article71750819.ece/alternates/LANDSCAPE_1200/2026-11-27T110007Z_1971608881_RC27VS91XAH3_RTRMADP_3_USA-PENTAGON-AIR-FORCE-CLOUD.JPG",
    "region": "North America",
    "topic": "Science & Technology",
-   "significance": 8,
-   "published": "2026-11-27T12:25:16+00:00",
+   "significance": 10,
+   "published": "2026-11-27T12:55:21+00:00",
    "sources": [
+    {
+     "name": "The Hindu",
+     "link": "https://www.thehindu.com/news/international/hackers-breach-us-air-force-flagship-cloud-one-computing-platform/article71750783.ece"
+    },
     {
      "name": "South China Morning Post",
      "link": "https://www.scmp.com/news/world/united-states-canada/article/3376087/hackers-breach-us-air-force-cloud-one-platform-putting-military-data-risk"
@@ -1195,6 +1195,27 @@
   },
   {
    "id": 47,
+   "headline": "China test-fires world’s first metal powder-fuelled afterburner for fighter jets",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Metal powder may seem an unlikely fuel for a jet engine, but Chinese scientists believe it could help propel planes to greater speeds.",
+    "source": "South China Morning Post"
+   },
+   "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/27/b4fa99b8-b620-40d3-87f7-8494a71092af_0c01e038.jpg?itok=kxfVFchZ&v=1795780308",
+   "region": "Asia-Pacific",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-27T13:00:08+00:00",
+   "sources": [
+    {
+     "name": "South China Morning Post",
+     "link": "https://www.scmp.com/news/china/science/article/3376081/china-test-fires-worlds-first-metal-powder-fuelled-afterburner-fighter-jets"
+    }
+   ]
+  },
+  {
+   "id": 48,
    "headline": "Nvidia Blackwell Chips Turn Up at China Site Tied to Alice Huang",
    "bullets": [],
    "why_it_matters": null,
@@ -1211,27 +1232,6 @@
     {
      "name": "Bloomberg",
      "link": "https://www.bloomberg.com/news/videos/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-video"
-    }
-   ]
-  },
-  {
-   "id": 48,
-   "headline": "Student sent for mental health care after bringing gun to school in Keralam’s Palakkad",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Police have warned against spreading unverified claims about the gun on social media",
-    "source": "The Hindu"
-   },
-   "image": "https://th-i.thgim.com/public/incoming/7n2f85/article71750659.ece/alternates/LANDSCAPE_1200/PHOTO.jpg",
-   "region": "Asia-Pacific",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-27T12:21:39+00:00",
-   "sources": [
-    {
-     "name": "The Hindu",
-     "link": "https://www.thehindu.com/news/national/kerala/student-sent-for-mental-health-care-after-bringing-gun-to-school-in-keralams-palakkad/article71747501.ece"
     }
    ]
   },
@@ -1828,6 +1828,27 @@
   },
   {
    "id": 73,
+   "headline": "FG roots for local biotech development",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "President Bola Tinubu says his administration will strengthen Nigeria’s biosafety regulatory framework and invest in indigenous research and innovation to harness biotechnology for food security, public health, and sustainable development",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/10/President-Bola-Ahmed-Tinubu.jpg?fit=1080%2C720&ssl=1",
+   "region": "Africa",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-27T12:55:50+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/news/928403-fg-roots-for-local-biotech-development.html"
+    }
+   ]
+  },
+  {
+   "id": 74,
    "headline": "Extreme heat threatens pregnant women in South Africa’s informal settlements",
    "bullets": [],
    "why_it_matters": null,
@@ -1844,27 +1865,6 @@
     {
      "name": "Africanews",
      "link": "http://www.africanews.com/2026/11/26/extreme-heat-threatens-pregnant-women-in-south-africas-informal-settlements/"
-    }
-   ]
-  },
-  {
-   "id": 74,
-   "headline": "UN says Ebola outbreak driving spike in gender-based violence in DR Congo",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "In the eastern Democratic Republic of the Congo, the Ebola outbreak is increasing the vulnerability of women and girls, exposing them to a rise in gender-based violence, according to UNICEF",
-    "source": "Africanews"
-   },
-   "image": "https://images.euronews.com/articles/stories/10/00/99/90/640x360_cmsv2_cf4cf9a1-6217-583d-a0bf-72079e71fcfb-10009990.jpg?1795707375",
-   "region": "Africa",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-27T09:22:24+00:00",
-   "sources": [
-    {
-     "name": "Africanews",
-     "link": "http://www.africanews.com/2026/11/26/ebola-un-says-outbreak-driving-spike-in-gender-based-violence-in-congo/"
     }
    ]
   },
@@ -2008,6 +2008,207 @@
   },
   {
    "id": 81,
+   "headline": "FACTBOX – Spain’s general election: Key candidates and political agendas",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Prime Minister Pedro Sanchez defends economic, social record but housing costs, corruption scandals weigh on his government",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "Europe",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-27T12:33:57+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/europe/factbox-spain-s-general-election-key-candidates-and-political-agendas/4140431"
+    },
+    {
+     "name": "The Economist",
+     "link": "https://www.economist.com/podcasts/2026/11/26/left-in-the-lurch-spains-general-election"
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "headline": "Trump backs Iraqi leader's efforts to assert more state authority",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "\"We support Iraqi Prime Minister Ali al-Zaidi’s efforts to assert state authority throughout Iraq, stop the smuggling of Iraqi oil, end corruption, and bring all weapons under the exclusive control of the state,\" Trump said in a Truth Social post on Friday (Nov 27).",
+    "source": "CNA"
+   },
+   "image": "https://dam.mediacorp.sg/image/upload/s--hpMSyIVe--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-09-09T123453Z_1_LYNXMPEM8813O_RTROPTP_3_USA-TRUMP.JPG?itok=7zKXgAjk",
+   "region": "Middle East",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-27T12:07:39+00:00",
+   "sources": [
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/world/trump-backs-iraqi-leader-ali-al-zaidi-state-authority-6587671"
+    },
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/americas/trump-voices-support-for-iraqi-premiers-efforts-to-assert-state-authority/4140239"
+    }
+   ]
+  },
+  {
+   "id": 83,
+   "headline": "What’s at stake if Spain swings right in Sunday’s election?",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Most polls give conservatives, far-right Vox enough seats to end 8 years of Socialist-led government",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "Europe",
+   "topic": "Politics",
+   "significance": 6,
+   "published": "2026-11-27T11:11:54+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/europe/explainer-what-s-at-stake-if-spain-swings-right-in-sunday-s-election/4140309"
+    },
+    {
+     "name": "Euronews",
+     "link": "https://www.euronews.com/video/2026/11/27/spains-conservative-and-far-right-parties-likely-to-secure-a-majority-in-sundays-election-"
+    }
+   ]
+  },
+  {
+   "id": 84,
+   "headline": "How Uzodimma wants to sit on two seats, By Azu Ishiekwene",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "The court has reminded Uzodimma that political offices are not like underwear, to be changed casually. And his political enemies have their hands on the trigger.",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2022/11/Azu-Ishiekwene-2.jpg?fit=582%2C480&ssl=1",
+   "region": "Africa",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T12:47:25+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/opinion/928402-how-uzodimma-wants-to-sit-on-two-seats-by-azu-ishiekwene.html"
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "headline": "Six Plateau residents sue Nigerian Army over alleged detention without trial",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "The applicants allege that they had been detained since their arrest on 5 September without being charged with any offence.",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/05/ISS-Today-pic-1-scaled.jpg?fit=2560%2C1920&ssl=1",
+   "region": "Africa",
+   "topic": "Conflict",
+   "significance": 4,
+   "published": "2026-11-27T11:54:28+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/regional/north-central/928398-six-plateau-residents-sue-nigerian-army-over-alleged-detention-without-trial.html"
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "headline": "Beyond protocol purism: Why Nigerians in South Africa welcome an envoy who refuses to whisper, By Abiodun Abidoye",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "…so many Nigerians across the diaspora, and commentators at home, have hailed the posting of Fani Kayode as a long overdue turning point, with admirers even arguing that his vocal defence of national dignity exemplifies the energy that the broader foreign policy leadership of Nigeria ought to project.",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/Abiodun-Abidoye.jpeg?fit=402%2C338&ssl=1",
+   "region": "Africa",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T11:20:04+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/opinion/928387-beyond-protocol-purism-why-nigerians-in-south-africa-welcome-an-envoy-who-refuses-to-whisper-by-abiodun-abidoye.html"
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "headline": "Why I tapped young people to lead offices in Oyo – Makinde",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Mr Makinde said his emergence as governor did not follow the traditional political structure.",
+    "source": "Premium Times"
+   },
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/903846932_1681847596629756_8461098630158920140_n.jpg?fit=1000%2C667&ssl=1",
+   "region": "Africa",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T10:56:25+00:00",
+   "sources": [
+    {
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/regional/ssouth-west/928397-why-i-tapped-young-people-to-lead-offices-in-oyo-makinde.html"
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "headline": "Trump defends Putin friendship that Zelensky calls ‘strange’",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Asked about their relationship, President Donald Trump said: \"We want to make a deal,\" blaming the Russian and Ukrainian leaders' \"hate\" as the biggest problem keeping them from peace.",
+    "source": "The Washington Post"
+   },
+   "image": null,
+   "region": "Europe",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T12:55:25+00:00",
+   "sources": [
+    {
+     "name": "The Washington Post",
+     "link": "https://www.washingtonpost.com/world/2026/11/27/trump-defends-putin-friendship-that-zelensky-calls-strange/"
+    }
+   ]
+  },
+  {
+   "id": 89,
+   "headline": "Democrats vow to restrain Trump’s foreign policy, but foresee limits",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "U.S. allies and partners want the incoming Congress to be more assertive, but some remain skeptical Trump can be reined in.",
+    "source": "The Washington Post"
+   },
+   "image": null,
+   "region": "North America",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T11:00:00+00:00",
+   "sources": [
+    {
+     "name": "The Washington Post",
+     "link": "https://www.washingtonpost.com/national-security/2026/11/27/democrats-vow-restrain-trumps-foreign-policy-foresee-limits/"
+    }
+   ]
+  },
+  {
+   "id": 90,
    "headline": "Spain general election 2026: Could Sánchez lose power?",
    "bullets": [],
    "why_it_matters": null,
@@ -2032,7 +2233,7 @@
    ]
   },
   {
-   "id": 82,
+   "id": 91,
    "headline": "Wife of Japanese Reporter Held in Russia Appeals for His Release",
    "bullets": [],
    "why_it_matters": null,
@@ -2057,112 +2258,7 @@
    ]
   },
   {
-   "id": 83,
-   "headline": "How Uzodimma wants to sit on two seats, By Azu Ishiekwene",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "The court has reminded Uzodimma that political offices are not like underwear, to be changed casually. And his political enemies have their hands on the trigger.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2022/11/Azu-Ishiekwene-2.jpg?fit=582%2C480&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T12:47:25+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/opinion/928402-how-uzodimma-wants-to-sit-on-two-seats-by-azu-ishiekwene.html"
-    }
-   ]
-  },
-  {
-   "id": 84,
-   "headline": "Six Plateau residents sue Nigerian Army over alleged detention without trial",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "The applicants allege that they had been detained since their arrest on 5 September without being charged with any offence.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/05/ISS-Today-pic-1-scaled.jpg?fit=2560%2C1920&ssl=1",
-   "region": "Africa",
-   "topic": "Conflict",
-   "significance": 4,
-   "published": "2026-11-27T11:54:28+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/regional/north-central/928398-six-plateau-residents-sue-nigerian-army-over-alleged-detention-without-trial.html"
-    }
-   ]
-  },
-  {
-   "id": 85,
-   "headline": "Beyond protocol purism: Why Nigerians in South Africa welcome an envoy who refuses to whisper, By Abiodun Abidoye",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "…so many Nigerians across the diaspora, and commentators at home, have hailed the posting of Fani Kayode as a long overdue turning point, with admirers even arguing that his vocal defence of national dignity exemplifies the energy that the broader foreign policy leadership of Nigeria ought to project.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/Abiodun-Abidoye.jpeg?fit=402%2C338&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T11:20:04+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/opinion/928387-beyond-protocol-purism-why-nigerians-in-south-africa-welcome-an-envoy-who-refuses-to-whisper-by-abiodun-abidoye.html"
-    }
-   ]
-  },
-  {
-   "id": 86,
-   "headline": "Why I tapped young people to lead offices in Oyo – Makinde",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Mr Makinde said his emergence as governor did not follow the traditional political structure.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/903846932_1681847596629756_8461098630158920140_n.jpg?fit=1000%2C667&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T10:56:25+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/regional/ssouth-west/928397-why-i-tapped-young-people-to-lead-offices-in-oyo-makinde.html"
-    }
-   ]
-  },
-  {
-   "id": 87,
-   "headline": "Why I supported Tinubu in 2023, but now challenge him – Makinde",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Mr Makinde said he and other aggrieved PDP governors, known as the G5, initially approached the Labour Party presidential candidate, Peter Obi.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/903954803_1680867073394475_8245602589449937885_n.jpg?fit=1000%2C667&ssl=1",
-   "region": "Africa",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T10:42:19+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/news/top-news/928391-why-i-supported-tinubu-in-2023-but-now-challenge-him-makinde.html"
-    }
-   ]
-  },
-  {
-   "id": 88,
+   "id": 92,
    "headline": "Strobe Talbott, former Time magazine reporter and deputy secretary of state, has died",
    "bullets": [],
    "why_it_matters": null,
@@ -2191,7 +2287,7 @@
    ]
   },
   {
-   "id": 89,
+   "id": 93,
    "headline": "92 Labour MPs call for Rosebank oilfield to be rejected",
    "bullets": [],
    "why_it_matters": null,
@@ -2216,7 +2312,7 @@
    ]
   },
   {
-   "id": 90,
+   "id": 94,
    "headline": "Record temperature surge in November fuels extreme weather",
    "bullets": [],
    "why_it_matters": null,
@@ -2237,57 +2333,7 @@
    ]
   },
   {
-   "id": 91,
-   "headline": "FACTBOX – Spain’s general election: Key candidates and political agendas",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Prime Minister Pedro Sanchez defends economic, social record but housing costs, corruption scandals weigh on his government",
-    "source": "Anadolu Agency"
-   },
-   "image": null,
-   "region": "Europe",
-   "topic": "Politics",
-   "significance": 6,
-   "published": "2026-11-27T12:33:57+00:00",
-   "sources": [
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/europe/factbox-spain-s-general-election-key-candidates-and-political-agendas/4140431"
-    },
-    {
-     "name": "The Economist",
-     "link": "https://www.economist.com/podcasts/2026/11/26/left-in-the-lurch-spains-general-election"
-    }
-   ]
-  },
-  {
-   "id": 92,
-   "headline": "Trump backs Iraqi leader's efforts to assert more state authority",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "\"We support Iraqi Prime Minister Ali al-Zaidi’s efforts to assert state authority throughout Iraq, stop the smuggling of Iraqi oil, end corruption, and bring all weapons under the exclusive control of the state,\" Trump said in a Truth Social post on Friday (Nov 27).",
-    "source": "CNA"
-   },
-   "image": "https://dam.mediacorp.sg/image/upload/s--hpMSyIVe--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-09-09T123453Z_1_LYNXMPEM8813O_RTROPTP_3_USA-TRUMP.JPG?itok=7zKXgAjk",
-   "region": "Middle East",
-   "topic": "Politics",
-   "significance": 6,
-   "published": "2026-11-27T12:07:39+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/world/trump-backs-iraqi-leader-ali-al-zaidi-state-authority-6587671"
-    },
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/americas/trump-voices-support-for-iraqi-premiers-efforts-to-assert-state-authority/4140239"
-    }
-   ]
-  },
-  {
-   "id": 93,
+   "id": 95,
    "headline": "UN marks first global day against child marriage as millions remain at risk",
    "bullets": [],
    "why_it_matters": null,
@@ -2308,7 +2354,7 @@
    ]
   },
   {
-   "id": 94,
+   "id": 96,
    "headline": "EU budget decision pushed back as leaders fail to bridge divides",
    "bullets": [],
    "why_it_matters": null,
@@ -2329,7 +2375,7 @@
    ]
   },
   {
-   "id": 95,
+   "id": 97,
    "headline": "Liberia: Drug Crisis Tops Agenda As Lawyers Gather in Buchanan for Bar Convention",
    "bullets": [],
    "why_it_matters": null,
@@ -2350,7 +2396,7 @@
    ]
   },
   {
-   "id": 96,
+   "id": 98,
    "headline": "What to watch this week",
    "bullets": [],
    "why_it_matters": null,
@@ -2371,7 +2417,7 @@
    ]
   },
   {
-   "id": 97,
+   "id": 99,
    "headline": "Social-insecurity numbers: the money behind the manosphere",
    "bullets": [],
    "why_it_matters": null,
@@ -2392,7 +2438,7 @@
    ]
   },
   {
-   "id": 98,
+   "id": 100,
    "headline": "Can the world’s biggest snack firm survive the Ozempic revolution?",
    "bullets": [],
    "why_it_matters": null,
@@ -2413,7 +2459,7 @@
    ]
   },
   {
-   "id": 99,
+   "id": 101,
    "headline": "Why museums are lending out precious artefacts",
    "bullets": [],
    "why_it_matters": null,
@@ -2434,7 +2480,7 @@
    ]
   },
   {
-   "id": 100,
+   "id": 102,
    "headline": "Eight-time champion Marquez to retire from MotoGP",
    "bullets": [],
    "why_it_matters": null,
@@ -2455,7 +2501,7 @@
    ]
   },
   {
-   "id": 101,
+   "id": 103,
    "headline": "European football violence causes concern with far-right claim in UEFA game",
    "bullets": [],
    "why_it_matters": null,
@@ -2476,7 +2522,7 @@
    ]
   },
   {
-   "id": 102,
+   "id": 104,
    "headline": "Trump calls GDP figures 'fake' and demands an investigation of Commerce Department",
    "bullets": [],
    "why_it_matters": null,
@@ -2501,7 +2547,7 @@
    ]
   },
   {
-   "id": 103,
+   "id": 105,
    "headline": "America's new bargain hunt",
    "bullets": [],
    "why_it_matters": null,
@@ -2522,7 +2568,7 @@
    ]
   },
   {
-   "id": 104,
+   "id": 106,
    "headline": "Puma Shen, Critic of China, Could be the Next Mayor of Taipei",
    "bullets": [],
    "why_it_matters": null,
@@ -2543,7 +2589,7 @@
    ]
   },
   {
-   "id": 105,
+   "id": 107,
    "headline": "A Journalist Fights for Free Speech in Egypt, and to Stay Out of Jail",
    "bullets": [],
    "why_it_matters": null,
@@ -2560,48 +2606,6 @@
     {
      "name": "The New York Times",
      "link": "https://www.nytimes.com/2026/11/27/world/middleeast/egypt-journalist-trial-lina-attalah-mada-masr.html"
-    }
-   ]
-  },
-  {
-   "id": 106,
-   "headline": "Democrats vow to restrain Trump’s foreign policy, but foresee limits",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "U.S. allies and partners want the incoming Congress to be more assertive, but some remain skeptical Trump can be reined in.",
-    "source": "The Washington Post"
-   },
-   "image": null,
-   "region": "North America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T11:00:00+00:00",
-   "sources": [
-    {
-     "name": "The Washington Post",
-     "link": "https://www.washingtonpost.com/national-security/2026/11/27/democrats-vow-restrain-trumps-foreign-policy-foresee-limits/"
-    }
-   ]
-  },
-  {
-   "id": 107,
-   "headline": "Taiwan loves Threads. China is targeting the platform, researchers say.",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Ahead of local elections, Taiwan’s embrace of Threads has made the social network a battleground for China’s influence operations, Taiwanese officials warn.",
-    "source": "The Washington Post"
-   },
-   "image": null,
-   "region": "Asia-Pacific",
-   "topic": "Science & Technology",
-   "significance": 4,
-   "published": "2026-11-26T13:24:57+00:00",
-   "sources": [
-    {
-     "name": "The Washington Post",
-     "link": "https://www.washingtonpost.com/world/2026/11/26/taiwan-loves-threads-china-is-targeting-platform-researchers-say/"
     }
    ]
   },
@@ -3637,31 +3641,6 @@
   },
   {
    "id": 156,
-   "headline": "What’s at stake if Spain swings right in Sunday’s election?",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Most polls give conservatives, far-right Vox enough seats to end 8 years of Socialist-led government",
-    "source": "Anadolu Agency"
-   },
-   "image": null,
-   "region": "Europe",
-   "topic": "Politics",
-   "significance": 6,
-   "published": "2026-11-27T11:11:54+00:00",
-   "sources": [
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/europe/explainer-what-s-at-stake-if-spain-swings-right-in-sunday-s-election/4140309"
-    },
-    {
-     "name": "Euronews",
-     "link": "https://www.euronews.com/video/2026/11/27/spains-conservative-and-far-right-parties-likely-to-secure-a-majority-in-sundays-election-"
-    }
-   ]
-  },
-  {
-   "id": 157,
    "headline": "China Relations Loom Large Over Taiwan’s Municipal Elections",
    "bullets": [],
    "why_it_matters": null,
@@ -3686,7 +3665,7 @@
    ]
   },
   {
-   "id": 158,
+   "id": 157,
    "headline": "Russia: Moscow's iconic Soviet-era expo park opens its 20,000-square-metre outdoor ice rink",
    "bullets": [],
    "why_it_matters": null,
@@ -3711,7 +3690,7 @@
    ]
   },
   {
-   "id": 159,
+   "id": 158,
    "headline": "Germany: Christmas markets open across the country amid tight security",
    "bullets": [],
    "why_it_matters": null,
@@ -3736,7 +3715,7 @@
    ]
   },
   {
-   "id": 160,
+   "id": 159,
    "headline": "UK: London's Gingerbread City returns with 50 edible architectural creations",
    "bullets": [],
    "why_it_matters": null,
@@ -3761,7 +3740,7 @@
    ]
   },
   {
-   "id": 161,
+   "id": 160,
    "headline": "Belgium: Farmers and tractors descend on Brussels to defend EU subsidies",
    "bullets": [],
    "why_it_matters": null,
@@ -3786,7 +3765,7 @@
    ]
   },
   {
-   "id": 162,
+   "id": 161,
    "headline": "Myanmar says it will not fully comply with ICJ genocide orders",
    "bullets": [],
    "why_it_matters": null,
@@ -3811,7 +3790,7 @@
    ]
   },
   {
-   "id": 163,
+   "id": 162,
    "headline": "FedEx airplane overruns runway at Miami airport, temporarily closing all but 1 runway",
    "bullets": [],
    "why_it_matters": null,
@@ -3836,7 +3815,49 @@
    ]
   },
   {
+   "id": 163,
+   "headline": "Putin, Pashinyan to discuss security, Russian military base in upcoming talks",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Kremlin says talks will also address Yerevan's future in Russian-led EAEU, as Armenia pursues EU integration",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "Europe",
+   "topic": "Conflict",
+   "significance": 4,
+   "published": "2026-11-27T12:59:14+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/asia-pacific/putin-pashinyan-to-discuss-security-russian-military-base-in-upcoming-talks/4140448"
+    }
+   ]
+  },
+  {
    "id": 164,
+   "headline": "Death toll in Pakistan building collapse rises to eight",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "“Around 10 people are still missing, and the operation will continue until the recovery of everyone from the rubble,” an emergency services official told AFP.",
+    "source": "CNA"
+   },
+   "image": "https://dam.mediacorp.sg/image/upload/s--Vi1-ft-f--/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/27/205223.png?itok=nmmUY0z8",
+   "region": "Asia-Pacific",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T12:54:00+00:00",
+   "sources": [
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/asia/pakistan-karachi-building-collapse-death-toll-rise-6587796"
+    }
+   ]
+  },
+  {
+   "id": 165,
    "headline": "North Korea halts Russia military aid over Seoul row, Kyiv says",
    "bullets": [],
    "why_it_matters": null,
@@ -3857,15 +3878,18 @@
    ]
   },
   {
-   "id": 165,
-   "headline": "Richest UK Families Cushion Themselves From Rising Costs (Video)",
+   "id": 166,
+   "headline": "Britain’s Richest Families Cushion Themselves From Rising Taxes and Costs",
    "bullets": [],
    "why_it_matters": null,
-   "excerpt": null,
+   "excerpt": {
+    "text": "Some of Britain’s richest families are taking steps to cushion themselves from higher taxes and wage costs. Benjamin Stupples explains. (Source: Bloomberg)",
+    "source": "Bloomberg"
+   },
    "image": null,
    "region": "Europe",
-   "topic": "Politics",
-   "significance": 3,
+   "topic": "Economics",
+   "significance": 4,
    "published": "2026-11-27T12:52:25+00:00",
    "sources": [
     {
@@ -3875,7 +3899,7 @@
    ]
   },
   {
-   "id": 166,
+   "id": 167,
    "headline": "Abu Dhabi Police offers 4-black-point deduction to safe drivers for Eid Al Etihad holiday",
    "bullets": [],
    "why_it_matters": null,
@@ -3893,7 +3917,7 @@
    ]
   },
   {
-   "id": 167,
+   "id": 168,
    "headline": "Who to watch in Spain's election race",
    "bullets": [],
    "why_it_matters": null,
@@ -3914,7 +3938,7 @@
    ]
   },
   {
-   "id": 168,
+   "id": 169,
    "headline": "Ofwat Warns Thames Water Rescue Decision Remains Months Away",
    "bullets": [],
    "why_it_matters": null,
@@ -3931,27 +3955,6 @@
     {
      "name": "Bloomberg",
      "link": "https://www.bloomberg.com/news/articles/2026-11-27/ofwat-warns-thames-water-rescue-decision-remains-months-away"
-    }
-   ]
-  },
-  {
-   "id": 169,
-   "headline": "Lloyds Bank, Bank of Scotland apps hit by major outage",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Thousands report problems accessing Lloyds banking services as bank apologizes for disruption",
-    "source": "Anadolu Agency"
-   },
-   "image": null,
-   "region": "Europe",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-27T12:43:45+00:00",
-   "sources": [
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/europe/lloyds-bank-bank-of-scotland-apps-hit-by-major-outage/4140438"
     }
    ]
   },
@@ -3978,6 +3981,27 @@
   },
   {
    "id": 171,
+   "headline": "Britons’ cow’s milk sales at record low as many opt for plant-based",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Environmental and animal welfare concerns, as well as taste preferences, behind rising popularity of alternatives Has milk gotta lotta bottle? It may not have as much as it used to, with official data showing Britons are buying less cow’s milk than at any point since records began.",
+    "source": "The Guardian"
+   },
+   "image": "https://i.guim.co.uk/img/media/2ec208e4382ab770c2192d22683be7bc473ef71a/0_215_3697_2957/master/3697.jpg?width=700&quality=85&auto=format&fit=max&s=96af525d968a25caa69cc2c7ef404978",
+   "region": "Global",
+   "topic": "Environment",
+   "significance": 4,
+   "published": "2026-11-27T12:42:38+00:00",
+   "sources": [
+    {
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/food/2026/nov/27/britain-cows-milk-sales-record-low-oat-almond"
+    }
+   ]
+  },
+  {
+   "id": 172,
    "headline": "Antisemitism adviser to launch inquiry into ‘hostile work environment’ at BBC",
    "bullets": [],
    "why_it_matters": null,
@@ -3998,7 +4022,7 @@
    ]
   },
   {
-   "id": 172,
+   "id": 173,
    "headline": "No warning, no mercy: why China moved fast to topple Chen Jining",
    "bullets": [],
    "why_it_matters": null,
@@ -4019,7 +4043,7 @@
    ]
   },
   {
-   "id": 173,
+   "id": 174,
    "headline": "Poland Signs $300 Million Palantir Deal to Use AI for Defense",
    "bullets": [],
    "why_it_matters": null,
@@ -4036,24 +4060,6 @@
     {
      "name": "Bloomberg",
      "link": "https://www.bloomberg.com/news/articles/2026-11-27/poland-signs-300-million-palantir-deal-to-use-ai-for-defense"
-    }
-   ]
-  },
-  {
-   "id": 174,
-   "headline": "ATP seeks to centralise rights to boost revenue",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": null,
-   "image": "https://dam.mediacorp.sg/image/upload/s--xjotB2m3--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-27T122516Z_1_LYNXNPEMAQ10K_RTROPTP_3_SPORT-TENNIS-ATP.JPG?itok=cUYy3ZM2",
-   "region": "Asia-Pacific",
-   "topic": "Economics",
-   "significance": 3,
-   "published": "2026-11-27T12:25:16+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/sport/atp-seeks-centralise-rights-boost-revenue-6587746"
     }
    ]
   },
@@ -4374,48 +4380,27 @@
   },
   {
    "id": 190,
-   "headline": "King tides batter US coasts as storms threaten Thanksgiving celebrations",
+   "headline": "Why I supported Tinubu in 2023, but now challenge him – Makinde",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "Heavy rain, strong winds and coastal flooding creating hazardous conditions for millions travelling for holiday King tides and huge waves have been battering both coasts of the US during a turbulent Thanksgiving period, with severe weather threatening millions across the country.",
-    "source": "The Guardian"
+    "text": "Mr Makinde said he and other aggrieved PDP governors, known as the G5, initially approached the Labour Party presidential candidate, Peter Obi.",
+    "source": "Premium Times"
    },
-   "image": "https://i.guim.co.uk/img/media/7021c3fba59895984e4b86a1f246a4fffca9c129/748_0_5657_4528/master/5657.jpg?width=700&quality=85&auto=format&fit=max&s=47658cce748e4aa8f739704e79eeb287",
-   "region": "North America",
-   "topic": "Environment",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/903954803_1680867073394475_8245602589449937885_n.jpg?fit=1000%2C667&ssl=1",
+   "region": "Africa",
+   "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-27T10:50:48+00:00",
+   "published": "2026-11-27T10:42:19+00:00",
    "sources": [
     {
-     "name": "The Guardian",
-     "link": "https://www.theguardian.com/us-news/2026/nov/27/king-tides-us-coasts-storms-threaten-thanksgiving-celebrations"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/news/top-news/928391-why-i-supported-tinubu-in-2023-but-now-challenge-him-makinde.html"
     }
    ]
   },
   {
    "id": 191,
-   "headline": "Reno Omokri presents Letter of Credence to Mexico, formally assumes duty as ambassador",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Letters of credence are formal diplomatic documents issued by a country’s head of state to confirm the appointment of an ambassador or permanent representative.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/aaa3a49d-c9e7-445d-bbd1-ef341bbec689-e1795775217680.jpeg?fit=1280%2C800&ssl=1",
-   "region": "Latin America",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T10:28:33+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/foreign/928388-reno-omokri-presents-letter-of-credence-to-mexico-formally-assumes-duty-as-ambassador.html"
-    }
-   ]
-  },
-  {
-   "id": 192,
    "headline": "My self-care ritual is a meal at a fancy restaurant - on my own",
    "bullets": [],
    "why_it_matters": null,
@@ -4436,7 +4421,7 @@
    ]
   },
   {
-   "id": 193,
+   "id": 192,
    "headline": "Spain’s Far-Right Era Ended in 1975. Will This Man Change That?",
    "bullets": [],
    "why_it_matters": null,
@@ -4457,7 +4442,7 @@
    ]
   },
   {
-   "id": 194,
+   "id": 193,
    "headline": "Cozy escapism or festive trash? How Netflix holiday movies took over Christmas",
    "bullets": [],
    "why_it_matters": null,
@@ -4478,7 +4463,7 @@
    ]
   },
   {
-   "id": 195,
+   "id": 194,
    "headline": "‘Innovation is never democratic’: Benedetto Vigna on Ferrari’s electric shock",
    "bullets": [],
    "why_it_matters": null,
@@ -4499,7 +4484,7 @@
    ]
   },
   {
-   "id": 196,
+   "id": 195,
    "headline": "Pro-Ukraine and pro-EU presidential candidates struggle to engage French voters on these issues",
    "bullets": [],
    "why_it_matters": null,
@@ -4520,7 +4505,7 @@
    ]
   },
   {
-   "id": 197,
+   "id": 196,
    "headline": "This suspected North Korean operative said he had an IT company in Toronto. It wasn't real",
    "bullets": [],
    "why_it_matters": null,
@@ -4541,7 +4526,7 @@
    ]
   },
   {
-   "id": 198,
+   "id": 197,
    "headline": "Pan-gov't task force on integration of military academies to set sail next week",
    "bullets": [],
    "why_it_matters": null,
@@ -4562,7 +4547,7 @@
    ]
   },
   {
-   "id": 199,
+   "id": 198,
    "headline": "Man found 'likely involved' in cold-case murder",
    "bullets": [],
    "why_it_matters": null,
@@ -4583,7 +4568,7 @@
    ]
   },
   {
-   "id": 200,
+   "id": 199,
    "headline": "A documentarian’s painstaking portrait of Bunyo Ishikawa, the ‘Battlefield Bohemian’",
    "bullets": [],
    "why_it_matters": null,
@@ -4604,7 +4589,7 @@
    ]
   },
   {
-   "id": 201,
+   "id": 200,
    "headline": "French citizens tasked with finding solutions to country's debt crisis",
    "bullets": [],
    "why_it_matters": null,
@@ -4625,7 +4610,7 @@
    ]
   },
   {
-   "id": 202,
+   "id": 201,
    "headline": "Floating nature islands installed in parks as Glasgow Games legacy",
    "bullets": [],
    "why_it_matters": null,
@@ -4646,7 +4631,7 @@
    ]
   },
   {
-   "id": 203,
+   "id": 202,
    "headline": "Inside Saudi Arabia, Houthi attacks test kingdom's image of security",
    "bullets": [],
    "why_it_matters": null,
@@ -4667,7 +4652,7 @@
    ]
   },
   {
-   "id": 204,
+   "id": 203,
    "headline": "Bank of England boss warns AI must benefit humans",
    "bullets": [],
    "why_it_matters": null,
@@ -4688,7 +4673,7 @@
    ]
   },
   {
-   "id": 205,
+   "id": 204,
    "headline": "News Wrap: EPA reports 'zero' airborne lead in Iowa",
    "bullets": [],
    "why_it_matters": null,
@@ -4709,7 +4694,7 @@
    ]
   },
   {
-   "id": 206,
+   "id": 205,
    "headline": "'Citizens angry with the establishment' as Spain heads to the polls",
    "bullets": [],
    "why_it_matters": null,
@@ -4730,7 +4715,7 @@
    ]
   },
   {
-   "id": 207,
+   "id": 206,
    "headline": "Customs seizes 18 million counterfeit cigarettes in Michoacán port city",
    "bullets": [],
    "why_it_matters": null,
@@ -4751,7 +4736,7 @@
    ]
   },
   {
-   "id": 208,
+   "id": 207,
    "headline": "Hamas weighs response after Israel kills 10 people in Gaza",
    "bullets": [],
    "why_it_matters": null,
@@ -4772,7 +4757,7 @@
    ]
   },
   {
-   "id": 209,
+   "id": 208,
    "headline": "'Think twice': Banff officials issue warning over thin ice after skater's death",
    "bullets": [],
    "why_it_matters": null,
@@ -4793,7 +4778,7 @@
    ]
   },
   {
-   "id": 210,
+   "id": 209,
    "headline": "Iranian journalist, Oscar-nominated screenwriter Mehdi Mahmoudian arrested in Tehran",
    "bullets": [],
    "why_it_matters": null,
@@ -4814,7 +4799,7 @@
    ]
   },
   {
-   "id": 211,
+   "id": 210,
    "headline": "Milei pushes electoral overhaul for 2027 election",
    "bullets": [],
    "why_it_matters": null,
@@ -4835,7 +4820,7 @@
    ]
   },
   {
-   "id": 212,
+   "id": 211,
    "headline": "Jensen Huang’s China problem",
    "bullets": [],
    "why_it_matters": null,
@@ -4856,7 +4841,7 @@
    ]
   },
   {
-   "id": 213,
+   "id": 212,
    "headline": "Musk makes $18 billion SpaceX stock pledge for every kid in America",
    "bullets": [],
    "why_it_matters": null,
@@ -4877,7 +4862,7 @@
    ]
   },
   {
-   "id": 214,
+   "id": 213,
    "headline": "Is authoritarian Vietnam ready to phase out the death penalty?",
    "bullets": [],
    "why_it_matters": null,
@@ -4894,6 +4879,27 @@
     {
      "name": "DW",
      "link": "https://www.dw.com/en/is-authoritarian-vietnam-ready-to-phase-out-the-death-penalty/a-80064271?maca=en-rss-en-world-4025-xml-mrss"
+    }
+   ]
+  },
+  {
+   "id": 214,
+   "headline": "Taiwan loves Threads. China is targeting the platform, researchers say.",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Ahead of local elections, Taiwan’s embrace of Threads has made the social network a battleground for China’s influence operations, Taiwanese officials warn.",
+    "source": "The Washington Post"
+   },
+   "image": null,
+   "region": "Asia-Pacific",
+   "topic": "Science & Technology",
+   "significance": 4,
+   "published": "2026-11-26T13:24:57+00:00",
+   "sources": [
+    {
+     "name": "The Washington Post",
+     "link": "https://www.washingtonpost.com/world/2026/11/26/taiwan-loves-threads-china-is-targeting-platform-researchers-say/"
     }
    ]
   },
@@ -4920,27 +4926,6 @@
   },
   {
    "id": 216,
-   "headline": "Iran imposes sweeping austerity measures as U.S. economic pressure mounts",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Iran is rolling back subsidies on bread and gasoline, deepening discontent with the government amid a worsening economic crisis after nearly nine months of war.",
-    "source": "The Washington Post"
-   },
-   "image": null,
-   "region": "Middle East",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-26T10:00:00+00:00",
-   "sources": [
-    {
-     "name": "The Washington Post",
-     "link": "https://www.washingtonpost.com/world/2026/11/26/tehran-imposes-austerity-under-us-pressure-iranians-frustrations-grow/"
-    }
-   ]
-  },
-  {
-   "id": 217,
    "headline": "Huge explosion at oil depot in Bangkok sends fireball into sky",
    "bullets": [],
    "why_it_matters": null,
@@ -4961,7 +4946,7 @@
    ]
   },
   {
-   "id": 218,
+   "id": 217,
    "headline": "'Unacceptable': China, EU among major economies against new US tariffs",
    "bullets": [],
    "why_it_matters": null,
@@ -4982,7 +4967,7 @@
    ]
   },
   {
-   "id": 219,
+   "id": 218,
    "headline": "Renewables key for 'economic, national security': Maldives climate chief",
    "bullets": [],
    "why_it_matters": null,
@@ -5000,7 +4985,46 @@
    ]
   },
   {
+   "id": 219,
+   "headline": "PROFILE - Marc Marquez: MotoGP champion who conquered pain and bowed out on top",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "From teenage MotoGP sensation to record-equaling 8-time champion, the Spaniard ends career marked by extraordinary success, serious injuries and remarkable comebacks",
+    "source": "Anadolu Agency"
+   },
+   "image": null,
+   "region": "Global",
+   "topic": "Politics",
+   "significance": 4,
+   "published": "2026-11-27T12:57:35+00:00",
+   "sources": [
+    {
+     "name": "Anadolu Agency",
+     "link": "https://www.aa.com.tr/en/sports/profile-marc-marquez-motogp-champion-who-conquered-pain-and-bowed-out-on-top/4140446"
+    }
+   ]
+  },
+  {
    "id": 220,
+   "headline": "ATP seeks to centralise rights to boost revenue",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": null,
+   "image": "https://dam.mediacorp.sg/image/upload/s--xjotB2m3--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-27T122516Z_1_LYNXNPEMAQ10K_RTROPTP_3_SPORT-TENNIS-ATP.JPG?itok=cUYy3ZM2",
+   "region": "Asia-Pacific",
+   "topic": "Economics",
+   "significance": 3,
+   "published": "2026-11-27T12:25:16+00:00",
+   "sources": [
+    {
+     "name": "CNA",
+     "link": "https://www.channelnewsasia.com/sport/atp-seeks-centralise-rights-boost-revenue-6587746"
+    }
+   ]
+  },
+  {
+   "id": 221,
    "headline": "No burqas at school and fewer foreign pupils: Italy passes controversial education law",
    "bullets": [],
    "why_it_matters": null,
@@ -5021,7 +5045,7 @@
    ]
   },
   {
-   "id": 221,
+   "id": 222,
    "headline": "Le Pen’s Presidential Bid Hits Fresh Snag in Top Court Fight",
    "bullets": [],
    "why_it_matters": null,
@@ -5042,7 +5066,7 @@
    ]
   },
   {
-   "id": 222,
+   "id": 223,
    "headline": "Erdogan approves Makkah pact as further talks take place in Islamabad",
    "bullets": [],
    "why_it_matters": null,
@@ -5060,7 +5084,7 @@
    ]
   },
   {
-   "id": 223,
+   "id": 224,
    "headline": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
    "bullets": [],
    "why_it_matters": null,
@@ -5081,7 +5105,7 @@
    ]
   },
   {
-   "id": 224,
+   "id": 225,
    "headline": "¿Volverá la derecha al poder en España?",
    "bullets": [],
    "why_it_matters": null,
@@ -5098,27 +5122,6 @@
     {
      "name": "Bloomberg",
      "link": "https://www.bloomberg.com/news/videos/2026-11-27/-volvera-la-derecha-al-poder-en-espana"
-    }
-   ]
-  },
-  {
-   "id": 225,
-   "headline": "Sudanese army announces recapture of area in Blue Nile state amid escalating fighting",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Civil society initiative says more than 14,000 people fled to South Sudan within a week",
-    "source": "Anadolu Agency"
-   },
-   "image": null,
-   "region": "Africa",
-   "topic": "Conflict",
-   "significance": 4,
-   "published": "2026-11-27T12:21:34+00:00",
-   "sources": [
-    {
-     "name": "Anadolu Agency",
-     "link": "https://www.aa.com.tr/en/middle-east/sudanese-army-announces-recapture-of-area-in-blue-nile-state-amid-escalating-fighting/4140417"
     }
    ]
   },
@@ -5145,6 +5148,27 @@
   },
   {
    "id": 227,
+   "headline": "King tides batter US coasts as storms threaten Thanksgiving celebrations",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Heavy rain, strong winds and coastal flooding creating hazardous conditions for millions travelling for holiday King tides and huge waves have been battering both coasts of the US during a turbulent Thanksgiving period, with severe weather threatening millions across the country.",
+    "source": "The Guardian"
+   },
+   "image": "https://i.guim.co.uk/img/media/7021c3fba59895984e4b86a1f246a4fffca9c129/748_0_5657_4528/master/5657.jpg?width=700&quality=85&auto=format&fit=max&s=47658cce748e4aa8f739704e79eeb287",
+   "region": "North America",
+   "topic": "Environment",
+   "significance": 4,
+   "published": "2026-11-27T10:50:48+00:00",
+   "sources": [
+    {
+     "name": "The Guardian",
+     "link": "https://www.theguardian.com/us-news/2026/nov/27/king-tides-us-coasts-storms-threaten-thanksgiving-celebrations"
+    }
+   ]
+  },
+  {
+   "id": 228,
    "headline": "Meta whistleblower calls on Burnham to go further with ban on NDAs",
    "bullets": [],
    "why_it_matters": null,
@@ -5165,7 +5189,7 @@
    ]
   },
   {
-   "id": 228,
+   "id": 229,
    "headline": "America’s self-defeating affordability politics",
    "bullets": [],
    "why_it_matters": null,
@@ -5186,7 +5210,7 @@
    ]
   },
   {
-   "id": 229,
+   "id": 230,
    "headline": "Black Friday Shoppers Turn to AI Bots to Find Deals",
    "bullets": [],
    "why_it_matters": null,
@@ -5203,27 +5227,6 @@
     {
      "name": "Bloomberg",
      "link": "https://www.bloomberg.com/news/videos/2026-11-27/black-friday-shoppers-turn-to-ai-bots-to-find-deals-video"
-    }
-   ]
-  },
-  {
-   "id": 230,
-   "headline": "India's Modi to revive parliament expansion bill tied to women's quota, sources say",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "India's parliament does not reserve any seats for women and the bill will test Modi's political strength after a series of protests and setbacks.",
-    "source": "CNA"
-   },
-   "image": "https://dam.mediacorp.sg/image/upload/s--ejPpApsK--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-27T114014Z_1_LYNXNPEMAQ0WE_RTROPTP_3_INDIA-POLITICS.JPG?itok=oRBNu4NL",
-   "region": "Asia-Pacific",
-   "topic": "Politics",
-   "significance": 4,
-   "published": "2026-11-27T12:23:00+00:00",
-   "sources": [
-    {
-     "name": "CNA",
-     "link": "https://www.channelnewsasia.com/asia/indias-modi-revive-parliament-expansion-bill-tied-womens-quota-sources-say-6587726"
     }
    ]
   },
@@ -5544,48 +5547,27 @@
   },
   {
    "id": 246,
-   "headline": "Week in wildlife: ‘polar bear jail’, baby penguins and the turkeys’ revenge",
+   "headline": "Reno Omokri presents Letter of Credence to Mexico, formally assumes duty as ambassador",
    "bullets": [],
    "why_it_matters": null,
    "excerpt": {
-    "text": "This week’s best wildlife photographs from around the world",
-    "source": "The Guardian"
+    "text": "Letters of credence are formal diplomatic documents issued by a country’s head of state to confirm the appointment of an ambassador or permanent representative.",
+    "source": "Premium Times"
    },
-   "image": "https://i.guim.co.uk/img/media/8330b33753f5283b15dae5d47fc3ad71e8214f96/317_0_4683_3747/master/4683.jpg?width=700&quality=85&auto=format&fit=max&s=5dd9a51864a1f21dddf128d01ccf6db3",
-   "region": "Global",
-   "topic": "Environment",
+   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/aaa3a49d-c9e7-445d-bbd1-ef341bbec689-e1795775217680.jpeg?fit=1280%2C800&ssl=1",
+   "region": "Latin America",
+   "topic": "Politics",
    "significance": 4,
-   "published": "2026-11-27T08:00:58+00:00",
+   "published": "2026-11-27T10:28:33+00:00",
    "sources": [
     {
-     "name": "The Guardian",
-     "link": "https://www.theguardian.com/environment/gallery/2026/nov/27/week-in-wildlife-polar-bear-jail-baby-penguins-and-the-turkeys-revenge"
+     "name": "Premium Times",
+     "link": "https://www.premiumtimesng.com/foreign/928388-reno-omokri-presents-letter-of-credence-to-mexico-formally-assumes-duty-as-ambassador.html"
     }
    ]
   },
   {
    "id": 247,
-   "headline": "In defence of Jankara diplomacy: When quiet diplomacy has not worked, By Olabisi Dare",
-   "bullets": [],
-   "why_it_matters": null,
-   "excerpt": {
-    "text": "Let the Jankara moment pass. Let the market hear that Nigeria is serious.",
-    "source": "Premium Times"
-   },
-   "image": "https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2026/11/Olabisi-Dare.jpeg?fit=640%2C506&ssl=1",
-   "region": "Africa",
-   "topic": "Economics",
-   "significance": 4,
-   "published": "2026-11-27T10:21:25+00:00",
-   "sources": [
-    {
-     "name": "Premium Times",
-     "link": "https://www.premiumtimesng.com/opinion/928384-in-defence-of-jankara-diplomacy-when-quiet-diplomacy-has-not-worked-by-olabisi-dare.html"
-    }
-   ]
-  },
-  {
-   "id": 248,
    "headline": "'We're scared to turn our heating on'",
    "bullets": [],
    "why_it_matters": null,
@@ -5606,7 +5588,7 @@
    ]
   },
   {
-   "id": 249,
+   "id": 248,
    "headline": "France’s Bookstores, Beloved Curators of Literature, Are in a Deep Crisis",
    "bullets": [],
    "why_it_matters": null,
@@ -5627,7 +5609,7 @@
    ]
   },
   {
-   "id": 250,
+   "id": 249,
    "headline": "‘I was very aggressive. They threw me out of every school’ … Julie Delpy on acting, anger and predatory directors",
    "bullets": [],
    "why_it_matters": null,
@@ -5644,6 +5626,27 @@
     {
      "name": "The Guardian",
      "link": "https://www.theguardian.com/film/2026/nov/26/julie-delpy-acting-anger-predatory-directors"
+    }
+   ]
+  },
+  {
+   "id": 250,
+   "headline": "WHO chief urges US to lift Cuba oil blockade",
+   "bullets": [],
+   "why_it_matters": null,
+   "excerpt": {
+    "text": "Cuba’s government has blamed the blockade for daily power outages and critical shortages of medical supplies.",
+    "source": "Semafor"
+   },
+   "image": "https://img.semafor.com/395f0ba94ae1e6508d0a40eb71b961f35f56605f-6000x4000.jpg",
+   "region": "Latin America",
+   "topic": "Economics",
+   "significance": 4,
+   "published": "2026-11-26T22:34:17+00:00",
+   "sources": [
+    {
+     "name": "Semafor",
+     "link": "https://www.semafor.com/article/11/26/2026/who-chief-urges-us-to-lift-cuba-oil-blockade"
     }
    ]
   }
